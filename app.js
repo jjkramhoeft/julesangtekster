@@ -314,8 +314,6 @@ function setupDialogs() {
     });
   }
 
-  $('about-button').addEventListener('click', () => $('about-dialog').showModal());
-
   $('info-button').addEventListener('click', async () => {
     if (!state.current) return;
     const song = await loadSong(state.current);
@@ -335,13 +333,6 @@ function setupDialogs() {
     $('info-dialog').showModal();
   });
 
-  $('share-button').addEventListener('click', () => {
-    const url = location.href.split('#')[0];
-    $('share-url').textContent = url;
-    $('qr').replaceChildren(qrSvg(url));
-    $('share-dialog').showModal();
-  });
-
   $('short-button').addEventListener('click', async () => {
     store.set(SHORT_KEY, !store.get(SHORT_KEY, false));
     if (state.current) renderSong(await loadSong(state.current));
@@ -349,7 +340,7 @@ function setupDialogs() {
 }
 
 function qrSvg(text) {
-  if (typeof qrcode !== 'function') return el('p', '', text);
+  if (typeof qrcode !== 'function') return document.createTextNode('');
   const qr = qrcode(0, 'M');
   qr.addData(text);
   qr.make();
@@ -391,6 +382,8 @@ async function start() {
     return;
   }
   renderList();
+  // QR code for the app's own address, so others can scan it from this phone.
+  $('qr').replaceChildren(qrSvg(location.href.split('#')[0]));
   window.addEventListener('hashchange', route);
   route();
 }

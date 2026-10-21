@@ -159,20 +159,7 @@ svg {
 }
 
 .index-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-  justify-content: center;
-  margin-top: 28px;
-}
-
-.text-button {
-  min-height: 44px;
-  padding: 0 6px;
-  border: 0;
-  background: transparent;
-  color: var(--accent);
-  font-weight: 600;
+  margin-top: 40px;
 }
 
 /* ---------- Song ---------- */
@@ -455,25 +442,19 @@ svg {
   font-weight: 700;
 }
 
-.share { text-align: center; }
-
 .qr {
-  width: min(280px, 80vw);
-  margin: 16px auto;
-  padding: 14px;
-  border-radius: var(--radius);
+  width: 168px;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 10px;
   background: #fff;
 }
+
+.qr:empty { display: none; }
 
 .qr svg {
   display: block;
   width: 100%;
   height: auto;
   stroke: none;
-}
-
-.share-url {
-  color: var(--muted);
-  font-size: 14px;
-  word-break: break-all;
 }

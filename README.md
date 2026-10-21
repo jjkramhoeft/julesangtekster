@@ -105,7 +105,7 @@ tools/
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
 - **Kort** shows the short version (only for songs that define one).
 - **ⓘ** shows facts and a short story about the song.
-- **Del med QR-kode** on the index shows a QR code for the app's address, so the rest of the family can open it.
+- **QR code** at the bottom of the index points to the app's address, so the rest of the family can scan it and open the app.
 
 ### Song file format
 

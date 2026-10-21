@@ -25,8 +25,7 @@
     <p id="list-empty" class="list-empty" hidden></p>
 
     <footer class="index-footer">
-      <button type="button" class="text-button" id="share-button">Del med QR-kode</button>
-      <button type="button" class="text-button" id="about-button">Om teksterne</button>
+      <div id="qr" class="qr"></div>
     </footer>
   </main>
 
@@ -74,26 +73,6 @@
       <dl id="info-facts" class="facts"></dl>
       <p id="info-text" class="info-text"></p>
       <p class="info-source"><a id="info-source" target="_blank" rel="noopener">Teksten på Wikisource</a></p>
-      <button class="primary-button" value="close">Luk</button>
-    </form>
-  </dialog>
-
-  <dialog id="share-dialog" class="sheet">
-    <form method="dialog" class="sheet-inner share">
-      <h2>Del juletræssangene</h2>
-      <p>Lad de andre scanne koden med kameraet på deres telefon.</p>
-      <div id="qr" class="qr"></div>
-      <p id="share-url" class="share-url"></p>
-      <button class="primary-button" value="close">Luk</button>
-    </form>
-  </dialog>
-
-  <dialog id="about-dialog" class="sheet">
-    <form method="dialog" class="sheet-inner">
-      <h2>Om teksterne</h2>
-      <p>Alle tekster er hentet fra den danske <a href="https://da.wikisource.org/wiki/Kategori:Julesange" target="_blank" rel="noopener">Wikisource</a> og er fri af ophavsret, fordi forfattere og oversættere døde for mere end 70 år siden.</p>
-      <p>Nogle kendte julesange mangler, fordi teksten stadig er beskyttet, eller fordi vi ikke ved, hvem der har oversat den.</p>
-      <p>Ingen login, ingen reklamer, ingen sporing. Knib med to fingre for at gøre teksten større.</p>
       <button class="primary-button" value="close">Luk</button>
     </form>
   </dialog>

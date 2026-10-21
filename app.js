@@ -1,26 +1,6 @@
 // Juletræssange – navigation, wake lock and sharing.
 'use strict';
 
-const SHORT_KEY = 'julesange.short';
-
-// localStorage can be unavailable (private mode, blocked storage), so every
-// access is wrapped and falls back to the default.
-const store = {
-  get(key, fallback) {
-    try {
-      const raw = localStorage.getItem(key);
-      return raw === null ? fallback : JSON.parse(raw);
-    } catch {
-      return fallback;
-    }
-  },
-  set(key, value) {
-    try {
-      localStorage.setItem(key, JSON.stringify(value));
-    } catch {}
-  },
-};
-
 const $ = (id) => document.getElementById(id);
 
 const state = {
@@ -92,33 +72,11 @@ function credit(song) {
   return `${song.author} · Dansk tekst: ${song.translator}${song.year ? `, ${song.year}` : ''}`;
 }
 
-function describeSkipped(numbers) {
-  if (numbers.length === 1) return `Vers ${numbers[0]} springes over i den korte udgave`;
-  const consecutive = numbers.every((n, i) => i === 0 || n === numbers[i - 1] + 1);
-  const list = consecutive
-    ? `${numbers[0]}–${numbers[numbers.length - 1]}`
-    : `${numbers.slice(0, -1).join(', ')} og ${numbers[numbers.length - 1]}`;
-  return `Vers ${list} springes over i den korte udgave`;
-}
-
 function renderVerses(song) {
-  const useShort = Boolean(song.shortVersion) && store.get(SHORT_KEY, false);
   const nodes = [];
-  let skipped = [];
-
-  const flushSkipped = () => {
-    if (skipped.length) nodes.push(el('p', 'skipped-note', describeSkipped(skipped)));
-    skipped = [];
-  };
 
   song.verses.forEach((verse, i) => {
     const number = i + 1;
-    if (useShort && !song.shortVersion.includes(number)) {
-      skipped.push(number);
-      return;
-    }
-    flushSkipped();
-
     const lines = Array.isArray(verse) ? verse : verse.lines;
     const section = el('section', 'verse');
     section.setAttribute('aria-label', `Vers ${number}`);
@@ -138,7 +96,6 @@ function renderVerses(song) {
       nodes.push(chorus);
     }
   });
-  flushSkipped();
   $('verses').replaceChildren(...nodes);
 }
 
@@ -147,34 +104,12 @@ function renderSong(song, direction) {
   $('song-number').textContent = `Nr. ${song.idNumber}`;
   $('song-title').textContent = song.title;
   $('song-credit').textContent = credit(song);
-  $('bar-number').textContent = String(song.idNumber);
-  $('bar-title').textContent = song.title;
   document.title = `${song.idNumber}. ${song.title} – Juletræssange`;
-
-  const shortButton = $('short-button');
-  shortButton.hidden = !song.shortVersion;
-  shortButton.setAttribute('aria-pressed', String(store.get(SHORT_KEY, false)));
-  shortButton.setAttribute('aria-label', 'Vis den korte udgave');
 
   renderVerses(song);
 
   const ids = state.songs.map((s) => s.id);
   const pos = ids.indexOf(song.id);
-  $('prev-button').disabled = pos <= 0;
-  $('next-button').disabled = pos >= ids.length - 1;
-  $('position').textContent = `${pos + 1} af ${ids.length}`;
-
-  const nextCard = $('next-card');
-  const next = state.byId.get(ids[pos + 1]);
-  nextCard.replaceChildren();
-  if (next) {
-    nextCard.href = `#/sang/${next.id}`;
-    nextCard.append(el('small', '', 'Næste sang'), `${next.idNumber}. ${next.title}`);
-  } else {
-    nextCard.href = '#/';
-    nextCard.append(el('small', '', 'Sidste sang'), 'Tilbage til oversigten');
-  }
-
   article.classList.remove('slide-left', 'slide-right');
   if (direction) {
     void article.offsetWidth; // restart the animation
@@ -332,11 +267,6 @@ function setupDialogs() {
     $('info-source').href = song.source?.url ?? 'https://da.wikisource.org/';
     $('info-dialog').showModal();
   });
-
-  $('short-button').addEventListener('click', async () => {
-    store.set(SHORT_KEY, !store.get(SHORT_KEY, false));
-    if (state.current) renderSong(await loadSong(state.current));
-  });
 }
 
 function qrSvg(text) {
@@ -370,8 +300,6 @@ async function start() {
   $('back-button').addEventListener('click', () => {
     location.hash = '#/';
   });
-  $('prev-button').addEventListener('click', () => go(-1));
-  $('next-button').addEventListener('click', () => go(1));
 
   try {
     await loadIndex();

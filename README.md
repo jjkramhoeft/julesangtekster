@@ -76,7 +76,7 @@ In practice, a site on GitHub Pages is public, so the app only ships texts that 
 - Plain HTML, CSS and JavaScript. No build step and no dependencies at runtime, apart from a vendored QR code generator ([vendor/qrcode.js](vendor/qrcode.js), MIT).
 - Songs are stored as one data file per song in `songs/`, with title, author, translator, source and verses (with an optional info text).
 - A web app manifest and a service worker make the app installable and offline-capable. Every song is cached on the first visit, so it works without signal by the tree.
-- The only stored setting is the short-version toggle, kept in the browser's `localStorage`. Light/dark follows the system setting.
+- Nothing is stored on the device apart from the offline cache. Light/dark follows the system setting.
 - Hosted as a static site, for example on GitHub Pages. All paths are relative, so it works from a sub-path such as `/julesangtekster/`.
 
 ### Structure
@@ -101,10 +101,9 @@ tools/
 ### How the app is used
 
 - **Index:** a numbered list of all songs under the title *Juletræssange*.
-- **Song:** swipe left/right, tap the left or right edge of the text, or use the big arrows at the bottom to change song.
+- **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
-- **Kort** shows the short version (only for songs that define one).
-- **ⓘ** shows facts and a short story about the song.
+- **ⓘ** at the top right shows facts and a short story about the song.
 - **QR code** at the bottom of the index points to the app's address, so the rest of the family can scan it and open the app.
 
 ### Song file format
@@ -134,7 +133,7 @@ tools/
 
 - `verses`: each verse is a list of lines, or an object with `lines` and a verse-specific `refrain` (shown in the chorus style).
 - `chorus`: lines repeated after every verse (*omkvæd*), or `null`.
-- `shortVersion`: the verse numbers to keep in the short version, for example `[1, 2, 3, 4, 5, 8]`, or `null`.
+- `shortVersion`: the verse numbers to keep in a short version, for example `[1, 2, 3, 4, 5, 8]`, or `null`. Kept in the data, but the app does not show a short-version button at the moment.
 - Repeats are written `//: … ://` and shown as ‖: … :‖.
 - `dds` and `hsb` are the numbers in *Den Danske Salmebog* and *Højskolesangbogen*.
 

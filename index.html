@@ -31,19 +31,14 @@
 
   <!-- One song -->
   <div id="song-view" class="view" hidden>
-    <header class="song-bar">
+    <div class="song-tools">
       <button class="icon-button" id="back-button" type="button" aria-label="Til oversigten">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
-      <div class="song-bar-title">
-        <span id="bar-number" class="bar-number"></span>
-        <span id="bar-title" class="bar-title"></span>
-      </div>
-      <button class="icon-button" id="short-button" type="button" aria-pressed="false" hidden>Kort</button>
       <button class="icon-button" id="info-button" type="button" aria-label="Om sangen">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
       </button>
-    </header>
+    </div>
 
     <article id="song" class="song" aria-live="polite">
       <header class="song-header">
@@ -52,18 +47,7 @@
         <p id="song-credit" class="song-credit"></p>
       </header>
       <div id="verses" class="verses"></div>
-      <a id="next-card" class="next-card" href="#/"></a>
     </article>
-
-    <nav class="song-nav" aria-label="Skift sang">
-      <button type="button" id="prev-button" class="nav-button" aria-label="Forrige sang">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
-      </button>
-      <span id="position" class="position"></span>
-      <button type="button" id="next-button" class="nav-button" aria-label="Næste sang">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
-      </button>
-    </nav>
   </div>
 
   <!-- Dialogs -->

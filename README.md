@@ -30,7 +30,7 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 - **Both title and number** for carols (some titles are quite similar)
 - **Verse numbers** shown clearly, so "let's skip to verse 4" works.
 - **A Short Version button** to easly hide a predifined set of verses for eash carol
-- **Chorus** (*omkvæd*) shown in a distinct style, so it is clear when to repeat it.
+- **Chorus** (*omkvæd*) written out in each verse as plain text, like the rest of the lyrics.
 - **An info pop up** for each carol with meta data and a short story about the carol
 
 ### Not in scope
@@ -131,8 +131,8 @@ tools/
 }
 ```
 
-- `verses`: each verse is a list of lines, or an object with `lines` and a verse-specific `refrain` (shown in the chorus style).
-- `chorus`: lines repeated after every verse (*omkvæd*), or `null`.
+- `verses`: each verse is a list of lines, or an object with `lines` and a verse-specific `refrain`. Refrain lines are shown as ordinary lines.
+- `chorus`: lines repeated after every verse (*omkvæd*), shown as ordinary lines, or `null`.
 - `shortVersion`: the verse numbers to keep in a short version, for example `[1, 2, 3, 4, 5, 8]`, or `null`. Kept in the data, but the app does not show a short-version button at the moment.
 - Repeats are written `//: … ://` and shown as ‖: … :‖.
 - `dds` and `hsb` are the numbers in *Den Danske Salmebog* and *Højskolesangbogen*.

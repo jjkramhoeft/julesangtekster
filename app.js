@@ -77,24 +77,13 @@ function renderVerses(song) {
 
   song.verses.forEach((verse, i) => {
     const number = i + 1;
-    const lines = Array.isArray(verse) ? verse : verse.lines;
+    // Refrain and chorus lines are shown as ordinary lines of the verse.
+    const lines = Array.isArray(verse) ? verse : [...verse.lines, ...(verse.refrain ?? [])];
     const section = el('section', 'verse');
     section.setAttribute('aria-label', `Vers ${number}`);
     section.append(el('span', 'verse-number', String(number)));
-    for (const line of lines) section.append(renderLine(line));
-    if (!Array.isArray(verse) && verse.refrain?.length) {
-      const refrain = el('div', 'refrain');
-      for (const line of verse.refrain) refrain.append(renderLine(line));
-      section.append(refrain);
-    }
+    for (const line of [...lines, ...(song.chorus ?? [])]) section.append(renderLine(line));
     nodes.push(section);
-
-    if (song.chorus) {
-      const chorus = el('div', i === 0 ? 'chorus' : 'chorus repeat');
-      chorus.append(el('span', 'chorus-label', 'Omkvæd'));
-      for (const line of song.chorus) chorus.append(renderLine(line));
-      nodes.push(chorus);
-    }
   });
   $('verses').replaceChildren(...nodes);
 }

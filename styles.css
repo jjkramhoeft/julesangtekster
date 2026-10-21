@@ -280,13 +280,14 @@ svg {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 4px 14px;
-  margin: 0 0 16px;
+  margin: 0;
 }
 
 .facts dt { color: var(--accent); }
 .facts dd { margin: 0; }
 
 .info-text {
+  margin: 0 0 16px;
   font-family: var(--font-lyrics);
   font-size: 19px;
   line-height: 1.5;
@@ -319,6 +320,13 @@ svg {
 }
 
 .qr:empty { display: none; }
+
+.qr-caption {
+  margin: 10px 0 0;
+  color: var(--accent);
+  font-weight: 600;
+  text-align: center;
+}
 
 .qr svg {
   display: block;

@@ -1,15 +1,7 @@
-// Julesange – navigation, settings and wake lock.
+// Juletræssange – navigation, wake lock and sharing.
 'use strict';
 
-const FONT_SIZES = [18, 20, 22, 24, 26, 29, 32, 36, 40, 45, 50];
-const DEFAULT_FONT_SIZE = 24;
-
-const KEYS = {
-  fontSize: 'julesange.fontSize',
-  theme: 'julesange.theme',
-  program: 'julesange.program',
-  short: 'julesange.short',
-};
+const SHORT_KEY = 'julesange.short';
 
 // localStorage can be unavailable (private mode, blocked storage), so every
 // access is wrapped and falls back to the default.
@@ -35,8 +27,6 @@ const state = {
   songs: [],
   byId: new Map(),
   cache: new Map(),
-  tab: 'all',
-  query: '',
   current: null,
   wakeLock: null,
 };
@@ -61,67 +51,6 @@ function loadSong(id) {
   return state.cache.get(id);
 }
 
-// ---------- Programme ----------
-
-function program() {
-  return store.get(KEYS.program, []).filter((id) => state.byId.has(id));
-}
-
-function setProgram(ids) {
-  store.set(KEYS.program, ids);
-  const count = ids.length;
-  $('program-count').textContent = count ? String(count) : '';
-}
-
-function toggleInProgram(id) {
-  const ids = program();
-  setProgram(ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]);
-}
-
-function moveInProgram(id, delta) {
-  const ids = program();
-  const i = ids.indexOf(id);
-  const j = i + delta;
-  if (i < 0 || j < 0 || j >= ids.length) return;
-  [ids[i], ids[j]] = [ids[j], ids[i]];
-  setProgram(ids);
-}
-
-// Songs that prev/next walk through. Inside tonight's programme we stay in
-// the programme; otherwise we go through all songs by number.
-function navOrder(id) {
-  const ids = program();
-  if (ids.length > 1 && ids.includes(id)) return { ids, inProgram: true };
-  return { ids: state.songs.map((s) => s.id), inProgram: false };
-}
-
-// ---------- Index view ----------
-
-function normalize(text) {
-  return text
-    .toLowerCase()
-    .replace(/[’'`´]/g, '')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
-    .trim();
-}
-
-function matches(song, query) {
-  if (!query) return true;
-  if (/^\d+$/.test(query)) return String(song.idNumber) === query;
-  const hay = normalize(`${song.title} ${song.firstLine} ${song.author}`);
-  return normalize(query).split(' ').every((word) => hay.includes(word));
-}
-
-function starIcon() {
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 24 24');
-  svg.setAttribute('aria-hidden', 'true');
-  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  path.setAttribute('d', 'm12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z');
-  svg.append(path);
-  return svg;
-}
-
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -129,78 +58,19 @@ function el(tag, className, text) {
   return node;
 }
 
+// ---------- Index view ----------
+
 function renderList() {
-  const list = $('song-list');
-  const ids = program();
-  const inProgramTab = state.tab === 'program';
-  const songs = (inProgramTab ? ids.map((id) => state.byId.get(id)) : state.songs).filter((s) =>
-    matches(s, state.query),
-  );
-
-  list.replaceChildren(
-    ...songs.map((song) => {
+  $('song-list').replaceChildren(
+    ...state.songs.map((song) => {
       const item = el('li', 'song-item');
-
       const link = el('a', 'song-link');
       link.href = `#/sang/${song.id}`;
       link.append(el('span', 'num', String(song.idNumber)), el('span', 'title', song.title));
-      link.append(el('span', 'meta', song.author));
       item.append(link);
-
-      const tools = el('div', 'song-tools');
-      if (inProgramTab && !state.query) {
-        const pos = ids.indexOf(song.id);
-        const up = el('button', 'move-button', '↑');
-        up.type = 'button';
-        up.disabled = pos === 0;
-        up.setAttribute('aria-label', `Flyt ${song.title} op`);
-        up.addEventListener('click', () => {
-          moveInProgram(song.id, -1);
-          renderList();
-        });
-        const down = el('button', 'move-button', '↓');
-        down.type = 'button';
-        down.disabled = pos === ids.length - 1;
-        down.setAttribute('aria-label', `Flyt ${song.title} ned`);
-        down.addEventListener('click', () => {
-          moveInProgram(song.id, 1);
-          renderList();
-        });
-        tools.append(up, down);
-      }
-      const star = el('button', 'star-button');
-      star.type = 'button';
-      const starred = ids.includes(song.id);
-      star.setAttribute('aria-pressed', String(starred));
-      star.setAttribute('aria-label', starred ? `Fjern ${song.title} fra programmet` : `Sæt ${song.title} på programmet`);
-      star.append(starIcon());
-      star.addEventListener('click', () => {
-        toggleInProgram(song.id);
-        renderList();
-      });
-      tools.append(star);
-      item.append(tools);
       return item;
     }),
   );
-
-  const empty = $('list-empty');
-  if (songs.length) {
-    empty.hidden = true;
-  } else {
-    empty.hidden = false;
-    empty.textContent =
-      inProgramTab && !ids.length
-        ? 'Programmet er tomt. Tryk på stjernen ud for en sang for at sætte den på aftenens program.'
-        : 'Ingen sange passer til søgningen.';
-  }
-}
-
-function setTab(tab) {
-  state.tab = tab;
-  $('tab-all').setAttribute('aria-pressed', String(tab === 'all'));
-  $('tab-program').setAttribute('aria-pressed', String(tab === 'program'));
-  renderList();
 }
 
 // ---------- Song view ----------
@@ -232,8 +102,7 @@ function describeSkipped(numbers) {
 }
 
 function renderVerses(song) {
-  const container = $('verses');
-  const useShort = Boolean(song.shortVersion) && store.get(KEYS.short, false);
+  const useShort = Boolean(song.shortVersion) && store.get(SHORT_KEY, false);
   const nodes = [];
   let skipped = [];
 
@@ -270,7 +139,7 @@ function renderVerses(song) {
     }
   });
   flushSkipped();
-  container.replaceChildren(...nodes);
+  $('verses').replaceChildren(...nodes);
 }
 
 function renderSong(song, direction) {
@@ -280,20 +149,20 @@ function renderSong(song, direction) {
   $('song-credit').textContent = credit(song);
   $('bar-number').textContent = String(song.idNumber);
   $('bar-title').textContent = song.title;
-  document.title = `${song.idNumber}. ${song.title} – Julesange`;
+  document.title = `${song.idNumber}. ${song.title} – Juletræssange`;
 
   const shortButton = $('short-button');
   shortButton.hidden = !song.shortVersion;
-  shortButton.setAttribute('aria-pressed', String(store.get(KEYS.short, false)));
+  shortButton.setAttribute('aria-pressed', String(store.get(SHORT_KEY, false)));
   shortButton.setAttribute('aria-label', 'Vis den korte udgave');
 
   renderVerses(song);
 
-  const { ids, inProgram } = navOrder(song.id);
+  const ids = state.songs.map((s) => s.id);
   const pos = ids.indexOf(song.id);
   $('prev-button').disabled = pos <= 0;
   $('next-button').disabled = pos >= ids.length - 1;
-  $('position').textContent = inProgram ? `Program ${pos + 1} af ${ids.length}` : `${pos + 1} af ${ids.length}`;
+  $('position').textContent = `${pos + 1} af ${ids.length}`;
 
   const nextCard = $('next-card');
   const next = state.byId.get(ids[pos + 1]);
@@ -302,8 +171,8 @@ function renderSong(song, direction) {
     nextCard.href = `#/sang/${next.id}`;
     nextCard.append(el('small', '', 'Næste sang'), `${next.idNumber}. ${next.title}`);
   } else {
-    nextCard.href = inProgram ? '#/program' : '#/';
-    nextCard.append(el('small', '', inProgram ? 'Programmet er slut' : 'Sidste sang'), 'Tilbage til oversigten');
+    nextCard.href = '#/';
+    nextCard.append(el('small', '', 'Sidste sang'), 'Tilbage til oversigten');
   }
 
   article.classList.remove('slide-left', 'slide-right');
@@ -339,7 +208,7 @@ async function showSong(id, direction = 0) {
 
 function go(delta) {
   if (!state.current) return;
-  const { ids } = navOrder(state.current);
+  const ids = state.songs.map((s) => s.id);
   const next = ids[ids.indexOf(state.current) + delta];
   if (!next) return;
   // Replace rather than push, so the back button returns to the index.
@@ -348,20 +217,18 @@ function go(delta) {
   showSong(next, delta);
 }
 
-function showIndex(tab) {
+function showIndex() {
   state.current = null;
   releaseWakeLock();
-  document.title = 'Julesange';
+  document.title = 'Juletræssange';
   $('song-view').hidden = true;
   $('index-view').hidden = false;
-  setTab(tab);
 }
 
 function route() {
-  const hash = location.hash;
-  const song = /^#\/sang\/([a-z0-9-]+)$/.exec(hash);
+  const song = /^#\/sang\/([a-z0-9-]+)$/.exec(location.hash);
   if (song) showSong(song[1]);
-  else showIndex(hash === '#/program' ? 'program' : 'all');
+  else showIndex();
 }
 
 // ---------- Gestures ----------
@@ -437,66 +304,7 @@ document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && state.current) requestWakeLock();
 });
 
-// ---------- Settings ----------
-
-function currentFontSize() {
-  return store.get(KEYS.fontSize, DEFAULT_FONT_SIZE);
-}
-
-function applyFontSize(px) {
-  document.documentElement.style.setProperty('--lyric-size', `${px}px`);
-  const i = FONT_SIZES.indexOf(px);
-  for (const id of ['smaller-button', 'settings-smaller']) $(id).disabled = i <= 0;
-  for (const id of ['larger-button', 'settings-larger']) $(id).disabled = i >= FONT_SIZES.length - 1;
-}
-
-function stepFontSize(delta) {
-  const current = currentFontSize();
-  let i = FONT_SIZES.findIndex((s) => s >= current);
-  if (i < 0) i = FONT_SIZES.length - 1;
-  const next = FONT_SIZES[Math.max(0, Math.min(FONT_SIZES.length - 1, i + delta))];
-  store.set(KEYS.fontSize, next);
-  applyFontSize(next);
-}
-
-function applyTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#fbf6ec' : '#120e0b';
-  for (const input of document.querySelectorAll('input[name="theme"]')) input.checked = input.value === theme;
-}
-
-function setupSettings() {
-  applyFontSize(currentFontSize());
-  applyTheme(store.get(KEYS.theme, 'dark'));
-
-  $('smaller-button').addEventListener('click', () => stepFontSize(-1));
-  $('larger-button').addEventListener('click', () => stepFontSize(1));
-  $('settings-smaller').addEventListener('click', () => stepFontSize(-1));
-  $('settings-larger').addEventListener('click', () => stepFontSize(1));
-
-  for (const input of document.querySelectorAll('input[name="theme"]')) {
-    input.addEventListener('change', () => {
-      store.set(KEYS.theme, input.value);
-      applyTheme(input.value);
-    });
-  }
-
-  $('short-button').addEventListener('click', async () => {
-    store.set(KEYS.short, !store.get(KEYS.short, false));
-    if (state.current) renderSong(await loadSong(state.current));
-  });
-
-  $('wake-lock-note').textContent =
-    'wakeLock' in navigator
-      ? 'Skærmen holdes tændt, mens en sang er åben.'
-      : 'Denne browser kan ikke holde skærmen tændt. Slå automatisk lås fra i telefonens indstillinger i aften.';
-}
-
 // ---------- Dialogs ----------
-
-function openDialog(dialog) {
-  dialog.showModal();
-}
 
 function setupDialogs() {
   for (const dialog of document.querySelectorAll('dialog')) {
@@ -506,8 +314,7 @@ function setupDialogs() {
     });
   }
 
-  $('settings-button').addEventListener('click', () => openDialog($('settings-dialog')));
-  $('about-button').addEventListener('click', () => openDialog($('about-dialog')));
+  $('about-button').addEventListener('click', () => $('about-dialog').showModal());
 
   $('info-button').addEventListener('click', async () => {
     if (!state.current) return;
@@ -525,14 +332,19 @@ function setupDialogs() {
     $('info-facts').replaceChildren(...facts.flatMap(([k, v]) => [el('dt', '', k), el('dd', '', String(v))]));
     $('info-text').textContent = song.extraInfo ?? '';
     $('info-source').href = song.source?.url ?? 'https://da.wikisource.org/';
-    openDialog($('info-dialog'));
+    $('info-dialog').showModal();
   });
 
   $('share-button').addEventListener('click', () => {
     const url = location.href.split('#')[0];
     $('share-url').textContent = url;
     $('qr').replaceChildren(qrSvg(url));
-    openDialog($('share-dialog'));
+    $('share-dialog').showModal();
+  });
+
+  $('short-button').addEventListener('click', async () => {
+    store.set(SHORT_KEY, !store.get(SHORT_KEY, false));
+    if (state.current) renderSong(await loadSong(state.current));
   });
 }
 
@@ -549,7 +361,7 @@ function qrSvg(text) {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('viewBox', `0 0 ${n} ${n}`);
   svg.setAttribute('role', 'img');
-  svg.setAttribute('aria-label', 'QR-kode til julesangene');
+  svg.setAttribute('aria-label', 'QR-kode til juletræssangene');
   svg.setAttribute('shape-rendering', 'crispEdges');
   const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
   path.setAttribute('d', d);
@@ -561,32 +373,14 @@ function qrSvg(text) {
 // ---------- Start ----------
 
 async function start() {
-  setupSettings();
   setupDialogs();
   setupGestures();
 
   $('back-button').addEventListener('click', () => {
-    location.hash = state.tab === 'program' ? '#/program' : '#/';
+    location.hash = '#/';
   });
   $('prev-button').addEventListener('click', () => go(-1));
   $('next-button').addEventListener('click', () => go(1));
-  $('tab-all').addEventListener('click', () => {
-    history.replaceState(null, '', '#/');
-    setTab('all');
-  });
-  $('tab-program').addEventListener('click', () => {
-    history.replaceState(null, '', '#/program');
-    setTab('program');
-  });
-  $('search').addEventListener('input', (e) => {
-    state.query = e.target.value.trim();
-    renderList();
-  });
-  $('search').addEventListener('keydown', (e) => {
-    if (e.key !== 'Enter') return;
-    const first = document.querySelector('.song-link');
-    if (first) location.hash = first.getAttribute('href');
-  });
 
   try {
     await loadIndex();
@@ -596,7 +390,7 @@ async function start() {
     $('list-empty').textContent = 'Sangene kunne ikke hentes. Prøv igen, når der er forbindelse.';
     return;
   }
-  setProgram(program());
+  renderList();
   window.addEventListener('hashchange', route);
   route();
 }

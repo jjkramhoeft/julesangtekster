@@ -18,8 +18,8 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 ## Features
 
 ### Must have
-- **Readable in the dark**: dark theme by default, high contrast, large text.
-- **Adjustable text size**: a plus/minus control or pinch to zoom, remembered between visits.
+- **Readable in the dark**: black and white with a green accent, following the phone's light/dark setting; high contrast, large text.
+- **Adjustable text size**: pinch to zoom.
 - **Screen stays awake** while a song is open (Screen Wake Lock API, where the browser supports it).
 - **One-hand navigation**: swipe left/right or tap the screen edges to move between songs; scroll vertically through verses.
 - **Danish UI**: all text in the app is in Danish.
@@ -27,7 +27,6 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 - **Index page of all the Carols**
 
 ### Nice to have
-- **Search** by title or first line.
 - **Both title and number** for carols (some titles are quite similar)
 - **Verse numbers** shown clearly, so "let's skip to verse 4" works.
 - **A Short Version button** to easly hide a predifined set of verses for eash carol
@@ -77,15 +76,15 @@ In practice, a site on GitHub Pages is public, so the app only ships texts that 
 - Plain HTML, CSS and JavaScript. No build step and no dependencies at runtime, apart from a vendored QR code generator ([vendor/qrcode.js](vendor/qrcode.js), MIT).
 - Songs are stored as one data file per song in `songs/`, with title, author, translator, source and verses (with an optional info text).
 - A web app manifest and a service worker make the app installable and offline-capable. Every song is cached on the first visit, so it works without signal by the tree.
-- Settings (text size, theme, short version, tonight's programme) are stored in the browser's `localStorage`.
+- The only stored setting is the short-version toggle, kept in the browser's `localStorage`. Light/dark follows the system setting.
 - Hosted as a static site, for example on GitHub Pages. All paths are relative, so it works from a sub-path such as `/julesangtekster/`.
 
 ### Structure
 
 ```
 index.html            App shell
-styles.css            Layout and dark/light theme
-app.js                Navigation, settings, wake lock, programme, QR code
+styles.css            Layout and light/dark theme
+app.js                Navigation, wake lock, QR code
 sw.js                 Service worker for offline use
 manifest.webmanifest
 icons/                App icons (SVG and PNG)
@@ -101,9 +100,9 @@ tools/
 
 ### How the app is used
 
-- **Index:** search by title, first line or number. Tap the star to put a song on *Aftenens program*, then use the arrows on the programme tab to set the order.
-- **Song:** swipe left/right, tap the left or right edge of the text, or use the big arrows at the bottom to change song. Inside the programme, navigation follows the programme order.
-- **A− / A+** change the text size; pinch-to-zoom also works. When the page is zoomed, swiping is turned off so you can pan.
+- **Index:** a numbered list of all songs under the title *Juletræssange*.
+- **Song:** swipe left/right, tap the left or right edge of the text, or use the big arrows at the bottom to change song.
+- **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
 - **Kort** shows the short version (only for songs that define one).
 - **ⓘ** shows facts and a short story about the song.
 - **Del med QR-kode** on the index shows a QR code for the app's address, so the rest of the family can open it.

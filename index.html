@@ -1,51 +1,25 @@
 <!doctype html>
-<html lang="da" data-theme="dark">
+<html lang="da">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Julesange</title>
+  <title>Juletræssange</title>
   <meta name="description" content="Teksterne til de danske julesange og julesalmer – til at gå om juletræet juleaften.">
-  <meta name="theme-color" content="#120e0b">
-  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Julesange">
-  <script>
-    // Apply saved settings before first paint so the screen never flashes white.
-    try {
-      const theme = localStorage.getItem('julesange.theme');
-      if (theme) document.documentElement.dataset.theme = theme;
-      const size = localStorage.getItem('julesange.fontSize');
-      if (size) document.documentElement.style.setProperty('--lyric-size', size + 'px');
-    } catch {}
-  </script>
+  <meta name="apple-mobile-web-app-title" content="Juletræssange">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Index of all carols -->
   <main id="index-view" class="view" hidden>
-    <header class="index-header">
-      <div class="index-title">
-        <h1>Julesange</h1>
-        <p class="tagline">til at gå om juletræet</p>
-      </div>
-      <button class="icon-button" id="settings-button" type="button" aria-label="Indstillinger">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
-      </button>
-    </header>
-
-    <div class="search">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
-      <input id="search" type="search" placeholder="Søg på titel, første linje eller nr." autocomplete="off" enterkeyhint="search" aria-label="Søg">
-    </div>
-
-    <nav class="tabs" aria-label="Visning">
-      <button type="button" class="tab" id="tab-all" aria-pressed="true">Alle sange</button>
-      <button type="button" class="tab" id="tab-program" aria-pressed="false">Aftenens program <span id="program-count" class="count"></span></button>
-    </nav>
+    <h1 class="index-title">Juletræssange</h1>
 
     <ol id="song-list" class="song-list"></ol>
     <p id="list-empty" class="list-empty" hidden></p>
@@ -67,8 +41,6 @@
         <span id="bar-title" class="bar-title"></span>
       </div>
       <button class="icon-button" id="short-button" type="button" aria-pressed="false" hidden>Kort</button>
-      <button class="icon-button" id="smaller-button" type="button" aria-label="Mindre tekst">A<span class="minus">−</span></button>
-      <button class="icon-button" id="larger-button" type="button" aria-label="Større tekst">A<span class="plus">+</span></button>
       <button class="icon-button" id="info-button" type="button" aria-label="Om sangen">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
       </button>
@@ -106,32 +78,9 @@
     </form>
   </dialog>
 
-  <dialog id="settings-dialog" class="sheet">
-    <form method="dialog" class="sheet-inner">
-      <h2>Indstillinger</h2>
-      <fieldset class="setting">
-        <legend>Tekststørrelse</legend>
-        <div class="size-control">
-          <button type="button" class="round-button" id="settings-smaller" aria-label="Mindre tekst">−</button>
-          <p class="size-preview" id="size-preview">Glade jul, dejlige jul</p>
-          <button type="button" class="round-button" id="settings-larger" aria-label="Større tekst">+</button>
-        </div>
-      </fieldset>
-      <fieldset class="setting">
-        <legend>Udseende</legend>
-        <div class="segmented">
-          <label><input type="radio" name="theme" value="dark"> Mørk</label>
-          <label><input type="radio" name="theme" value="light"> Lys</label>
-        </div>
-      </fieldset>
-      <p id="wake-lock-note" class="note"></p>
-      <button class="primary-button" value="close">Luk</button>
-    </form>
-  </dialog>
-
   <dialog id="share-dialog" class="sheet">
     <form method="dialog" class="sheet-inner share">
-      <h2>Del julesangene</h2>
+      <h2>Del juletræssangene</h2>
       <p>Lad de andre scanne koden med kameraet på deres telefon.</p>
       <div id="qr" class="qr"></div>
       <p id="share-url" class="share-url"></p>
@@ -144,7 +93,7 @@
       <h2>Om teksterne</h2>
       <p>Alle tekster er hentet fra den danske <a href="https://da.wikisource.org/wiki/Kategori:Julesange" target="_blank" rel="noopener">Wikisource</a> og er fri af ophavsret, fordi forfattere og oversættere døde for mere end 70 år siden.</p>
       <p>Nogle kendte julesange mangler, fordi teksten stadig er beskyttet, eller fordi vi ikke ved, hvem der har oversat den.</p>
-      <p>Ingen login, ingen reklamer, ingen sporing. Dine indstillinger gemmes kun på din egen telefon.</p>
+      <p>Ingen login, ingen reklamer, ingen sporing. Knib med to fingre for at gøre teksten større.</p>
       <button class="primary-button" value="close">Luk</button>
     </form>
   </dialog>

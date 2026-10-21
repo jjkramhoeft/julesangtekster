@@ -260,8 +260,16 @@ svg {
   padding: 24px var(--gutter) calc(env(safe-area-inset-bottom) + 20px);
 }
 
+.sheet-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
 .sheet h2 {
-  margin: 0 0 12px;
+  margin: 0;
   font-family: var(--font-lyrics);
   font-size: 26px;
   font-weight: 600;
@@ -275,7 +283,7 @@ svg {
   margin: 0 0 16px;
 }
 
-.facts dt { color: var(--muted); }
+.facts dt { color: var(--accent); }
 .facts dd { margin: 0; }
 
 .info-text {
@@ -284,18 +292,23 @@ svg {
   line-height: 1.5;
 }
 
-.info-source { font-size: 15px; }
-
-.primary-button {
-  width: 100%;
-  min-height: 52px;
-  margin-top: 12px;
-  border: 0;
-  border-radius: var(--radius);
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-weight: 700;
+.close-button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 40px;
+  padding: 0 12px 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
 }
+
+.close-button svg { width: 18px; height: 18px; }
+.close-button:active { background: var(--surface-2); }
 
 .qr {
   width: 168px;

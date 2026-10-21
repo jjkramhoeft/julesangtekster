@@ -52,11 +52,15 @@
   <!-- Dialogs -->
   <dialog id="info-dialog" class="sheet">
     <form method="dialog" class="sheet-inner">
-      <h2 id="info-title"></h2>
+      <div class="sheet-head">
+        <h2 id="info-title"></h2>
+        <button class="close-button" value="close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          Luk
+        </button>
+      </div>
       <dl id="info-facts" class="facts"></dl>
       <p id="info-text" class="info-text"></p>
-      <p class="info-source"><a id="info-source" target="_blank" rel="noopener">Teksten på Wikisource</a></p>
-      <button class="primary-button" value="close">Luk</button>
     </form>
   </dialog>
 

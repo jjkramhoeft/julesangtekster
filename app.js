@@ -248,19 +248,16 @@ function setupDialogs() {
   $('info-button').addEventListener('click', async () => {
     if (!state.current) return;
     const song = await loadSong(state.current);
-    $('info-title').textContent = `${song.idNumber}. ${song.title}`;
+    $('info-title').textContent = song.title;
     const facts = [
-      ['Type', song.type],
       [song.translator ? 'Original' : 'Tekst', song.author],
       ['Dansk tekst', song.translator],
       ['År', song.year],
       ['Den Danske Salmebog', song.dds && `nr. ${song.dds}`],
       ['Højskolesangbogen', song.hsb && `nr. ${song.hsb}`],
-      ['Vers', song.verses.length],
     ].filter(([, value]) => value);
     $('info-facts').replaceChildren(...facts.flatMap(([k, v]) => [el('dt', '', k), el('dd', '', String(v))]));
     $('info-text').textContent = song.extraInfo ?? '';
-    $('info-source').href = song.source?.url ?? 'https://da.wikisource.org/';
     $('info-dialog').showModal();
   });
 }

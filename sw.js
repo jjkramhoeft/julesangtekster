@@ -1,7 +1,7 @@
 // Service worker: keeps the app and every song available offline.
 // Bump VERSION when the app shell changes so phones pick up the new files.
 
-const VERSION = 'v9';
+const VERSION = 'v11';
 const CACHE = `julesange-${VERSION}`;
 
 const SHELL = [

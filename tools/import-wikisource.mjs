@@ -26,7 +26,8 @@ const SONGS = [
     extraInfo:
       'Peter Faber skrev sangen til sin egen familie julen 1847 under titlen »Juletræet«. ' +
       'Emil Hornemans melodi fra 1848 passede til den nye skik med at danse om juletræet. ' +
-      'Højskolesangbogen udelader vers 6 og 7, som handler om den lille William og bedstefar.',
+      'Højskolesangbogen udelader vers 6 og 7, som handler om den lille William og bedstefar – ' +
+      'det gør Udvalgte vers også.',
   },
   {
     id: 'glade-jul',

@@ -160,6 +160,6 @@ When you change the app shell (HTML, CSS or JS), bump `VERSION` in [sw.js](sw.js
 
 ### Choosing the verses for *Udvalgte vers*
 
-Each entry in `songs/index.json` has a `shortVersion` list with the verse numbers to show when the switch is on *Udvalgte vers*, for example `"shortVersion": [1, 3, 5, 7]`. To start with, every song uses its odd-numbered verses; edit the lists by hand to pick better ones. Re-running the importer keeps your lists, and new songs start with their odd verses.
+Each entry in `songs/index.json` has a `shortVersion` list with the verse numbers to show when the switch is on *Udvalgte vers*, for example `"shortVersion": [1, 3, 5, 7]`. The current lists come from [docs/research/carol-short-versions.md](docs/research/carol-short-versions.md): two follow a documented songbook version, short songs keep all their verses, and the rest are editorial picks. Edit the lists by hand to change them. Re-running the importer keeps your lists, and new songs start with their odd verses.
 
 Only add songs whose text is in the public domain, or that you have permission to publish.

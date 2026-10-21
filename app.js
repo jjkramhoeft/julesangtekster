@@ -80,12 +80,6 @@ function expandRepeats(lines) {
   return out;
 }
 
-function credit(song) {
-  const author = song.year && !song.translator ? `${song.author}, ${song.year}` : song.author;
-  if (!song.translator) return author === 'Traditionel' ? 'Traditionel' : `Tekst: ${author}`;
-  return `${song.author} · Dansk tekst: ${song.translator}${song.year ? `, ${song.year}` : ''}`;
-}
-
 function renderVerses(song) {
   const nodes = [];
 
@@ -106,7 +100,6 @@ function renderSong(song, direction) {
   const article = $('song');
   $('song-number').textContent = `Nr. ${song.idNumber}`;
   $('song-title').textContent = song.title;
-  $('song-credit').textContent = credit(song);
   document.title = `${song.idNumber}. ${song.title} – Juletræssange`;
 
   renderVerses(song);

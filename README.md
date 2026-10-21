@@ -134,7 +134,7 @@ tools/
 - `verses`: each verse is a list of lines, or an object with `lines` and a verse-specific `refrain`. Refrain lines are shown as ordinary lines.
 - `chorus`: lines repeated after every verse (*omkvæd*), shown as ordinary lines, or `null`.
 - `shortVersion`: the verse numbers to keep in a short version, for example `[1, 2, 3, 4, 5, 8]`, or `null`. Kept in the data, but the app does not show a short-version button at the moment.
-- Repeats are written `//: … ://` and shown as ‖: … :‖.
+- Repeats are written `//: … ://` (and may span several lines); the app writes the marked lines out twice.
 - `dds` and `hsb` are the numbers in *Den Danske Salmebog* and *Højskolesangbogen*.
 
 ## Running locally

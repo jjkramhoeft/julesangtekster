@@ -245,13 +245,6 @@ svg {
   text-wrap: pretty;
 }
 
-.repeat-sign {
-  color: var(--accent);
-  font-family: var(--font-ui);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.8em;
-}
 
 /* ---------- Dialogs ---------- */
 

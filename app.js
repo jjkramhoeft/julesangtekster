@@ -55,15 +55,29 @@ function renderList() {
 
 // ---------- Song view ----------
 
-// Repeat marks in the data are written "//: … ://".
 function renderLine(text, className = 'line') {
-  const p = el('p', className);
-  for (const part of text.split(/(\/\/:|:\/\/)/)) {
-    if (part === '//:') p.append(el('span', 'repeat-sign', '‖: '));
-    else if (part === '://') p.append(el('span', 'repeat-sign', ' :‖'));
-    else if (part) p.append(part);
+  return el('p', className, text);
+}
+
+// Repeat marks in the data are written "//: … ://" and can span several
+// lines. The marked lines are written out twice instead.
+function expandRepeats(lines) {
+  const out = [];
+  let group = null;
+  for (const line of lines) {
+    const opens = line.includes('//:');
+    const closes = line.includes('://');
+    const text = line.replace(/\/\/:\s*|\s*:\/\//g, '').trim();
+    if (opens) group = [];
+    if (group) group.push(text);
+    else out.push(text);
+    if (closes && group) {
+      out.push(...group, ...group);
+      group = null;
+    }
   }
-  return p;
+  if (group) out.push(...group);
+  return out;
 }
 
 function credit(song) {
@@ -82,7 +96,7 @@ function renderVerses(song) {
     const section = el('section', 'verse');
     section.setAttribute('aria-label', `Vers ${number}`);
     section.append(el('span', 'verse-number', String(number)));
-    for (const line of [...lines, ...(song.chorus ?? [])]) section.append(renderLine(line));
+    for (const line of expandRepeats([...lines, ...(song.chorus ?? [])])) section.append(renderLine(line));
     nodes.push(section);
   });
   $('verses').replaceChildren(...nodes);

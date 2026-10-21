@@ -492,5 +492,10 @@ for (const [i, song] of ordered.entries()) {
   });
   await sleep(1500);
 }
-await writeFile(new URL('index.json', OUT_DIR), JSON.stringify(index, null, 2) + '\n');
+// Keep each verse list on one line, e.g. "shortVersion": [1, 3, 5], so it is easy to edit.
+const indexJson = JSON.stringify(index, null, 2).replace(
+  /("shortVersion": )\[([^\]]*)\]/g,
+  (_, key, inner) => `${key}[${inner.split(',').map((n) => n.trim()).filter(Boolean).join(', ')}]`,
+);
+await writeFile(new URL('index.json', OUT_DIR), indexJson + '\n');
 console.log(`Wrote ${index.length} songs.`);

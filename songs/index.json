@@ -7,9 +7,7 @@
     "author": "H.C. Andersen",
     "composer": "Niels W. Gade, 1859",
     "verseCount": 2,
-    "shortVersion": [
-      1
-    ]
+    "shortVersion": [1]
   },
   {
     "id": "boern-og-voksne-i-kaerlig-krans",
@@ -19,10 +17,7 @@
     "author": "Elith Reumert",
     "composer": "J.P.E. Hartmann",
     "verseCount": 3,
-    "shortVersion": [
-      1,
-      3
-    ]
+    "shortVersion": [1, 3]
   },
   {
     "id": "dejlig-er-den-himmel-blaa",
@@ -32,12 +27,7 @@
     "author": "N.F.S. Grundtvig",
     "composer": "J.G. Meidell, ca. 1840",
     "verseCount": 7,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7
-    ]
+    "shortVersion": [1, 3, 5, 7]
   },
   {
     "id": "dejlig-er-jorden",
@@ -47,10 +37,7 @@
     "author": "B.S. Ingemann",
     "composer": "Schlesisk folkemelodi, 1700-tallet",
     "verseCount": 3,
-    "shortVersion": [
-      1,
-      3
-    ]
+    "shortVersion": [1, 3]
   },
   {
     "id": "den-yndigste-rose-er-funden",
@@ -60,12 +47,7 @@
     "author": "H.A. Brorson",
     "composer": "Wittenberg / Joseph Klug, 1542",
     "verseCount": 8,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7
-    ]
+    "shortVersion": [1, 3, 5, 7]
   },
   {
     "id": "det-kimer-nu-til-julefest",
@@ -75,13 +57,7 @@
     "author": "N.F.S. Grundtvig",
     "composer": "C.C.N. Balle, 1850",
     "verseCount": 9,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7,
-      9
-    ]
+    "shortVersion": [1, 3, 5, 7, 9]
   },
   {
     "id": "en-rose-saa-jeg-skyde",
@@ -91,9 +67,7 @@
     "author": "Tysk, 1500-tallet",
     "composer": "Tysk folkemelodi, Köln 1599",
     "verseCount": 2,
-    "shortVersion": [
-      1
-    ]
+    "shortVersion": [1]
   },
   {
     "id": "et-barn-er-foedt-i-betlehem",
@@ -103,13 +77,7 @@
     "author": "N.F.S. Grundtvig",
     "composer": "Tysk sang fra ca. 1600, bearbejdet af A.P. Berggreen 1849",
     "verseCount": 10,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7,
-      9
-    ]
+    "shortVersion": [1, 3, 5, 7, 9]
   },
   {
     "id": "et-lidet-barn-saa-lysteligt",
@@ -119,9 +87,7 @@
     "author": "Arvid Pedersen og N.F.S. Grundtvig",
     "composer": "1400-tallet / Joseph Klug, 1533",
     "verseCount": 2,
-    "shortVersion": [
-      1
-    ]
+    "shortVersion": [1]
   },
   {
     "id": "fra-himlen-hoejt-kom-budskab-her",
@@ -131,13 +97,7 @@
     "author": "Martin Luther",
     "composer": "Tilskrevet Martin Luther, 1539",
     "verseCount": 10,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7,
-      9
-    ]
+    "shortVersion": [1, 3, 5, 7, 9]
   },
   {
     "id": "glade-jul",
@@ -147,10 +107,7 @@
     "author": "B.S. Ingemann",
     "composer": "Franz Xaver Gruber, 1818",
     "verseCount": 4,
-    "shortVersion": [
-      1,
-      3
-    ]
+    "shortVersion": [1, 3]
   },
   {
     "id": "her-kommer-jesus-dine-smaa",
@@ -160,13 +117,7 @@
     "author": "H.A. Brorson",
     "composer": "J.A.P. Schulz, 1786",
     "verseCount": 9,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7,
-      9
-    ]
+    "shortVersion": [1, 3, 5, 7, 9]
   },
   {
     "id": "hjerte-loeft-din-glaedes-vinger",
@@ -176,12 +127,7 @@
     "author": "Paul Gerhardt",
     "composer": "Johann Crüger, 1653",
     "verseCount": 7,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7
-    ]
+    "shortVersion": [1, 3, 5, 7]
   },
   {
     "id": "hoejt-fra-traeets-groenne-top",
@@ -191,12 +137,7 @@
     "author": "Peter Faber",
     "composer": "Emil Horneman, 1848",
     "verseCount": 8,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7
-    ]
+    "shortVersion": [1, 3, 5, 7]
   },
   {
     "id": "i-denne-soede-juletid",
@@ -206,12 +147,7 @@
     "author": "H.A. Brorson",
     "composer": "C.C.N. Balle, 1855",
     "verseCount": 7,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7
-    ]
+    "shortVersion": [1, 3, 5, 7]
   },
   {
     "id": "julen-har-bragt-velsignet-bud",
@@ -221,10 +157,7 @@
     "author": "B.S. Ingemann",
     "composer": "C.E.F. Weyse, 1841",
     "verseCount": 3,
-    "shortVersion": [
-      1,
-      3
-    ]
+    "shortVersion": [1, 3]
   },
   {
     "id": "kimer-i-klokker",
@@ -234,10 +167,7 @@
     "author": "N.F.S. Grundtvig",
     "composer": "Henrik Rung, 1857",
     "verseCount": 3,
-    "shortVersion": [
-      1,
-      3
-    ]
+    "shortVersion": [1, 3]
   },
   {
     "id": "lad-det-klinge-soedt-i-sky",
@@ -247,10 +177,7 @@
     "author": "Claus Mortensen, N.F.S. Grundtvig og Thomas Laub",
     "composer": "Middelalderlig (Resonet in laudibus), bearbejdet af Thomas Laub 1890",
     "verseCount": 3,
-    "shortVersion": [
-      1,
-      3
-    ]
+    "shortVersion": [1, 3]
   },
   {
     "id": "nu-er-det-jul-igen",
@@ -260,9 +187,7 @@
     "author": "Traditionel",
     "composer": "Svensk-dansk folkemelodi",
     "verseCount": 2,
-    "shortVersion": [
-      1
-    ]
+    "shortVersion": [1]
   },
   {
     "id": "sikken-voldsom-traengsel-og-alarm",
@@ -272,12 +197,7 @@
     "author": "Peter Faber",
     "composer": "Adolf Müller, 1833 (ofte tilskrevet Emil Horneman)",
     "verseCount": 7,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7
-    ]
+    "shortVersion": [1, 3, 5, 7]
   },
   {
     "id": "velkommen-igen-guds-engle-smaa",
@@ -287,11 +207,6 @@
     "author": "N.F.S. Grundtvig",
     "composer": "A.P. Berggreen, 1832",
     "verseCount": 8,
-    "shortVersion": [
-      1,
-      3,
-      5,
-      7
-    ]
+    "shortVersion": [1, 3, 5, 7]
   }
 ]

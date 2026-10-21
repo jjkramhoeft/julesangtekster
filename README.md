@@ -118,6 +118,7 @@ tools/
   "author": "B.S. Ingemann",
   "translator": null,
   "year": 1850,
+  "composer": "Franz Xaver Gruber, 1818",
   "dds": 120,
   "hsb": 249,
   "extraInfo": "Ingemanns tekst er skrevet til …",
@@ -135,6 +136,7 @@ tools/
 - `chorus`: lines repeated after every verse (*omkvæd*), shown as ordinary lines, or `null`.
 - `shortVersion`: the verse numbers to keep in a short version, for example `[1, 2, 3, 4, 5, 8]`, or `null`. Kept in the data, but the app does not show a short-version button at the moment.
 - Repeats are written `//: … ://` (and may span several lines); the app writes the marked lines out twice.
+- `composer`: who wrote the melody, in Danish (shown as *Melodi* in the info pop-up). Sources are in [docs/research/carol-melody-composers.md](docs/research/carol-melody-composers.md).
 - `dds` and `hsb` are the numbers in *Den Danske Salmebog* and *Højskolesangbogen*.
 
 ## Running locally
@@ -154,6 +156,6 @@ When you change the app shell (HTML, CSS or JS), bump `VERSION` in [sw.js](sw.js
 ## Adding a song
 
 - **From Wikisource:** add an entry to `SONGS` in [tools/import-wikisource.mjs](tools/import-wikisource.mjs) and run `node tools/import-wikisource.mjs`. This rewrites every song file and `songs/index.json`, and warns if a verse count does not match `expectedVerses`.
-- **By hand:** add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `title`, `firstLine`, `author`, `verseCount`).
+- **By hand:** add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `title`, `firstLine`, `author`, `composer`, `verseCount`).
 
 Only add songs whose text is in the public domain, or that you have permission to publish.

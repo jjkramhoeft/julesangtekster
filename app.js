@@ -253,6 +253,7 @@ function setupDialogs() {
       [song.translator ? 'Original' : 'Tekst', song.author],
       ['Dansk tekst', song.translator],
       ['År', song.year],
+      ['Melodi', song.composer],
       ['Den Danske Salmebog', song.dds && `nr. ${song.dds}`],
       ['Højskolesangbogen', song.hsb && `nr. ${song.hsb}`],
     ].filter(([, value]) => value);

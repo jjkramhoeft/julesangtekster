@@ -213,21 +213,17 @@ svg {
 }
 
 .verse {
-  position: relative;
   margin: 0 0 1.2em;
-  padding-left: 1.4em;
 }
 
+/* The number sits on its own line so the verse can use the full width. */
 .verse-number {
-  position: absolute;
-  left: 0;
-  top: 0.05em;
-  width: 1.05em;
+  display: block;
+  margin-bottom: 0.1em;
   color: var(--accent);
   font-family: var(--font-ui);
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 700;
-  text-align: right;
   font-variant-numeric: tabular-nums;
 }
 

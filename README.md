@@ -39,31 +39,31 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 
 ## Songs
 
-The app ships with 21 carols. Their texts are imported from Danish Wikisource and are in the public domain: every author and translator died more than 70 years ago (ophavsretsloven § 63). The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
+The app ships with 21 carols, numbered in Danish alphabetical order. Their texts are imported from Danish Wikisource and are in the public domain: every author and translator died more than 70 years ago (ophavsretsloven § 63). The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
 
 | # | Title | Text |
 | --- | --- | --- |
-| 1 | Højt fra træets grønne top | Peter Faber |
-| 2 | Glade jul, dejlige jul | B.S. Ingemann |
-| 3 | Et barn er født i Betlehem | N.F.S. Grundtvig |
-| 4 | Dejlig er den himmel blå | N.F.S. Grundtvig |
-| 5 | Nu er det jul igen | Traditional |
+| 1 | Barn Jesus i en krybbe lå | H.C. Andersen |
+| 2 | Børn og voksne i kærlig krans | Elith Reumert |
+| 3 | Dejlig er den himmel blå | N.F.S. Grundtvig |
+| 4 | Dejlig er jorden | B.S. Ingemann |
+| 5 | Den yndigste rose er funden | H.A. Brorson |
 | 6 | Det kimer nu til julefest | N.F.S. Grundtvig |
-| 7 | Julen har bragt velsignet bud | B.S. Ingemann |
-| 8 | Dejlig er jorden | B.S. Ingemann |
-| 9 | I denne søde juletid | H.A. Brorson |
-| 10 | Sikken voldsom trængsel og alarm | Peter Faber |
-| 11 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
-| 12 | Kimer, I klokker | N.F.S. Grundtvig |
-| 13 | Barn Jesus i en krybbe lå | H.C. Andersen |
-| 14 | Her kommer, Jesus, dine små | H.A. Brorson |
-| 15 | Den yndigste rose er funden | H.A. Brorson |
-| 16 | Hjerte, løft din glædes vinger | Paul Gerhardt, Danish text C.J. Brandt |
-| 17 | Lad det klinge sødt i sky | Claus Mortensen, N.F.S. Grundtvig and Thomas Laub |
-| 18 | Fra himlen højt kom budskab her | Martin Luther, Danish text J.L.A. Kolderup-Rosenvinge |
-| 19 | Et lidet barn så lysteligt | Arvid Pedersen and N.F.S. Grundtvig |
-| 20 | En rose så jeg skyde (verses 1–2) | Thomas Laub |
-| 21 | Børn og voksne i kærlig krans | Elith Reumert |
+| 7 | En rose så jeg skyde (verses 1–2) | Thomas Laub |
+| 8 | Et barn er født i Betlehem | N.F.S. Grundtvig |
+| 9 | Et lidet barn så lysteligt | Arvid Pedersen and N.F.S. Grundtvig |
+| 10 | Fra himlen højt kom budskab her | Martin Luther, Danish text J.L.A. Kolderup-Rosenvinge |
+| 11 | Glade jul, dejlige jul | B.S. Ingemann |
+| 12 | Her kommer, Jesus, dine små | H.A. Brorson |
+| 13 | Hjerte, løft din glædes vinger | Paul Gerhardt, Danish text C.J. Brandt |
+| 14 | Højt fra træets grønne top | Peter Faber |
+| 15 | I denne søde juletid | H.A. Brorson |
+| 16 | Julen har bragt velsignet bud | B.S. Ingemann |
+| 17 | Kimer, I klokker | N.F.S. Grundtvig |
+| 18 | Lad det klinge sødt i sky | Claus Mortensen, N.F.S. Grundtvig and Thomas Laub |
+| 19 | Nu er det jul igen | Traditional |
+| 20 | Sikken voldsom trængsel og alarm | Peter Faber |
+| 21 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
 
 ### Copyright
 
@@ -100,7 +100,7 @@ tools/
 
 ### How the app is used
 
-- **Index:** a numbered list of all songs under the title *Juletræssange*.
+- **Index:** a list of all songs in alphabetical order, numbered 1–21, under the title *Juletræssange*. Swiping on a song page follows the same order.
 - **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
 - **ⓘ** at the top right shows facts and a short story about the song.
@@ -111,7 +111,7 @@ tools/
 ```json
 {
   "id": "glade-jul",
-  "idNumber": 2,
+  "idNumber": 11,
   "title": "Glade jul, dejlige jul",
   "firstLine": "Glade jul, dejlige jul",
   "type": "julesalme",

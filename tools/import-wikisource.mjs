@@ -441,9 +441,13 @@ function buildSong(song, number, parsed) {
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// Songs are numbered in Danish alphabetical order of their titles (æ, ø, å last).
+const byTitle = new Intl.Collator('da').compare;
+const ordered = [...SONGS].sort((a, b) => byTitle(a.title, b.title));
+
 await mkdir(OUT_DIR, { recursive: true });
 const index = [];
-for (const [i, song] of SONGS.entries()) {
+for (const [i, song] of ordered.entries()) {
   const number = i + 1;
   console.log(`${number}. ${song.title}`);
   const data = buildSong(song, number, await fetchPage(song.page));

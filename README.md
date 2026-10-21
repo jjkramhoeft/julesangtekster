@@ -29,7 +29,7 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 ### Nice to have
 - **Both title and number** for carols (some titles are quite similar)
 - **Verse numbers** shown clearly, so "let's skip to verse 4" works.
-- **A Short Version button** to easly hide a predifined set of verses for eash carol
+- **A Short Version switch** (*Udvalgte vers* / *Alle vers*) to show only a predefined set of verses for each carol
 - **Chorus** (*omkvæd*) written out in each verse as plain text, like the rest of the lyrics.
 - **An info pop up** for each carol with meta data and a short story about the carol
 
@@ -76,7 +76,7 @@ In practice, a site on GitHub Pages is public, so the app only ships texts that 
 - Plain HTML, CSS and JavaScript. No build step and no dependencies at runtime, apart from a vendored QR code generator ([vendor/qrcode.js](vendor/qrcode.js), MIT).
 - Songs are stored as one data file per song in `songs/`, with title, author, translator, source and verses (with an optional info text).
 - A web app manifest and a service worker make the app installable and offline-capable. Every song is cached on the first visit, so it works without signal by the tree.
-- Nothing is stored on the device apart from the offline cache. Light/dark follows the system setting.
+- The only stored setting is the *Udvalgte vers* / *Alle vers* switch, kept in the browser's `localStorage`. Light/dark follows the system setting.
 - Hosted as a static site, for example on GitHub Pages. All paths are relative, so it works from a sub-path such as `/julesangtekster/`.
 
 ### Structure
@@ -101,6 +101,7 @@ tools/
 ### How the app is used
 
 - **Index:** a list of all songs in alphabetical order, numbered 1–21, under the title *Juletræssange*. Swiping on a song page follows the same order.
+- **Udvalgte vers / Alle vers:** the switch under the title picks whether song pages show only the selected verses (left) or every verse (right). The choice is remembered on the phone. Verse numbers keep their original numbering, so skipped verses are visible as gaps.
 - **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
 - **ⓘ** at the top right shows facts and a short story about the song.
@@ -122,7 +123,6 @@ tools/
   "dds": 120,
   "hsb": 249,
   "extraInfo": "Ingemanns tekst er skrevet til …",
-  "shortVersion": null,
   "source": { "name": "Wikisource", "url": "https://da.wikisource.org/w/index.php?oldid=36046", "revision": 36046, "license": "…" },
   "chorus": null,
   "verses": [
@@ -134,7 +134,7 @@ tools/
 
 - `verses`: each verse is a list of lines, or an object with `lines` and a verse-specific `refrain`. Refrain lines are shown as ordinary lines.
 - `chorus`: lines repeated after every verse (*omkvæd*), shown as ordinary lines, or `null`.
-- `shortVersion`: the verse numbers to keep in a short version, for example `[1, 2, 3, 4, 5, 8]`, or `null`. Kept in the data, but the app does not show a short-version button at the moment.
+- The verses for *Udvalgte vers* are not in the song file; they are the `shortVersion` list in `songs/index.json` (see below).
 - Repeats are written `//: … ://` (and may span several lines); the app writes the marked lines out twice.
 - `composer`: who wrote the melody, in Danish (shown as *Melodi* in the info pop-up). Sources are in [docs/research/carol-melody-composers.md](docs/research/carol-melody-composers.md).
 - `dds` and `hsb` are the numbers in *Den Danske Salmebog* and *Højskolesangbogen*.
@@ -156,6 +156,10 @@ When you change the app shell (HTML, CSS or JS), bump `VERSION` in [sw.js](sw.js
 ## Adding a song
 
 - **From Wikisource:** add an entry to `SONGS` in [tools/import-wikisource.mjs](tools/import-wikisource.mjs) and run `node tools/import-wikisource.mjs`. This rewrites every song file and `songs/index.json`, and warns if a verse count does not match `expectedVerses`.
-- **By hand:** add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `title`, `firstLine`, `author`, `composer`, `verseCount`).
+- **By hand:** add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `title`, `firstLine`, `author`, `composer`, `verseCount`, `shortVersion`).
+
+### Choosing the verses for *Udvalgte vers*
+
+Each entry in `songs/index.json` has a `shortVersion` list with the verse numbers to show when the switch is on *Udvalgte vers*, for example `"shortVersion": [1, 3, 5, 7]`. To start with, every song uses its odd-numbered verses; edit the lists by hand to pick better ones. Re-running the importer keeps your lists, and new songs start with their odd verses.
 
 Only add songs whose text is in the public domain, or that you have permission to publish.

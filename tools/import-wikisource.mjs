@@ -6,7 +6,7 @@
 // Only songs whose text is public domain in Denmark are listed. Requests are
 // throttled because Wikisource rate-limits rapid API calls.
 
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const API = 'https://da.wikisource.org/w/api.php';
 const USER_AGENT = 'CarolLyricsImporter/1.0 (https://github.com/jjkramhoeft/julesangtekster)';
@@ -23,12 +23,10 @@ const SONGS = [
     composer: 'Emil Horneman, 1848',
     hsb: 260,
     expectedVerses: 8,
-    shortVersion: [1, 2, 3, 4, 5, 8],
     extraInfo:
       'Peter Faber skrev sangen til sin egen familie julen 1847 under titlen »Juletræet«. ' +
       'Emil Hornemans melodi fra 1848 passede til den nye skik med at danse om juletræet. ' +
-      'Højskolesangbogen udelader vers 6 og 7, som handler om den lille William og bedstefar – ' +
-      'det gør den korte udgave her også.',
+      'Højskolesangbogen udelader vers 6 og 7, som handler om den lille William og bedstefar.',
   },
   {
     id: 'glade-jul',
@@ -449,7 +447,6 @@ function buildSong(song, number, parsed) {
     dds: song.dds ?? null,
     hsb: song.hsb ?? null,
     extraInfo: song.extraInfo,
-    shortVersion: song.shortVersion ?? null,
     source: {
       name: 'Wikisource',
       url: `https://da.wikisource.org/w/index.php?oldid=${parsed.revid}`,
@@ -467,6 +464,15 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const byTitle = new Intl.Collator('da').compare;
 const ordered = [...SONGS].sort((a, b) => byTitle(a.title, b.title));
 
+// The verses for "Udvalgte vers" are chosen by hand in songs/index.json, so keep
+// the existing choice. New songs start with the odd-numbered verses.
+const previous = new Map();
+try {
+  const old = JSON.parse(await readFile(new URL('index.json', OUT_DIR), 'utf8'));
+  for (const s of old) previous.set(s.id, s.shortVersion);
+} catch {}
+const oddVerses = (count) => Array.from({ length: count }, (_, i) => i + 1).filter((n) => n % 2 === 1);
+
 await mkdir(OUT_DIR, { recursive: true });
 const index = [];
 for (const [i, song] of ordered.entries()) {
@@ -482,6 +488,7 @@ for (const [i, song] of ordered.entries()) {
     author: data.author,
     composer: data.composer,
     verseCount: data.verses.length,
+    shortVersion: previous.get(data.id) ?? oddVerses(data.verses.length),
   });
   await sleep(1500);
 }

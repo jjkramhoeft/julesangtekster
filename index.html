@@ -21,6 +21,12 @@
   <main id="index-view" class="view" hidden>
     <h1 class="index-title">Juletræssange</h1>
 
+    <div class="verse-switch">
+      <button type="button" class="switch-label" id="label-short">Udvalgte vers</button>
+      <input type="checkbox" class="switch" id="all-verses" role="switch" aria-label="Alle vers">
+      <button type="button" class="switch-label" id="label-all">Alle vers</button>
+    </div>
+
     <ol id="song-list" class="song-list"></ol>
     <p id="list-empty" class="list-empty" hidden></p>
 

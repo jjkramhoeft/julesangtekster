@@ -3,6 +3,25 @@
 
 const $ = (id) => document.getElementById(id);
 
+// "all" shows every verse, "short" only the verses listed in shortVersion.
+const VERSES_KEY = 'julesange.verses';
+
+// localStorage can be unavailable (private mode, blocked storage), so fall
+// back to showing all verses.
+function versesSetting() {
+  try {
+    return localStorage.getItem(VERSES_KEY) === 'short' ? 'short' : 'all';
+  } catch {
+    return 'all';
+  }
+}
+
+function saveVersesSetting(value) {
+  try {
+    localStorage.setItem(VERSES_KEY, value);
+  } catch {}
+}
+
 const state = {
   songs: [],
   byId: new Map(),
@@ -53,6 +72,24 @@ function renderList() {
   );
 }
 
+function renderVerseSwitch() {
+  const all = versesSetting() === 'all';
+  $('all-verses').checked = all;
+  $('label-all').setAttribute('aria-current', String(all));
+  $('label-short').setAttribute('aria-current', String(!all));
+}
+
+function setupVerseSwitch() {
+  const set = (value) => {
+    saveVersesSetting(value);
+    renderVerseSwitch();
+  };
+  $('all-verses').addEventListener('change', (e) => set(e.target.checked ? 'all' : 'short'));
+  $('label-short').addEventListener('click', () => set('short'));
+  $('label-all').addEventListener('click', () => set('all'));
+  renderVerseSwitch();
+}
+
 // ---------- Song view ----------
 
 function renderLine(text, className = 'line') {
@@ -82,9 +119,11 @@ function expandRepeats(lines) {
 
 function renderVerses(song) {
   const nodes = [];
+  const chosen = versesSetting() === 'short' ? state.byId.get(song.id)?.shortVersion : null;
 
   song.verses.forEach((verse, i) => {
     const number = i + 1;
+    if (chosen?.length && !chosen.includes(number)) return;
     // Refrain and chorus lines are shown as ordinary lines of the verse.
     const lines = Array.isArray(verse) ? verse : [...verse.lines, ...(verse.refrain ?? [])];
     const section = el('section', 'verse');
@@ -290,6 +329,7 @@ function qrSvg(text) {
 async function start() {
   setupDialogs();
   setupGestures();
+  setupVerseSwitch();
 
   $('back-button').addEventListener('click', () => {
     location.hash = '#/';

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "hoejt-fra-traeets-groenne-top",
+    "idNumber": 1,
+    "title": "Højt fra træets grønne top",
+    "firstLine": "Højt fra træets grønne top",
+    "author": "Peter Faber",
+    "verseCount": 8
+  },
+  {
+    "id": "glade-jul",
+    "idNumber": 2,
+    "title": "Glade jul, dejlige jul",
+    "firstLine": "Glade jul, dejlige jul",
+    "author": "B.S. Ingemann",
+    "verseCount": 4
+  },
+  {
+    "id": "et-barn-er-foedt-i-betlehem",
+    "idNumber": 3,
+    "title": "Et barn er født i Betlehem",
+    "firstLine": "Et barn er født i Bethlehem",
+    "author": "N.F.S. Grundtvig",
+    "verseCount": 10
+  },
+  {
+    "id": "dejlig-er-den-himmel-blaa",
+    "idNumber": 4,
+    "title": "Dejlig er den himmel blå",
+    "firstLine": "Dejlig er den himmel blå",
+    "author": "N.F.S. Grundtvig",
+    "verseCount": 7
+  },
+  {
+    "id": "nu-er-det-jul-igen",
+    "idNumber": 5,
+    "title": "Nu er det jul igen",
+    "firstLine": "Nu’ det jul igen",
+    "author": "Traditionel",
+    "verseCount": 2
+  },
+  {
+    "id": "det-kimer-nu-til-julefest",
+    "idNumber": 6,
+    "title": "Det kimer nu til julefest",
+    "firstLine": "Det kimer nu til julefest",
+    "author": "N.F.S. Grundtvig",
+    "verseCount": 9
+  },
+  {
+    "id": "julen-har-bragt-velsignet-bud",
+    "idNumber": 7,
+    "title": "Julen har bragt velsignet bud",
+    "firstLine": "Julen har bragt velsignet bud",
+    "author": "B.S. Ingemann",
+    "verseCount": 3
+  },
+  {
+    "id": "dejlig-er-jorden",
+    "idNumber": 8,
+    "title": "Dejlig er jorden",
+    "firstLine": "Dejlig er jorden",
+    "author": "B.S. Ingemann",
+    "verseCount": 3
+  },
+  {
+    "id": "i-denne-soede-juletid",
+    "idNumber": 9,
+    "title": "I denne søde juletid",
+    "firstLine": "I denne søde juletid",
+    "author": "H.A. Brorson",
+    "verseCount": 7
+  },
+  {
+    "id": "sikken-voldsom-traengsel-og-alarm",
+    "idNumber": 10,
+    "title": "Sikken voldsom trængsel og alarm",
+    "firstLine": "Sikken voldsom trængsel og alarm",
+    "author": "Peter Faber",
+    "verseCount": 7
+  },
+  {
+    "id": "velkommen-igen-guds-engle-smaa",
+    "idNumber": 11,
+    "title": "Velkommen igen, Guds engle små",
+    "firstLine": "Velkommen igen, Guds engle små",
+    "author": "N.F.S. Grundtvig",
+    "verseCount": 8
+  },
+  {
+    "id": "kimer-i-klokker",
+    "idNumber": 12,
+    "title": "Kimer, I klokker",
+    "firstLine": "Kimer, I klokker, ja, kimer før dag i det dunkle",
+    "author": "N.F.S. Grundtvig",
+    "verseCount": 3
+  },
+  {
+    "id": "barn-jesus-i-en-krybbe-laa",
+    "idNumber": 13,
+    "title": "Barn Jesus i en krybbe lå",
+    "firstLine": "Barn Jesus i en Krybbe laae",
+    "author": "H.C. Andersen",
+    "verseCount": 2
+  },
+  {
+    "id": "her-kommer-jesus-dine-smaa",
+    "idNumber": 14,
+    "title": "Her kommer, Jesus, dine små",
+    "firstLine": "Her kommer, Jesus, dine små",
+    "author": "H.A. Brorson",
+    "verseCount": 9
+  },
+  {
+    "id": "den-yndigste-rose-er-funden",
+    "idNumber": 15,
+    "title": "Den yndigste rose er funden",
+    "firstLine": "Den yndigste rose er funden",
+    "author": "H.A. Brorson",
+    "verseCount": 8
+  },
+  {
+    "id": "hjerte-loeft-din-glaedes-vinger",
+    "idNumber": 16,
+    "title": "Hjerte, løft din glædes vinger",
+    "firstLine": "Hjerte, løft din glædes vinger",
+    "author": "Paul Gerhardt",
+    "verseCount": 7
+  },
+  {
+    "id": "lad-det-klinge-soedt-i-sky",
+    "idNumber": 17,
+    "title": "Lad det klinge sødt i sky",
+    "firstLine": "Lad det klinge sødt i sky",
+    "author": "Claus Mortensen, N.F.S. Grundtvig og Thomas Laub",
+    "verseCount": 3
+  },
+  {
+    "id": "fra-himlen-hoejt-kom-budskab-her",
+    "idNumber": 18,
+    "title": "Fra himlen højt kom budskab her",
+    "firstLine": "Fra himlen højt kom budskab her",
+    "author": "Martin Luther",
+    "verseCount": 10
+  },
+  {
+    "id": "et-lidet-barn-saa-lysteligt",
+    "idNumber": 19,
+    "title": "Et lidet barn så lysteligt",
+    "firstLine": "Et lidet barn så lysteligt",
+    "author": "Arvid Pedersen og N.F.S. Grundtvig",
+    "verseCount": 2
+  },
+  {
+    "id": "en-rose-saa-jeg-skyde",
+    "idNumber": 20,
+    "title": "En rose så jeg skyde",
+    "firstLine": "En rose så jeg skyde",
+    "author": "Tysk, 1500-tallet",
+    "verseCount": 2
+  },
+  {
+    "id": "boern-og-voksne-i-kaerlig-krans",
+    "idNumber": 21,
+    "title": "Børn og voksne i kærlig krans",
+    "firstLine": "Børn og voksne i kærlig krans",
+    "author": "Elith Reumert",
+    "verseCount": 3
+  }
+]

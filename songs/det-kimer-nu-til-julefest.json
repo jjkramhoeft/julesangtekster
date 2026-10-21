@@ -1,0 +1,77 @@
+{
+  "id": "det-kimer-nu-til-julefest",
+  "idNumber": 6,
+  "title": "Det kimer nu til julefest",
+  "firstLine": "Det kimer nu til julefest",
+  "type": "julesalme",
+  "author": "N.F.S. Grundtvig",
+  "translator": null,
+  "year": 1817,
+  "dds": 94,
+  "hsb": 241,
+  "extraInfo": "Grundtvig skrev salmen i 1817 med inspiration fra Luther og reviderede den i 1852. Melodien er af C.C.N. Balle fra 1850. Den åbner ofte gudstjenesten juleaften.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=35361",
+    "revision": 35361,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Det kimer nu til julefest,",
+      "det kimer for den høje gæst,",
+      "som steg til lave hytter ned",
+      "med nytårsgaver: fryd og fred."
+    ],
+    [
+      "O, kommer med til Davids by,",
+      "hvor engle sjunger under sky,",
+      "o, ganger med på marken ud,",
+      "hvor hyrder hører nyt fra Gud!"
+    ],
+    [
+      "Og lad os gå med stille sind",
+      "som hyrderne til barnet ind,",
+      "med glædestårer takke Gud",
+      "for miskundhed og nådesbud!"
+    ],
+    [
+      "O Jesus, verden vid og lang",
+      "til vugge var dig dog for trang,",
+      "for ringe, om med guld tilredt",
+      "og perlestukken, silkebredt."
+    ],
+    [
+      "Men verdens ære, magt og guld",
+      "for dig er ikkun støv og muld,",
+      "i krybben lagt, i klude svøbt,",
+      "et himmelsk liv du har mig købt."
+    ],
+    [
+      "Velan, min sjæl, så vær nu glad,",
+      "og hold din jul i Davids stad,",
+      "ja, pris din Gud i allen stund",
+      "med liflig sang af hjertens grund!"
+    ],
+    [
+      "Ja, sjunge hver, som sjunge kan:",
+      "Nu tændtes lys i skyggers land,",
+      "og ret som midnatshanen gol,",
+      "blev Jakobs stjerne til en sol!"
+    ],
+    [
+      "Nu kom han, patriarkers håb,",
+      "med flammeord og himmeldåb,",
+      "og barnet tyder nu i vang,",
+      "hvad David dunkelt så og sang."
+    ],
+    [
+      "Kom, Jesus, vær min hyttegæst,",
+      "hold selv i os din julefest,",
+      "da skal med Davidsharpens klang",
+      "dig takke højt vor nytårssang!"
+    ]
+  ]
+}

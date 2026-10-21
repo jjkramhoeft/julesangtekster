@@ -1,0 +1,41 @@
+{
+  "id": "en-rose-saa-jeg-skyde",
+  "idNumber": 20,
+  "title": "En rose så jeg skyde",
+  "firstLine": "En rose så jeg skyde",
+  "type": "julesalme",
+  "author": "Tysk, 1500-tallet",
+  "translator": "Thomas Laub",
+  "year": 1920,
+  "dds": 117,
+  "hsb": 236,
+  "extraInfo": "Vers 1–2 er Thomas Laubs oversættelse fra 1920 af en tysk tekst i Praetorius’ udgave fra 1609. Salmebogens vers 3 er oversat af Uffe Hansen i 1935 og er stadig ophavsretligt beskyttet, så det er ikke med her.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=431254",
+    "revision": 431254,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "En rose så jeg skyde",
+      "op af den frosne jord,",
+      "alt som os fordum spå'de",
+      "profetens trøsteord.",
+      "Den rose spired frem",
+      "midt i den kolde vinter",
+      "om nat ved Betlehem."
+    ],
+    [
+      "For rosen nu jeg kvæder",
+      "omkap med Himlens hær:",
+      "En jomfru var hans moder,",
+      "Maria ren og skær.",
+      "I ham brød lyset frem",
+      "midt i den mørke vinter",
+      "om nat ved Betlehem."
+    ]
+  ]
+}

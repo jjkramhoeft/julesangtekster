@@ -1,0 +1,41 @@
+{
+  "id": "barn-jesus-i-en-krybbe-laa",
+  "idNumber": 13,
+  "title": "Barn Jesus i en krybbe lå",
+  "firstLine": "Barn Jesus i en Krybbe laae",
+  "type": "julesalme",
+  "author": "H.C. Andersen",
+  "translator": null,
+  "year": 1832,
+  "dds": 103,
+  "hsb": 247,
+  "extraInfo": "En af de få salmer af H.C. Andersen, skrevet i 1832. Melodien er af Niels W. Gade fra 1859. Teksten her har den oprindelige stavemåde fra 1832.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=40829",
+    "revision": 40829,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Barn Jesus i en Krybbe laae,",
+      "Skjøndt Himlen var hans Eie;",
+      "Hans Pude her blev Hø og Straa,",
+      "Mørkt var det om hans Leie!",
+      "Men Stjernen over Huset stod,",
+      "Og Oxen kyssed' Barnets Fod,",
+      "Halleluja, Barn Jesus!"
+    ],
+    [
+      "Hver sorgfuld Sjæl, bliv karsk og glad,",
+      "Ryst af din tunge Smerte,",
+      "Et Barn er født i Davids Stad,",
+      "Til Trøst for hvert et Hjerte;",
+      "Til Barnet vil vi stige ind,",
+      "Og blive Børn i Sjæl og Sind.",
+      "Halleluja, Barn Jesus!"
+    ]
+  ]
+}

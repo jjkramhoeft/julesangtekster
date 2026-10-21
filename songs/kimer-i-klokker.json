@@ -1,0 +1,44 @@
+{
+  "id": "kimer-i-klokker",
+  "idNumber": 12,
+  "title": "Kimer, I klokker",
+  "firstLine": "Kimer, I klokker, ja, kimer før dag i det dunkle",
+  "type": "julesalme",
+  "author": "N.F.S. Grundtvig",
+  "translator": null,
+  "year": 1856,
+  "dds": 100,
+  "hsb": 246,
+  "extraInfo": "Grundtvig skrev salmen i 1856. Melodien er af Henrik Rung fra 1857.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=431366",
+    "revision": 431366,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Kimer, I klokker, ja, kimer før dag i det dunkle!",
+      "Tindrer, I stjerner, som englenes øjne kan funkle!",
+      "Fred kom til jord,",
+      "Himmelens fred med Guds ord.",
+      "Æren er Guds i det høje!"
+    ],
+    [
+      "Julen er kommen med solhverv for hjerterne bange,",
+      "jul med Gudsbarnet i svøb under englenes sange,",
+      "kommer fra Gud,",
+      "bringer os glædskabens bud.",
+      "Æren er Guds i det høje!"
+    ],
+    [
+      "Synger og danser og klapper i eders småhænder,",
+      "menneskebørnene alle til jorderigs ender!",
+      "Født er i dag",
+      "barnet til Guds velbehag.",
+      "Æren er Guds i det høje!"
+    ]
+  ]
+}

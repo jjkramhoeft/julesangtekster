@@ -1,0 +1,53 @@
+{
+  "id": "lad-det-klinge-soedt-i-sky",
+  "idNumber": 17,
+  "title": "Lad det klinge sødt i sky",
+  "firstLine": "Lad det klinge sødt i sky",
+  "type": "julesalme",
+  "author": "Claus Mortensen, N.F.S. Grundtvig og Thomas Laub",
+  "translator": null,
+  "year": 1837,
+  "dds": 115,
+  "hsb": 244,
+  "extraInfo": "Salmen går tilbage til en latinsk tekst fra 1300-tallet. Den blev oversat af Claus Mortensen i 1529, gendigtet af Grundtvig i 1837 og bearbejdet af Thomas Laub i 1918.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=431379",
+    "revision": 431379,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": [
+    "Eja, eja!",
+    "Nu er sket til jordens held,",
+    "hvad os meldte Gabriel,",
+    "Guds engel fin:",
+    "Født er herren af en mø,",
+    "og vi ej fødes til at dø.",
+    "Gud med os, Immanuel,",
+    "Immanuel!"
+  ],
+  "verses": [
+    [
+      "Lad det klinge sødt i sky:",
+      "Lovet være kongen ny,",
+      "Sions konge barnebly!",
+      "Han kom til jord,",
+      "som os profeten spå'de."
+    ],
+    [
+      "Synger med os, alle små!",
+      "Børn i vugge! stammer på,",
+      "hvad selv engle knap forstå!",
+      "Han kom til jord,",
+      "som os profeten spå'de."
+    ],
+    [
+      "Lad det spørges trindt om land:",
+      "Født er os en frelsermand,",
+      "Jesus Kristus hedder han!",
+      "Han kom til jord,",
+      "som os profeten spå'de."
+    ]
+  ]
+}

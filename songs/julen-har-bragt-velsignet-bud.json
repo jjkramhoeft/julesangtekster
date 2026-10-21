@@ -1,0 +1,53 @@
+{
+  "id": "julen-har-bragt-velsignet-bud",
+  "idNumber": 7,
+  "title": "Julen har bragt velsignet bud",
+  "firstLine": "Julen har bragt velsignet bud",
+  "type": "julesalme",
+  "author": "B.S. Ingemann",
+  "translator": null,
+  "year": 1839,
+  "dds": 119,
+  "hsb": 248,
+  "extraInfo": "Ingemann skrev salmen til børn i 1839 på bestilling fra familien Fenger i Lynge. Han skrev seks korte vers, som Weyse slog sammen til tre, da han satte melodi til i 1841.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=66021",
+    "revision": 66021,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Julen har bragt velsignet bud;",
+      "nu glædes gamle og unge:",
+      "hvad englene sang i verden ud,",
+      "nu alle små børn skal sjunge.",
+      "Grenen fra livets træ står skønt",
+      "med lys som fugle på kviste.",
+      "Det barn, som sig glæder fromt og kønt,",
+      "skal aldrig den glæde miste."
+    ],
+    [
+      "Glæden er jordens gæst i dag",
+      "med himmelkongen den lille.",
+      "Du fattige spurv, flyv ned fra tag",
+      "med duen til julegilde.",
+      "Dans, lille barn på moders skød-",
+      "en dejlig dag er oprunden;",
+      "i dag blev vor kære Frelser fød",
+      "og paradisvejen funden."
+    ],
+    [
+      "Frelseren selv var barn som vi,",
+      "i dag han lå i sin vugge.",
+      "Den have, Guds engle flyve i,",
+      "vil Jesus for os oplukke.",
+      "Himmerigs konge blandt os bor,",
+      "han juleglæden os bringer.",
+      "Han favner hver barnesjæl på jord",
+      "og lover os englevinger."
+    ]
+  ]
+}

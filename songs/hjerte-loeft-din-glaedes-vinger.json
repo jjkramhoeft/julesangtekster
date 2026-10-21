@@ -1,0 +1,93 @@
+{
+  "id": "hjerte-loeft-din-glaedes-vinger",
+  "idNumber": 16,
+  "title": "Hjerte, løft din glædes vinger",
+  "firstLine": "Hjerte, løft din glædes vinger",
+  "type": "julesalme",
+  "author": "Paul Gerhardt",
+  "translator": "C.J. Brandt",
+  "year": 1878,
+  "dds": 114,
+  "hsb": 237,
+  "extraInfo": "C.J. Brandts danske gendigtning fra 1878 af Paul Gerhardts tyske salme fra 1653. Melodien er af Johann Crüger. Den Danske Salmebog har 6 af de 7 vers.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=431320",
+    "revision": 431320,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Hjerte, løft din glædes vinger!",
+      "Julefest",
+      "allerbedst",
+      "englesangen klinger!",
+      "Hør det, hør de toner søde,",
+      "himlen lydt",
+      "melder nyt:",
+      "Kristus lod sig føde!"
+    ],
+    [
+      "Guddoms-helten af sit kammer",
+      "går i dag,",
+      "så vor sag",
+      "bliver fryd for jammer!",
+      "Gud som mand på jord vil træde,",
+      "Davids søn,",
+      "Gud i Løn,",
+      "i vort kød sig klæde!"
+    ],
+    [
+      "Gud, vor fader gav i nåde",
+      "denne nat",
+      "os en skat,",
+      "herlig over måde.",
+      "For at frelse os af nøden",
+      "steg her ned",
+      "kærlighed,",
+      "stærkere end døden."
+    ],
+    [
+      "I et krybberum den hviler,",
+      "vinker blid:",
+      "Kommer hid!",
+      "himmelsk barnet smiler:",
+      "\"Kast din byrde, kære broder!",
+      "vær ved mod,",
+      "jeg har bod,",
+      "sønnen af din moder!\""
+    ],
+    [
+      "I, som tunge stier træde,",
+      "stands og hør!",
+      "her er dør",
+      "til den sande glæde!",
+      "Og i huset inden døre",
+      "trøstes med",
+      "salig fred,",
+      "ingen sorg tør røre."
+    ],
+    [
+      "Er I fattige og arme,",
+      "ind kun stig,",
+      "han er rig",
+      "og har hjertevarme!",
+      "Fyldt af forråd er hans lade,",
+      "og han huld",
+      "skifter guld,",
+      "som gør hjerter glade!"
+    ],
+    [
+      "Nu, så lad til ham os fare,",
+      "mange, få,",
+      "store, små,",
+      "i en samlet skare!",
+      "Ingen tør ved rejsen gyse,",
+      "Jesu navn",
+      "som en bavn",
+      "vil på vejen lyse."
+    ]
+  ]
+}

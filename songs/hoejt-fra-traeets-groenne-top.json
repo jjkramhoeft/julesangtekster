@@ -1,0 +1,110 @@
+{
+  "id": "hoejt-fra-traeets-groenne-top",
+  "idNumber": 1,
+  "title": "Højt fra træets grønne top",
+  "firstLine": "Højt fra træets grønne top",
+  "type": "julesang",
+  "author": "Peter Faber",
+  "translator": null,
+  "year": 1847,
+  "dds": null,
+  "hsb": 260,
+  "extraInfo": "Peter Faber skrev sangen til sin egen familie julen 1847 under titlen »Juletræet«. Emil Hornemans melodi fra 1848 passede til den nye skik med at danse om juletræet. Højskolesangbogen udelader vers 6 og 7, som handler om den lille William og bedstefar – det gør den korte udgave her også.",
+  "shortVersion": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    8
+  ],
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=35519",
+    "revision": 35519,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Højt fra træets grønne top",
+      "stråler juleglansen,",
+      "spillemand, spil lystigt op,",
+      "nu begynder dansen.",
+      "Læg nu smukt din hånd i min,",
+      "ikke rør' ved den rosin!",
+      "Først skal træet vises,",
+      "siden skal det spises."
+    ],
+    [
+      "Se, børnlil’, nu går det godt,",
+      "I forstår at trave,",
+      "lad den lille Sine blot",
+      "få sin julegave.",
+      "Løs kun selv det røde bånd!",
+      "Hvor du ryster på din hånd!",
+      "Når du strammer garnet,",
+      "kvæler du jo barnet."
+    ],
+    [
+      "Peter har den gren så kær,",
+      "hvorpå trommen hænger,",
+      "hver gang han den kommer nær,",
+      "vil han ikke længer.",
+      "Hvad du ønsker, skal du få,",
+      "når jeg blot kan stole på,",
+      "at du ej vil tromme,",
+      "før min sang er omme."
+    ],
+    [
+      "Anna hun har ingen ro,",
+      "før hun får sin pakke:",
+      "fire alen merino",
+      "til en vinterfrakke.",
+      "Barn, du bli'r mig alt for dyr,",
+      "men da du så propert syr,",
+      "sparer vi det atter",
+      "ikke sandt, min datter?"
+    ],
+    [
+      "Denne fane, ny og god,",
+      "giver jeg til Henrik,",
+      "du er stærk, og du har mod,",
+      "du skal være fænrik.",
+      "Hvor han svinger fanen kækt!",
+      "Børn, I skylder ham respekt;",
+      "Vid, det er en ære",
+      "dannebrog at bære."
+    ],
+    [
+      "Træets allerbedste ziir",
+      "skal min William have,",
+      "på det blanke guldpapir",
+      "må du gerne gnave.",
+      "Vær forsigtig og giv agt,",
+      "indenfor er noget lagt,",
+      "som du ej må kramme,",
+      "det er til din amme."
+    ],
+    [
+      "O, hvor den er blød og rar,",
+      "sikken dejlig hue!",
+      "den skal sikre bedstefar",
+      "imod frost og snue.",
+      "Lotte hun kan være stolt,",
+      "tænk jer, hun har garnet holdt!",
+      "det kan Hanne ikke,",
+      "hun kan bare strikke!"
+    ],
+    [
+      "Børn, nu er jeg blevet træt,",
+      "og I får ej mere,",
+      "moder er i køkkenet,",
+      "nu skal hun traktere.",
+      "Derfor får hun denne pung,",
+      "løft engang, hvor den er tung!",
+      "Julen varer længe,",
+      "koster mange penge."
+    ]
+  ]
+}

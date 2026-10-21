@@ -1,0 +1,123 @@
+{
+  "id": "et-barn-er-foedt-i-betlehem",
+  "idNumber": 3,
+  "title": "Et barn er født i Betlehem",
+  "firstLine": "Et barn er født i Bethlehem",
+  "type": "julesalme",
+  "author": "N.F.S. Grundtvig",
+  "translator": null,
+  "year": 1820,
+  "dds": 104,
+  "hsb": 242,
+  "extraInfo": "Grundtvig skrev salmen i 1820 og igen i 1845 efter den latinske »Puer natus« fra 1300-tallet og ældre danske udgaver fra 1544 og 1569. I 2014 var den danskernes foretrukne sang til at gå om juletræet.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=35721",
+    "revision": 35721,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    {
+      "lines": [
+        "Et barn er født i Bethlehem,",
+        "Bethlehem,",
+        "thi glæder sig Jerusalem."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "En fattig jomfru sad i løn,",
+        "sad i løn,",
+        "og fødte himlens kongesøn."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "Han lagdes i et krybberum,",
+        "krybberum,",
+        "Guds engle sang med fryd derom."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "Og østens vise ofred der,",
+        "ofred der,",
+        "Guld, røgelse og myrra skær."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "Forvunden er nu al vor nød,",
+        "al vor nød,",
+        "os er i dag en frelser fød."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "Guds kære børn vi blev påny,",
+        "blev påny,",
+        "skal holde jul i himmelby."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "På stjernetæpper lyse blå,",
+        "lyseblå,",
+        "skal glade vi til kirke gå."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "Guds engle der os lære brat,",
+        "lære brat,",
+        "at synge, som de sang i nat."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "Da vorde engle vi som de,",
+        "vi som de,",
+        "Guds milde ansigt skal vi se."
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    },
+    {
+      "lines": [
+        "Ham være pris til evig tid,",
+        "evig tid,",
+        "for frelser bold og broder blid!"
+      ],
+      "refrain": [
+        "Halleluja, halleluja!"
+      ]
+    }
+  ]
+}

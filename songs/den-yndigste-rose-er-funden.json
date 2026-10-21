@@ -1,0 +1,71 @@
+{
+  "id": "den-yndigste-rose-er-funden",
+  "idNumber": 15,
+  "title": "Den yndigste rose er funden",
+  "firstLine": "Den yndigste rose er funden",
+  "type": "julesalme",
+  "author": "H.A. Brorson",
+  "translator": null,
+  "year": 1732,
+  "dds": 122,
+  "hsb": 239,
+  "extraInfo": "Brorson skrev salmen i 1732. Melodien stammer fra Wittenberg og Joseph Klug, 1542.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=34249",
+    "revision": 34249,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Den yndigste rose er funden",
+      "Blandt stiveste torne oprunden",
+      "Vor Jesus, den dejligste pode,",
+      "Blandt syndige mennesker gro'de"
+    ],
+    [
+      "Alt siden vi tabte den ære",
+      "Guds billedes frugter at bære",
+      "Var verden forvildet og øde,",
+      "Vi Alle i synden bortdøde"
+    ],
+    [
+      "Da lod gud en rose opskyde",
+      "Og sæden omsider frembryde",
+      "At rense og ganske forsøde",
+      "Vor slægts den fordærvede grøde."
+    ],
+    [
+      "Al verden nu burde sig fryde",
+      "Med salmer mangfoldig udbryde,",
+      "men mangen har aldrig fornummen,",
+      "at rosen i verden er kommen."
+    ],
+    [
+      "Forhærdede tidsel-gemytter,",
+      "Så stive som torne og støtter",
+      "Hvi holder I eder så ranke",
+      "I stoltheds fordærvede tanke."
+    ],
+    [
+      "Ak, søger de ydmyge steder",
+      "I støvet for Frelseren græder,",
+      "Så får i vor Jesus i tale",
+      "Thi roserne vokse i dale."
+    ],
+    [
+      "Min Jesus! Du stedse skal være",
+      "Mit smykke, min rose, min ære,",
+      "De giftige lyster du døder",
+      "Og korset så lifligt forsøder."
+    ],
+    [
+      "Lad verden mig alting betage",
+      "Lad tornene rive og nage",
+      "Lad hjertet kun dåne og briste,",
+      "Min rose jeg aldrig vil miste."
+    ]
+  ]
+}

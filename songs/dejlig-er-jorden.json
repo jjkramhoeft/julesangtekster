@@ -1,0 +1,47 @@
+{
+  "id": "dejlig-er-jorden",
+  "idNumber": 8,
+  "title": "Dejlig er jorden",
+  "firstLine": "Dejlig er jorden",
+  "type": "salme",
+  "author": "B.S. Ingemann",
+  "translator": null,
+  "year": 1850,
+  "dds": 121,
+  "hsb": 56,
+  "extraInfo": "Ingemanns salme blev først trykt i 1850 under titlen »Pilgrimssang«. Melodien er en schlesisk folkemelodi fra 1700-tallet. Den kaldes ofte Nordens mest populære salme.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=35365",
+    "revision": 35365,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Dejlig er jorden,",
+      "prægtig er Guds himmel,",
+      "skøn er sjælenes pilgrimsgang!",
+      "Gennem de fagre",
+      "riger på jorden",
+      "gå vi til paradis med sang!"
+    ],
+    [
+      "Tider skal komme,",
+      "tider skal henrulle,",
+      "slægt skal følge slægters gang.",
+      "Aldrig forstummer",
+      "tonen fra himlen",
+      "i sjælens glade pilgrimssang."
+    ],
+    [
+      "Englene sang den",
+      "først for markens hyrder,",
+      "skønt fra sjæl til sjæl det lød:",
+      "Fred over jorden!",
+      "Menneske, fryd dig,",
+      "os er en evig frelser fød!"
+    ]
+  ]
+}

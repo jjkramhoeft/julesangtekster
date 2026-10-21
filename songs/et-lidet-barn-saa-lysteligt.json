@@ -1,0 +1,47 @@
+{
+  "id": "et-lidet-barn-saa-lysteligt",
+  "idNumber": 19,
+  "title": "Et lidet barn så lysteligt",
+  "firstLine": "Et lidet barn så lysteligt",
+  "type": "julesalme",
+  "author": "Arvid Pedersen og N.F.S. Grundtvig",
+  "translator": null,
+  "year": 1529,
+  "dds": 102,
+  "hsb": null,
+  "extraInfo": "Arvid Pedersens danske tekst fra 1529 efter en tysk original fra omkring 1400, bearbejdet af Grundtvig i 1837–1845.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=431260",
+    "revision": 431260,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Et lidet barn så lysteligt",
+      "blev af en jomfru båret,",
+      "ej før, ej siden hørtes sligt,",
+      "men kun i jubelåret,",
+      "i tidens fylde, da Guds Søn",
+      "på jord sig fandt en moder skøn,",
+      "lod uden synd sig føde,",
+      "fornedrede sig til de små,",
+      "så de kan ham til broder få,",
+      "den Himlens morgenrøde."
+    ],
+    [
+      "Højlovet i al evighed",
+      "skal Jesus Kristus være,",
+      "og når for ham vi knæle ned,",
+      "det er Gud Faders ære,",
+      "og når vor lovsang, altid ny,",
+      "fra jord sig svinger let i sky",
+      "med glade juletoner,",
+      "vort fattige halleluja",
+      "med salig fryd istemmes da",
+      "af engles millioner."
+    ]
+  ]
+}

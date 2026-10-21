@@ -1,0 +1,33 @@
+{
+  "id": "nu-er-det-jul-igen",
+  "idNumber": 5,
+  "title": "Nu er det jul igen",
+  "firstLine": "Nu’ det jul igen",
+  "type": "julesang",
+  "author": "Traditionel",
+  "translator": null,
+  "year": null,
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "En gammel folkelig sang fra en fælles dansk-svensk tradition. Melodien kendes fra sanglege i 1700-tallet og er nok endnu ældre. Den synges i rask tempo, når kæden løber gennem huset.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=431428",
+    "revision": 431428,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "//: Nu' det jul igen og",
+      "nu' det jul igen",
+      "og julen varer li' til påske ://"
+    ],
+    [
+      "//: Nej det' ikke sandt,",
+      "nej det ikke sandt,",
+      "for ind imellem kommer fasten. ://"
+    ]
+  ]
+}

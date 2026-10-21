@@ -1,0 +1,149 @@
+{
+  "id": "sikken-voldsom-traengsel-og-alarm",
+  "idNumber": 10,
+  "title": "Sikken voldsom trængsel og alarm",
+  "firstLine": "Sikken voldsom trængsel og alarm",
+  "type": "julesang",
+  "author": "Peter Faber",
+  "translator": null,
+  "year": 1848,
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "Også kendt som »Julestemning«. Peter Faber skrev den i 1848, og den blev trykt efter hans død i »Viser og Vers« (1877). Melodien stammer fra Adolf Müllers musik til Nestroys »Lumpazivagabundus« (1833).",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=67490",
+    "revision": 67490,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    {
+      "lines": [
+        "Sikken voldsom trængsel og alarm,",
+        "det er koldt, og man må gå sig varm.",
+        "Lygten tændes klokken fire alt,",
+        "det skal være aften med gevalt.",
+        "Midt på gaden sælges træ'r og frugt,",
+        "se butikken, hvor den stråler smukt!",
+        "Varer kan man få i tusindvis,",
+        "tænk dem bare: under indkøbspris."
+      ],
+      "refrain": [
+        "Pris, pris, pris, pris, pris, pris,",
+        "tænk dem bare: under indkøbspris,",
+        "pris, pris, pris, pris, pris,",
+        "tænk dem bare: under indkøbspris!"
+      ]
+    },
+    {
+      "lines": [
+        "Håndværksmanden han må holde her,",
+        "kunstneren har også sit besvær.",
+        "Og hans værker spredes vidt omkring,",
+        "takket være Hornemann og Bing!",
+        "Man af kundskabsvæsnet daglig ser,",
+        "at poeterne bli'r fler og fler.",
+        "Selv min lille bly forfrosne fugl",
+        "kvidrer med i dag, for det er jul."
+      ],
+      "refrain": [
+        "Jul, jul, jul, jul, jul,",
+        "kvidrer med i dag, for det er jul,",
+        "jul, jul, jul, jul, jul,",
+        "kvidrer med i dag, for det er jul,"
+      ]
+    },
+    {
+      "lines": [
+        "Pyntet smukt af en usynlig hånd",
+        "står nu træet der med lys og bånd.",
+        "Døren åbnes, og man strømmer ind,",
+        "kredsen sluttes med begejstret sind.",
+        "Børnene de hopper rask af sted,",
+        "bedstefader han er også med,",
+        "lad os tage del i deres sang,",
+        "brødre, vi var også børn engang."
+      ],
+      "refrain": [
+        "Gang, gang, gang, gang, gang, gang,",
+        "brødre, vi var også børn engang,",
+        "gang, gang, gang, gang, gang,",
+        "brødre, vi var også børn engang."
+      ]
+    },
+    {
+      "lines": [
+        "Juleaften, o hvor er du sød,",
+        "så skal alle folk ha' risengrød,",
+        "æbleskiven bliver flittigt vendt,",
+        "gåsestegen er til bag'ren sendt.",
+        "Bonden sidder tidligt ved sit fad,",
+        "sikken Guds velsignelse af mad,",
+        "lænkehunden selv får dobbelt sul,",
+        "den skal også vide, det er jul."
+      ],
+      "refrain": [
+        "Jul, jul, jul, jul, jul, jul,",
+        "den skal også vide, det er jul,",
+        "jul, jul, jul, jul, jul,",
+        "den skal også vide, det er jul."
+      ]
+    },
+    {
+      "lines": [
+        "Når man ikke er en doven krop,",
+        "står man julemorgen tidligt op.",
+        "Klokken kimer, gaden er så glat,",
+        "kirken lyser i den stille nat.",
+        "Indenfor er sang og festlig fred,",
+        "og man føler sig så vel derved,",
+        "allerhelst når præk'nen ikke du'r,",
+        "thi så får man sig en lille lur."
+      ],
+      "refrain": [
+        "Lur, lur, lur, lur, lur, lur,",
+        "thi så får man sig en lille lur,",
+        "lur, lur, lur, lur, lur,",
+        "thi så får man sig en lille lur."
+      ]
+    },
+    {
+      "lines": [
+        "Op ad dagen går man byen rundt,",
+        "trækker vejret lidt, det er så sundt.",
+        "Alle folk er i den nye stads,",
+        "men om aftnen er der fint kalas.",
+        "Gud velsigne den, som først opfandt",
+        "det at lege jul og give pant.",
+        "Unge pige, lad os lege skjul,",
+        "giv mig kun et kys, det er jo jul."
+      ],
+      "refrain": [
+        "Jul, jul, jul, jul, jul, jul,",
+        "giv mig kun et kys, det er jo jul,",
+        "jul, jul, jul, jul, jul,",
+        "giv mig kun et kys, det er jo jul."
+      ]
+    },
+    {
+      "lines": [
+        "Du som skænkte os den skønne fest,",
+        "hvad der båder os, det ved du bedst,",
+        "dog har jeg det håb, at - før jeg dør -",
+        "du ej nægter mig en vis favør:",
+        "Drej kun universet helt omkring,",
+        "vend kun op og ned på alle ting,",
+        "jorden med, thi den er falsk og hul,",
+        "rør blot ikke ved min gamle jul."
+      ],
+      "refrain": [
+        "Jul, jul, jul, jul, jul, jul,",
+        "rør blot ikke ved min gamle jul,",
+        "jul, jul, jul, jul, jul,",
+        "rør blot ikke ved min gamle jul"
+      ]
+    }
+  ]
+}

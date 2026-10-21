@@ -1,0 +1,41 @@
+{
+  "id": "boern-og-voksne-i-kaerlig-krans",
+  "idNumber": 21,
+  "title": "Børn og voksne i kærlig krans",
+  "firstLine": "Børn og voksne i kærlig krans",
+  "type": "julesang",
+  "author": "Elith Reumert",
+  "translator": null,
+  "year": 1899,
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "En sang skrevet til at gå om juletræet. Teksten er af Elith Reumert, melodien af J.P.E. Hartmann.",
+  "shortVersion": null,
+  "source": {
+    "name": "Wikisource",
+    "url": "https://da.wikisource.org/w/index.php?oldid=84226",
+    "revision": 84226,
+    "license": "Public domain (ophavsretsloven § 63)"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Børn og voksne i kærlig krans,",
+      "rundt omkring træet vandre,",
+      "alt under lysenes festlige glans,",
+      "hånd i hånd med hverandre."
+    ],
+    [
+      "Ak! om vi kunne føre enhver,",
+      "som er forladt og ene,",
+      "ind under lysenes rigdom her,",
+      "under de grønklædte grene."
+    ],
+    [
+      "Ak! om vi kunne med barnetro",
+      "fylde de hjerter, som græde!",
+      "så at de følte barnefro,",
+      "julens velsignede glæde..."
+    ]
+  ]
+}

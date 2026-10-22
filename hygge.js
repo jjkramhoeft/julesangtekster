@@ -151,8 +151,10 @@ const hygge = (() => {
   const sparkle = (c) => svg(glow(c.glow, 0.45) + `<path d="M0-40Q4-4 40 0Q4 4 0 40Q-4 4-40 0Q-4-4 0-40Z" fill="${c.star}"/>`);
 
   // Dannebrog, waving a little: red with a white cross set towards the pole,
-  // in the flag's proportions of 12+4+21 across and 12+4+12 down (×2).
-  // wave: how far the cloth bends up and down.
+  // in the flag's proportions of 12+4+21 across and 12+4+12 down (×2), but
+  // with the cross a fifth wider. Turned a quarter clockwise, so it hangs
+  // from its top edge like a banner.
+  // wave: how far the cloth bends.
   const flag = (wave) => (c) => {
     const band = (top, bottom) =>
       `M-37 ${top}C-12 ${top - wave} 12 ${top + wave} 37 ${top}V${bottom}C12 ${bottom + wave}-12 ${bottom - wave}-37 ${bottom}Z`;
@@ -163,9 +165,9 @@ const hygge = (() => {
         '<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity=".16"/>' +
         '<stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset=".78" stop-color="#000" stop-opacity=".14"/>' +
         '<stop offset="1" stop-color="#fff" stop-opacity=".08"/></linearGradient></defs>' +
-        '<g clip-path="url(#cloth)">' +
+        '<g transform="rotate(90)" clip-path="url(#cloth)">' +
         `<path d="${cloth}" fill="${c.red}"/>` +
-        `<g fill="${c.white}"><rect x="-13" y="-40" width="8" height="80"/><path d="${band(-4, 4)}"/></g>` +
+        `<g fill="${c.white}"><rect x="-13.8" y="-40" width="9.6" height="80"/><path d="${band(-4.8, 4.8)}"/></g>` +
         `<path d="${cloth}" fill="url(#folds)"/>` +
         '</g>',
     );

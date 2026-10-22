@@ -1,6 +1,7 @@
 // Juletræssange – "Mere hygge": a slow background animation behind the index.
-// Seven themes (snow, paper hearts, spruce, holly, mistletoe, stars and
-// candles), each in light and dark colours. One run lasts 30 seconds.
+// Nine themes (snow, paper hearts, spruce, holly, mistletoe, stars, Danish
+// flags, advent wreaths and candles), each in light and dark colours. One run
+// lasts 30 seconds.
 'use strict';
 
 const hygge = (() => {
@@ -38,14 +39,16 @@ const hygge = (() => {
     );
 
   // A woven Danish paper heart: a square standing on its point with a round
-  // lobe on each upper side, red strips woven through white ones.
+  // lobe on each upper side, red strips woven through white ones. A red paper
+  // strip rises from between the lobes as the loop it hangs by.
   function heart(c) {
     let cells = '';
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) if ((i + j) % 2 === 0) cells += `<rect x="${-24 + 16 * i}" y="${-24 + 16 * j}" width="16" height="16"/>`;
     }
     return svg(
-      '<g transform="translate(0 4) rotate(45)">' +
+      `<rect x="-4" y="-48" width="8" height="30" rx="3" fill="${c.red}"/>` +
+        '<g transform="translate(0 9) scale(.9) rotate(45)">' +
         `<path d="M-24 24A24 24 0 0 1-24-24H24V24Z" fill="${c.white}"/>` +
         `<path d="M-24-24A24 24 0 0 1 24-24Z" fill="${c.red}"/>` +
         `<g fill="${c.red}">${cells}</g>` +
@@ -54,32 +57,48 @@ const hygge = (() => {
     );
   }
 
-  // Needles along a twig from its base to its tip, slanting towards the tip.
-  function needles([x0, y0, x1, y1, len0, len1]) {
-    const length = Math.hypot(x1 - x0, y1 - y0);
-    const ux = (x1 - x0) / length;
-    const uy = (y1 - y0) / length;
+  // A twig bends gently from its base (x0, y0) past (cx, cy) to its tip.
+  const twigPath = ([x0, y0, cx, cy, x1, y1]) => `M${x0} ${y0}Q${cx} ${cy} ${x1} ${y1}`;
+
+  // Needles along a twig, slanting towards the tip and bending a little that
+  // way. They are a bit shorter at the base, and near the end they shorten and
+  // turn forward, so the twig has a soft oval outline and a round tip.
+  function needles([x0, y0, cx, cy, x1, y1, len0, len1]) {
+    const at = (t, a, b, c) => (1 - t) * (1 - t) * a + 2 * (1 - t) * t * b + t * t * c;
+    const steps = Math.round((Math.hypot(cx - x0, cy - y0) + Math.hypot(x1 - cx, y1 - cy)) / 4.5);
+    // forward: the cosine of the needle's angle to the twig.
+    const needle = (x, y, ux, uy, len, forward, side) => {
+      const along = (f, l) => {
+        const out = Math.sqrt(1 - f * f) * side;
+        return `${round(l * (f * ux - out * uy))} ${round(l * (f * uy + out * ux))}`;
+      };
+      return `M${round(x)} ${round(y)}q${along(Math.max(0, forward - 0.15), len / 2)} ${along(forward, len)}`;
+    };
     let d = '';
-    for (let s = 3; s <= length; s += 4.5) {
-      const len = len0 + ((len1 - len0) * s) / length;
-      for (const side of [1, -1]) {
-        const dx = len * (0.55 * ux - 0.83 * uy * side);
-        const dy = len * (0.55 * uy + 0.83 * ux * side);
-        d += `M${round(x0 + ux * s)} ${round(y0 + uy * s)}l${round(dx)} ${round(dy)}`;
-      }
+    let ux = 0;
+    let uy = 0;
+    for (let i = 1; i <= steps; i++) {
+      const t = i / steps;
+      const tx = (1 - t) * (cx - x0) + t * (x1 - cx);
+      const ty = (1 - t) * (cy - y0) + t * (y1 - cy);
+      const norm = Math.hypot(tx, ty);
+      ux = tx / norm;
+      uy = ty / norm;
+      const len = (len0 + (len1 - len0) * t) * (1 - 0.3 * (1 - t) ** 4) * (1 - 0.45 * t ** 6);
+      for (const side of [1, -1]) d += needle(at(t, x0, cx, x1), at(t, y0, cy, y1), ux, uy, len, 0.5 + 0.4 * t ** 3, side);
     }
-    return d;
+    return d + needle(x1, y1, ux, uy, len1 * 0.6, 1, 1);
   }
 
   function spruce(c) {
     const twigs = [
-      [2, 46, -2, -46, 13, 6],
-      [0, 12, -26, -20, 10, 5],
-      [1, -10, 20, -34, 9, 5],
+      [2, 46, -2, 0, -2, -44, 14.5, 7.5],
+      [0, 12, -16, 0, -25, -19, 11, 6.5],
+      [1, -10, 13, -19, 19, -33, 10, 6.5],
     ];
     return svg(
       '<g fill="none" stroke-linecap="round">' +
-        `<path stroke="${c.stem}" stroke-width="3" d="${twigs.map(([x0, y0, x1, y1]) => `M${x0} ${y0}L${x1} ${y1}`).join('')}"/>` +
+        `<path stroke="${c.stem}" stroke-width="3" d="${twigs.map(twigPath).join('')}"/>` +
         `<path stroke="${c.needle}" stroke-width="2.8" d="${twigs.map(needles).join('')}"/>` +
         '</g>',
     );
@@ -131,9 +150,105 @@ const hygge = (() => {
 
   const sparkle = (c) => svg(glow(c.glow, 0.45) + `<path d="M0-40Q4-4 40 0Q4 4 0 40Q-4 4-40 0Q-4-4 0-40Z" fill="${c.star}"/>`);
 
+  // Dannebrog, waving a little: red with a white cross set towards the pole,
+  // in the flag's proportions of 12+4+21 across and 12+4+12 down (×2).
+  // wave: how far the cloth bends up and down.
+  const flag = (wave) => (c) => {
+    const band = (top, bottom) =>
+      `M-37 ${top}C-12 ${top - wave} 12 ${top + wave} 37 ${top}V${bottom}C12 ${bottom + wave}-12 ${bottom - wave}-37 ${bottom}Z`;
+    const cloth = band(-28, 28);
+    return svg(
+      '<defs><clipPath id="cloth">' +
+        `<path d="${cloth}"/></clipPath><linearGradient id="folds" x1="-37" x2="37" gradientUnits="userSpaceOnUse">` +
+        '<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity=".16"/>' +
+        '<stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset=".78" stop-color="#000" stop-opacity=".14"/>' +
+        '<stop offset="1" stop-color="#fff" stop-opacity=".08"/></linearGradient></defs>' +
+        '<g clip-path="url(#cloth)">' +
+        `<path d="${cloth}" fill="${c.red}"/>` +
+        `<g fill="${c.white}"><rect x="-13" y="-40" width="8" height="80"/><path d="${band(-4, 4)}"/></g>` +
+        `<path d="${cloth}" fill="url(#folds)"/>` +
+        '</g>',
+    );
+  };
+
+  // An advent wreath of spruce with four candles, seen from a little above.
+  // Laid flat it has a bow at the front; hung, four red ribbons rise from it
+  // to a bow at the top.
+  const wreath = (hung) => (c) => {
+    const R = 36;
+    const tilt = 1 / 3; // how much the ring is squashed seen from above
+    const cy = hung ? 26 : 12;
+    const at = (a, r = R) => [r * Math.cos(a), cy + tilt * r * Math.sin(a)];
+    const isBack = (a) => Math.sin(a) < 0;
+
+    // Needles around the ring: out, in and up from each point, each a little
+    // to one side. Directions are [radial, along, up] before the squash.
+    let back = '';
+    let front = '';
+    for (let i = 0; i < 60; i++) {
+      const a = (2 * Math.PI * i) / 60;
+      const side = i % 2 ? 1 : -1;
+      const [x, y] = at(a, R + 3 * Math.sin(i * 2.4));
+      for (const [radial, along, up, len] of [[0.85, 0.5, 0.25, 9], [-0.75, 0.5, 0.4, 7], [0.3, 0.35, 0.9, 6]]) {
+        const dx = radial * Math.cos(a) - along * side * Math.sin(a);
+        const dy = radial * Math.sin(a) + along * side * Math.cos(a);
+        const d = `M${round(x)} ${round(y)}l${round(len * dx)} ${round(len * (tilt * dy - 0.94 * up))}`;
+        if (isBack(a)) back += d;
+        else front += d;
+      }
+    }
+    const ring = (half, needles) =>
+      `<path d="M${-R * half} ${cy}A${R} ${R * tilt} 0 0 1 ${R * half} ${cy}" fill="none" stroke="${c.shade}" stroke-width="12"/>` +
+      `<path d="${needles}" fill="none" stroke="${c.needle}" stroke-width="2.4" stroke-linecap="round"/>`;
+
+    const candle = (a) => {
+      const [x, y] = at(a);
+      const s = isBack(a) ? 0.92 : 1;
+      const top = round(y - 3 - 22 * s);
+      return (
+        `<circle cx="${round(x)}" cy="${round(top - 7)}" r="11" fill="url(#halo)"/>` +
+        `<rect x="${round(x - 4 * s)}" y="${top}" width="${round(8 * s)}" height="${round(22 * s)}" rx="1.5" fill="url(#wax)"/>` +
+        `<path d="M${round(x)} ${top}v-3" stroke="${c.wick}" stroke-width="1.2" stroke-linecap="round"/>` +
+        `<path d="M${round(x)} ${top - 1.5}c-3.5-2-3-7 0-11c3 4 3.5 9 0 11Z" fill="url(#flame)"/>`
+      );
+    };
+    // Turned a little, so no candle hides another or stands in a ribbon's way.
+    const candles = (side) =>
+      [12, 102, 192, 282]
+        .map((deg) => (deg * Math.PI) / 180)
+        .filter((a) => isBack(a) === (side === 'back'))
+        .map(candle)
+        .join('');
+
+    const ribbon = (a) => {
+      const [x, y] = at(a);
+      return `<path d="M${round(x)} ${round(y)}L0-45" fill="none" stroke="${c.ribbon}" stroke-width="2.6"/>`;
+    };
+    const bow = ([x, y], size) =>
+      `<g fill="${c.ribbon}" transform="translate(${round(x)} ${round(y)}) scale(${size})">` +
+      '<path d="M0 0C-4-6-11-6-10 0C-11 6-4 6 0 0ZM0 0C4-6 11-6 10 0C11 6 4 6 0 0Z"/>' +
+      '<path d="M-1 1L-5 9L-2 9L0 3L2 9L5 9L1 1Z"/><circle r="2.2"/></g>';
+
+    return svg(
+      '<defs>' +
+        `<radialGradient id="halo"><stop offset="0" stop-color="${c.glow}" stop-opacity=".55"/><stop offset="1" stop-color="${c.glow}" stop-opacity="0"/></radialGradient>` +
+        `<linearGradient id="wax"><stop offset="0" stop-color="${c.waxShade}"/><stop offset=".45" stop-color="${c.wax}"/><stop offset="1" stop-color="${c.waxShade}"/></linearGradient>` +
+        '<linearGradient id="flame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff6d6"/><stop offset=".5" stop-color="#ffcf5a"/><stop offset="1" stop-color="#ff9a2e"/></linearGradient>' +
+        '</defs>' +
+        (hung ? ribbon((3 * Math.PI) / 2) : '') +
+        ring(1, back) +
+        candles('back') +
+        (hung ? ribbon(0) + ribbon(Math.PI) : '') +
+        ring(-1, front) +
+        candles('front') +
+        (hung ? ribbon(Math.PI / 2) + bow([0, -44], 0.75) : bow(at(1, R + 2), 0.7)),
+    );
+  };
+
   // ---------- Themes ----------
   // size: px, speed: px per second, sway: px from side to side, spin: turning
-  // in radians per second, rock: radians of tilt back and forth while swaying.
+  // in radians per second, rock: radians of tilt back and forth while swaying,
+  // noFlip: never drawn mirrored, so the flag's cross stays by the pole.
   // Smaller items are further away: slower and fainter.
 
   const THEMES = [
@@ -182,6 +297,21 @@ const hygge = (() => {
       colors: { light: { star: '#d0a024', glow: '#e8c35a' }, dark: { star: '#f3d06e', glow: '#f3d06e' } },
       sprites: [star, sparkle],
       density: 5, size: [12, 26], speed: [12, 26], sway: 12, spin: 0.15, rock: 0, upright: true, twinkle: true,
+    },
+    {
+      name: 'dannebrog',
+      colors: { light: { red: '#c8102e', white: '#ffffff' }, dark: { red: '#d42a3c', white: '#f4eee6' } },
+      sprites: [flag(6), flag(-5)],
+      density: 2.4, size: [26, 44], speed: [24, 42], sway: 30, spin: 0, rock: 0.3, upright: true, noFlip: true,
+    },
+    {
+      name: 'adventskrans',
+      colors: {
+        light: { needle: '#2f6e45', shade: '#24563a', wax: '#c0392b', waxShade: '#8f2a20', wick: '#2b1d12', ribbon: '#c62828', glow: '#ffb04a' },
+        dark: { needle: '#5aa874', shade: '#356f4b', wax: '#efe6d2', waxShade: '#b8ad96', wick: '#3a2a1a', ribbon: '#e04848', glow: '#ffba5c' },
+      },
+      sprites: [wreath(false), wreath(true)],
+      density: 1.3, size: [46, 76], speed: [22, 38], sway: 26, spin: 0, rock: 0.18, upright: true,
     },
     {
       name: 'stearinlys',
@@ -244,7 +374,7 @@ const hygge = (() => {
     item.phase = Math.random() * Math.PI * 2;
     item.angle = theme.upright ? (Math.random() - 0.5) * 0.6 : Math.random() * Math.PI * 2;
     item.spin = (Math.random() - 0.5) * 2 * theme.spin;
-    item.flip = Math.random() < 0.5 ? -1 : 1;
+    item.flip = !theme.noFlip && Math.random() < 0.5 ? -1 : 1;
     item.sprite = Math.floor(Math.random() * theme.sprites.length);
     item.twinkleRate = 1.5 + Math.random() * 1.5;
     return item;

@@ -32,7 +32,7 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 - **A Short Version switch** (*Udvalgte vers* / *Alle vers*) to show only a predefined set of verses for each carol
 - **Chorus** (*omkvæd*) written out in each verse as plain text, like the rest of the lyrics.
 - **An info pop up** for each carol with meta data and a short story about the carol
-- **Mere hygge**: a slow, quiet background animation behind the index (snow, paper hearts, spruce, holly, mistletoe, stars or candles)
+- **Mere hygge**: a slow, quiet background animation behind the index (snow, paper hearts, spruce, holly, mistletoe, stars, Danish flags, advent wreaths or candles)
 
 ### Not in scope
 - Music, melodies or sheet music.
@@ -108,7 +108,7 @@ tools/
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
 - **ⓘ** at the top right shows facts and a short story about the song.
 - **QR code** at the bottom of the index points to the app's address, so the rest of the family can scan it and open the app.
-- **Mere hygge:** when the app opens on the index, a randomly picked theme drifts slowly down behind the list for 30 seconds: snowflakes, *julehjerter*, spruce twigs, holly, mistletoe or stars, or a row of flickering candles along the bottom. The *Mere hygge* button next to the QR code starts a new run with a different theme. Opening a song stops it. With the phone's "reduce motion" setting on, the scene stands still for the 30 seconds.
+- **Mere hygge:** when the app opens on the index, a randomly picked theme drifts slowly down behind the list for 30 seconds: snowflakes, *julehjerter*, spruce twigs, holly, mistletoe, stars, little Dannebrog flags or *adventskranse*, or a row of flickering candles along the bottom. The *Mere hygge* button next to the QR code starts a new run with a different theme. Opening a song stops it. With the phone's "reduce motion" setting on, the scene stands still for the 30 seconds.
 
 ### Song file format
 

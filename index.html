@@ -31,10 +31,19 @@
     <p id="list-empty" class="list-empty" hidden></p>
 
     <footer class="index-footer">
-      <div id="qr" class="qr"></div>
-      <p class="qr-caption">Del med denne</p>
+      <div class="share">
+        <div id="qr" class="qr"></div>
+        <p class="qr-caption">Del med denne</p>
+      </div>
+      <button type="button" id="hygge-button" class="hygge-button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.7 5 3.5 8 8.5 9.5-5 1.5-7.8 4.5-8.5 9.5-.7-5-3.5-8-8.5-9.5 5-1.5 7.8-4.5 8.5-9.5Z"/></svg>
+        Mere hygge
+      </button>
     </footer>
   </main>
+
+  <!-- "Mere hygge" background animation, behind the index -->
+  <canvas id="hygge" class="hygge" aria-hidden="true" hidden></canvas>
 
   <!-- One song -->
   <div id="song-view" class="view" hidden>
@@ -72,6 +81,7 @@
   </dialog>
 
   <script src="vendor/qrcode.js" defer></script>
+  <script src="hygge.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>

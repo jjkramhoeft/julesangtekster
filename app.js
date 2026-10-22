@@ -162,6 +162,7 @@ async function showSong(id, direction = 0) {
     return;
   }
   state.current = id;
+  hygge.stop();
   $('index-view').hidden = true;
   $('song-view').hidden = false;
   try {
@@ -334,6 +335,7 @@ async function start() {
   $('back-button').addEventListener('click', () => {
     location.hash = '#/';
   });
+  $('hygge-button').addEventListener('click', () => hygge.start());
 
   try {
     await loadIndex();
@@ -348,6 +350,8 @@ async function start() {
   $('qr').replaceChildren(qrSvg(location.href.split('#')[0]));
   window.addEventListener('hashchange', route);
   route();
+  // A little "Mere hygge" to welcome you, when the app opens on the index.
+  if (!state.current) hygge.start();
 }
 
 if ('serviceWorker' in navigator) {

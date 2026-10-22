@@ -1,7 +1,7 @@
 // Service worker: keeps the app and every song available offline.
 // Bump VERSION when the app shell changes so phones pick up the new files.
 
-const VERSION = 'v18';
+const VERSION = 'v19';
 const CACHE = `julesange-${VERSION}`;
 
 const SHELL = [
@@ -9,6 +9,7 @@ const SHELL = [
   'index.html',
   'styles.css',
   'app.js',
+  'hygge.js',
   'vendor/qrcode.js',
   'manifest.webmanifest',
   'icons/icon.svg',

@@ -319,6 +319,13 @@ const SONGS = [
     extraInfo:
       'En sang skrevet til at gå om juletræet. Teksten er af Elith Reumert, melodien af J.P.E. Hartmann.',
   },
+  // Not on Danish Wikisource. The song file is kept by hand, from Munthe's
+  // Norwegian original on no.wikisource; the importer only renumbers it.
+  {
+    id: 'paa-loftet-sidder-nissen',
+    title: 'På loftet sidder nissen',
+    manual: true,
+  },
 ];
 
 async function fetchPage(title) {
@@ -479,7 +486,9 @@ const index = [];
 for (const [i, song] of ordered.entries()) {
   const number = i + 1;
   console.log(`${number}. ${song.title}`);
-  const data = buildSong(song, number, await fetchPage(song.page));
+  const data = song.manual
+    ? { ...JSON.parse(await readFile(new URL(`${song.id}.json`, OUT_DIR), 'utf8')), idNumber: number }
+    : buildSong(song, number, await fetchPage(song.page));
   await writeFile(new URL(`${song.id}.json`, OUT_DIR), JSON.stringify(data, null, 2) + '\n');
   index.push({
     id: data.id,
@@ -491,7 +500,7 @@ for (const [i, song] of ordered.entries()) {
     verseCount: data.verses.length,
     shortVersion: previous.get(data.id) ?? oddVerses(data.verses.length),
   });
-  await sleep(1500);
+  if (!song.manual) await sleep(1500);
 }
 // Keep each verse list on one line, e.g. "shortVersion": [1, 3, 5], so it is easy to edit.
 const indexJson = JSON.stringify(index, null, 2).replace(

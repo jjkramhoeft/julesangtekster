@@ -190,8 +190,18 @@
     "shortVersion": [1, 2]
   },
   {
-    "id": "sikken-voldsom-traengsel-og-alarm",
+    "id": "paa-loftet-sidder-nissen",
     "idNumber": 20,
+    "title": "På loftet sidder nissen",
+    "firstLine": "På loftet sidder nissen med sin julegrød",
+    "author": "Margrethe Munthe",
+    "composer": "Franz Meißner, 1892 (ofte tilskrevet Otto Teich)",
+    "verseCount": 3,
+    "shortVersion": [1, 2, 3]
+  },
+  {
+    "id": "sikken-voldsom-traengsel-og-alarm",
+    "idNumber": 21,
     "title": "Sikken voldsom trængsel og alarm",
     "firstLine": "Sikken voldsom trængsel og alarm",
     "author": "Peter Faber",
@@ -201,7 +211,7 @@
   },
   {
     "id": "velkommen-igen-guds-engle-smaa",
-    "idNumber": 21,
+    "idNumber": 22,
     "title": "Velkommen igen, Guds engle små",
     "firstLine": "Velkommen igen, Guds engle små",
     "author": "N.F.S. Grundtvig",

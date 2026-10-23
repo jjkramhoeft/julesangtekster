@@ -162,6 +162,7 @@ Every fact below is followed by its source. "DDS page" means the hymn's own page
 - **Verses:** the Danish text is set out as 3 stanzas on [duda.dk][duda-nissen] (secondary source, unverified).
 - **PD:** **unverified.** Munthe's original is PD. The status of the Danish text depends on its unknown translator. If it was published anonymously before 1956, it is PD under § 63, stk. 3 ([lovguiden § 63][law63]). **Recommendation:** don't ship it until the translator or first Danish printing is found. Det Kgl. Bibliotek's catalogue is the place to check.
 - **Full text:** no high-trust source found. Only lyric aggregator sites.
+- **Update 2026-10-23: added to the app.** The Norwegian original is on [Norwegian Wikisource][nows-nissen] (revision 5784), marked as Munthe's text. A Danish blog says the Danish text changes only a few words (*loftet* for *låven*). It says no Danish author has put their name to it, and that it is printed in *De små synger* ([jenscornelius.dk][jc-nissen]). *De små synger* was first published in 1948 ([da.wikipedia][wp-desmaa]), but it is unconfirmed that the song is in the first edition. On that basis the Danish text is treated as an anonymous adaptation of a PD text. Still open: a confirmed Danish printing before 1956.
 
 #### 9. Dejlig er jorden
 - **Type:** salme in DDS's "Jesu fødsel" section ([DDS 121][dds121]). Sung around the tree ([KD 2007][kd2007]). [religion.dk][reldk] calls it the most popular hymn in the Nordic countries.
@@ -352,7 +353,7 @@ Every fact below is followed by its source. "DDS page" means the hymn's own page
 | *En rose så jeg skyde*, verse 3 | Uffe Hansen died 1994. Verses 1–2 can be used. | [DDS 117][dds117]; [obituary][uffe] |
 | *Bjældeklang* (Danish "Jingle Bells") | Danish text attributed to Otto Leisner, 1947, by a weak secondary source. Leisner died 2008. | [skagenonline (weak)][skagen-bjaelde]; [lex.dk Leisner][lex-leisner] |
 | *Nu tændes tusind julelys* | Danish translator Linda Lehun has unknown dates. On hold. | [HSB story][hsb-nutaendes] |
-| *På loftet sidder nissen* | Danish translator unknown. On hold. | [no.wikipedia][nowp-nissen] |
+| *På loftet sidder nissen* | Danish translator unknown. **Added 2026-10-23** as an anonymous adaptation of Munthe's PD text (see section 2, #8). | [no.wikipedia][nowp-nissen] |
 | *Musevisa* / Danish "Musevisen" | The Norwegian original is by Alf Prøysen (1914–1970), 1946. The Danish version's credits are unverified. | [en.wikipedia Musevisa][enwp-musevisa] |
 | Modern pop julesange (*Tinka*, *Lille store verden*, *I en stjerneregn af sne*, and Danish versions of *Rudolph*, *Last Christmas* and similar) | 20th/21st-century works, all protected. Individual credits not researched. | [IFPI streaming top 10 via Gaffa][gaffa2019] |
 | *O, du dejlige grønne træ* | **Not protected any more.** Hans Ahlmann (1881–1952) became PD on 1 January 2023, but Wikisource still withholds the text. Not popular enough to include. | [Wikisource][ws-odejlige] |
@@ -633,5 +634,8 @@ Also unverified: the credits of *Til julebal i Nisseland*. No reliable source wa
 [enwp-nuardet]: https://en.wikipedia.org/wiki/Nu_%C3%A4r_det_jul_igen
 [enwp-musevisa]: https://en.wikipedia.org/wiki/Musevisa
 [duda-nissen]: https://duda.dk/tema/jul/julesange/paa-loftet-sidder-nissen/
+[nows-nissen]: https://no.wikisource.org/w/index.php?oldid=5784
+[jc-nissen]: https://www.jenscornelius.dk/tysk-satire-blev-til-paa-loftet-sidder-nissen-med-sin-julegroed/
+[wp-desmaa]: https://da.wikipedia.org/wiki/De_sm%C3%A5_synger
 [skagen-bjaelde]: https://www.skagenonline.dk/faq/hvem-har-oversat-jingle-bells-til-dansk
 [law63]: https://www.lovguiden.dk/loven/ophavsretsloven/63

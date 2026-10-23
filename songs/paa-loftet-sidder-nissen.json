@@ -1,0 +1,53 @@
+{
+  "id": "paa-loftet-sidder-nissen",
+  "idNumber": 20,
+  "title": "På loftet sidder nissen",
+  "firstLine": "På loftet sidder nissen med sin julegrød",
+  "type": "julesang",
+  "author": "Margrethe Munthe",
+  "translator": "Ukendt",
+  "year": 1911,
+  "composer": "Franz Meißner, 1892 (ofte tilskrevet Otto Teich)",
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "Den norske lærerinde Margrethe Munthe skrev »På låven sitter nissen« som en sangleg til bogen »Saa leker vi litt!« fra 1911. Melodien er en tysk rheinlænder fra Berlin, »Holzauktion«, som udkom i Danmark hos Wilhelm Hansen i 1892. Den danske tekst ligger så tæt på den norske, at kun få ord er ændret – nissen sidder bare på loftet i stedet for på laden – og ingen har sat navn på oversættelsen.",
+  "source": {
+    "name": "Wikisource (norsk original)",
+    "url": "https://no.wikisource.org/w/index.php?oldid=5784",
+    "revision": 5784,
+    "license": "Public domain (ophavsretsloven § 63): Munthe døde 1931; den danske tilpasning er uden navngiven oversætter"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "På loftet sidder nissen med sin julegrød,",
+      "sin julegrød, så god og sød,",
+      "han nikker, og han spiser, og han er så glad,",
+      "for julegrød er hans bedste mad.",
+      "Men rundt omkring står alle de små rotter,",
+      "og de skotter, og de skotter:",
+      "»Vi vil også gerne ha’ lidt julegodter!«",
+      "Og de danser, danser rundt i ring."
+    ],
+    [
+      "Men nissen, se, han truer med sin store ske:",
+      "»Vil I nu se at komme af sted,",
+      "for jeg vil ha’ min julegrød i ro og fred,",
+      "og ingen, ingen vil jeg dele med!«",
+      "Men rotterne, de hopper, og de danser,",
+      "og de svinser, og de svanser,",
+      "og de kigger efter grøden, og de standser,",
+      "og de står om nissen tæt i ring."
+    ],
+    [
+      "Men nissen, ja, han er en lille hidsigprop,",
+      "og med sin krop han gør et hop:",
+      "»Jeg henter katten, hvis I ikke holder op!",
+      "Når katten kommer, skal det nok bli’ stop.«",
+      "Da springer alle rotterne så bange,",
+      "å, så bange, å, så bange,",
+      "og de vender sig og danser nogle gange,",
+      "og i en-to-tre, så er de væk."
+    ]
+  ]
+}

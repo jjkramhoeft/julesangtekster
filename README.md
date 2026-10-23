@@ -40,7 +40,7 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 
 ## Songs
 
-The app ships with 21 carols, numbered in Danish alphabetical order. Their texts are imported from Danish Wikisource and are in the public domain: every author and translator died more than 70 years ago (ophavsretsloven § 63). The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
+The app ships with 22 carols, numbered in Danish alphabetical order. Their texts are in the public domain: every author and named translator died more than 70 years ago (ophavsretsloven § 63). All but one are imported from Danish Wikisource; *På loftet sidder nissen* is kept by hand (see Copyright below). The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
 
 | # | Title | Text |
 | --- | --- | --- |
@@ -63,14 +63,17 @@ The app ships with 21 carols, numbered in Danish alphabetical order. Their texts
 | 17 | Kimer, I klokker | N.F.S. Grundtvig |
 | 18 | Lad det klinge sødt i sky | Claus Mortensen, N.F.S. Grundtvig and Thomas Laub |
 | 19 | Nu er det jul igen | Traditional |
-| 20 | Sikken voldsom trængsel og alarm | Peter Faber |
-| 21 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
+| 20 | På loftet sidder nissen | Margrethe Munthe, Danish text unattributed |
+| 21 | Sikken voldsom trængsel og alarm | Peter Faber |
+| 22 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
 
 ### Copyright
 
 The app is for private and non-commersial use - in the users on home: So Copyright do not apply.
 
-In practice, a site on GitHub Pages is public, so the app only ships texts that are free of copyright. *På loftet sidder nissen* and *Nu tændes tusind julelys* are on hold until their Danish translators are identified, and verse 3 of *En rose så jeg skyde* is protected until 2065.
+In practice, a site on GitHub Pages is public, so the app only ships texts that are free of copyright. *Nu tændes tusind julelys* is on hold until its Danish translator is identified, and verse 3 of *En rose så jeg skyde* is protected until 2065.
+
+*På loftet sidder nissen* is included on these grounds. Margrethe Munthe (†1931) wrote the Norwegian original in 1911, and it is public domain. The Danish text changes only a few words of hers, and no source names a Danish translator, so it counts as an anonymous adaptation. Anonymous works published before 1956 are public domain (§ 63, stk. 3). One gap remains: no Danish printing from before 1956 has been confirmed. It appears in *De små synger* (first edition 1948), but not necessarily in that first edition. The song file follows Munthe's text from [Norwegian Wikisource](https://no.wikisource.org/w/index.php?oldid=5784) as closely as the usual Danish wording allows.
 
 ## Technical approach
 
@@ -102,7 +105,7 @@ tools/
 
 ### How the app is used
 
-- **Index:** a list of all songs in alphabetical order, numbered 1–21, under the title *Juletræssange*. Swiping on a song page follows the same order.
+- **Index:** a list of all songs in alphabetical order, numbered 1–22, under the title *Juletræssange*. Swiping on a song page follows the same order.
 - **Udvalgte vers / Alle vers:** the switch under the title picks whether song pages show only the selected verses (left) or every verse (right). The choice is remembered on the phone. Verse numbers keep their original numbering, so skipped verses are visible as gaps.
 - **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
@@ -159,7 +162,7 @@ When you change the app shell (HTML, CSS or JS), bump `VERSION` in [sw.js](sw.js
 ## Adding a song
 
 - **From Wikisource:** add an entry to `SONGS` in [tools/import-wikisource.mjs](tools/import-wikisource.mjs) and run `node tools/import-wikisource.mjs`. This rewrites every song file and `songs/index.json`, and warns if a verse count does not match `expectedVerses`.
-- **By hand:** add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `title`, `firstLine`, `author`, `composer`, `verseCount`, `shortVersion`).
+- **By hand:** add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `title`, `firstLine`, `author`, `composer`, `verseCount`, `shortVersion`). Also add `{ id, title, manual: true }` to `SONGS` in the importer, so a later import keeps the song and only renumbers it.
 
 ### Choosing the verses for *Udvalgte vers*
 

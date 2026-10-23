@@ -41,10 +41,12 @@ const hygge = (() => {
   // A woven Danish paper heart: a square standing on its point with a round
   // lobe on each upper side, red strips woven through white ones. A red paper
   // strip rises from between the lobes as the loop it hangs by.
-  function heart(c) {
+  // strips: how many strips each half is cut into.
+  const heart = (strips) => (c) => {
+    const w = 48 / strips;
     let cells = '';
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) if ((i + j) % 2 === 0) cells += `<rect x="${-24 + 16 * i}" y="${-24 + 16 * j}" width="16" height="16"/>`;
+    for (let i = 0; i < strips; i++) {
+      for (let j = 0; j < strips; j++) if ((i + j) % 2 === 0) cells += `<rect x="${round(-24 + w * i)}" y="${round(-24 + w * j)}" width="${round(w)}" height="${round(w)}"/>`;
     }
     return svg(
       `<rect x="-4" y="-48" width="8" height="30" rx="3" fill="${c.red}"/>` +
@@ -55,7 +57,7 @@ const hygge = (() => {
         `<path d="M-24 24A24 24 0 0 1-24-24A24 24 0 0 1 24-24V24Z" fill="none" stroke="${c.red}" stroke-width="2.5" stroke-linejoin="round"/>` +
         '</g>',
     );
-  }
+  };
 
   // A twig bends gently from its base (x0, y0) past (cx, cy) to its tip.
   const twigPath = ([x0, y0, cx, cy, x1, y1]) => `M${x0} ${y0}Q${cx} ${cy} ${x1} ${y1}`;
@@ -90,50 +92,94 @@ const hygge = (() => {
     return d + needle(x1, y1, ux, uy, len1 * 0.6, 1, 1);
   }
 
-  function spruce(c) {
-    const twigs = [
-      [2, 46, -2, 0, -2, -44, 14.5, 7.5],
-      [0, 12, -16, 0, -25, -19, 11, 6.5],
-      [1, -10, 13, -19, 19, -33, 10, 6.5],
-    ];
-    return svg(
+  // A spruce cone hanging from (x, y), turned a little by angle: an oval
+  // with rows of scales, darker at the edges.
+  const cone = (c) => ([x, y, angle]) => {
+    let scales = '';
+    for (let row = 0; row < 5; row++) {
+      const sy = 6 + row * 4.4;
+      const half = 6 * Math.sin((Math.PI * (sy - 2)) / 26);
+      scales += `M${round(-half)} ${round(sy - 2)}Q0 ${round(sy + 2.5)} ${round(half)} ${round(sy - 2)}`;
+    }
+    return (
+      `<g transform="translate(${x} ${y}) rotate(${angle})">` +
+      `<path d="M0 0V4" stroke="${c.stem}" stroke-width="2.4" stroke-linecap="round"/>` +
+      `<ellipse cy="16" rx="7" ry="13" fill="${c.cone}"/>` +
+      `<path d="${scales}" fill="none" stroke="${c.coneShade}" stroke-width="1.4" stroke-linecap="round"/>` +
+      '</g>'
+    );
+  };
+
+  // twigs: [x0, y0, cx, cy, x1, y1, base needle length, tip needle length].
+  // cones: [x, y, angle] for each cone hanging from the twigs.
+  const spruce = (twigs, cones = []) => (c) =>
+    svg(
       '<g fill="none" stroke-linecap="round">' +
         `<path stroke="${c.stem}" stroke-width="3" d="${twigs.map(twigPath).join('')}"/>` +
         `<path stroke="${c.needle}" stroke-width="2.8" d="${twigs.map(needles).join('')}"/>` +
-        '</g>',
+        '</g>' +
+        cones.map(cone(c)).join(''),
     );
-  }
+
+  const SPRUCE = [
+    // Side shoots on alternate sides.
+    spruce([[2, 46, -2, 0, -2, -44, 14.5, 7.5], [0, 12, -16, 0, -25, -19, 11, 6.5], [1, -10, 13, -19, 19, -33, 10, 6.5]]),
+    // Forked: two shoots from the same point.
+    spruce([[1, 46, 0, 10, -1, -42, 14, 7.5], [0, 6, -13, -8, -24, -28, 10.5, 6.5], [0, 6, 13, -8, 24, -28, 10.5, 6.5]]),
+    // One side shoot with a cone hanging below it.
+    spruce([[-6, 44, 2, 4, 6, -42, 13.5, 7], [1, 8, 14, 0, 26, -16, 10, 6.5]], [[14, 0, -8]]),
+  ];
 
   const HOLLY_LEAF = 'M0 2Q-5-4-9-2Q-8-9-15-14Q-10-20-15-27Q-8-30-9-38Q-3-39 0-46Q3-39 9-38Q8-30 15-27Q10-20 15-14Q8-9 9-2Q5-4 0 2Z';
 
-  function holly(c) {
-    const leaf = (transform) =>
-      `<g transform="${transform}"><path d="${HOLLY_LEAF}" fill="${c.leaf}"/>` +
+  // leaves: [angle, scale] for each leaf, from a point just above the berries.
+  // berries: [x, y] for each berry.
+  const holly = (leaves, berries) => (c) => {
+    const leaf = ([angle, scale]) =>
+      `<g transform="translate(0 10) rotate(${angle}) scale(${scale})"><path d="${HOLLY_LEAF}" fill="${c.leaf}"/>` +
       `<path d="M0 0V-40" fill="none" stroke="${c.vein}" stroke-width="1.6" stroke-linecap="round"/></g>`;
     const berry = ([x, y]) =>
       `<circle cx="${x}" cy="${y}" r="6.5" fill="${c.berry}"/><circle cx="${x - 2}" cy="${y - 2.2}" r="1.8" fill="#fff" fill-opacity=".55"/>`;
-    return svg(
-      '<g transform="translate(0 4) scale(1.25)">' +
-        leaf('translate(0 10) rotate(-38)') +
-        leaf('translate(0 10) rotate(42) scale(.9)') +
-        [[-5, 14], [6, 13], [0, 6]].map(berry).join('') +
-        '</g>',
-    );
-  }
+    return svg(`<g transform="translate(0 4) scale(1.25)">${leaves.map(leaf).join('')}${berries.map(berry).join('')}</g>`);
+  };
+
+  const HOLLY = [
+    holly([[-38, 1], [42, 0.9]], [[-5, 14], [6, 13], [0, 6]]),
+    holly([[-62, 0.82], [62, 0.82], [0, 0.95]], [[-6, 13], [6, 13], [0, 17]]),
+    holly([[-18, 1.05]], [[-1, 14], [9, 11]]),
+  ];
 
   const MISTLETOE_LEAF = 'M0 0C-7-6-9-22-4-29C-2-32 2-32 4-29C9-22 7-6 0 0Z';
 
-  function mistletoe(c) {
+  // stem: the path of the stems. leaves: [x, y, angle] for each leaf.
+  // berries: [x, y] for each berry, sitting in the forks.
+  const mistletoe = (stem, leaves, berries) => (c) => {
     const leaf = ([x, y, a]) => `<path transform="translate(${x} ${y}) rotate(${a})" d="${MISTLETOE_LEAF}"/>`;
-    const leaves = [[-14, -12, -60], [-14, -12, -8], [14, -12, 8], [14, -12, 60], [0, 30, -70], [0, 30, 70]];
     return svg(
-      `<path d="M0 44V10L-14-12M0 10L14-12" fill="none" stroke="${c.stem}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>` +
+      `<path d="${stem}" fill="none" stroke="${c.stem}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>` +
         `<g fill="${c.leaf}">${leaves.map(leaf).join('')}</g>` +
         `<g fill="${c.berry}" stroke="${c.edge}" stroke-width="1.2">` +
-        [[-5, 12], [5, 12], [0, 5]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="5.5"/>`).join('') +
+        berries.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="5.5"/>`).join('') +
         '</g>',
     );
-  }
+  };
+
+  const MISTLETOE = [
+    // Forked in two.
+    mistletoe(
+      'M0 44V10L-14-12M0 10L14-12',
+      [[-14, -12, -60], [-14, -12, -8], [14, -12, 8], [14, -12, 60], [0, 30, -70], [0, 30, 70]],
+      [[-5, 12], [5, 12], [0, 5]],
+    ),
+    // A single sprig with two pairs of leaves.
+    mistletoe('M0 44V2', [[0, 2, -28], [0, 2, 28], [0, 26, -72], [0, 26, 72]], [[-4, 5], [4, 5]]),
+    // Forked in three.
+    mistletoe(
+      'M0 44V12L-19-6M0 12V-14M0 12L19-6',
+      [[-19, -6, -62], [-19, -6, -14], [0, -14, -24], [0, -14, 24], [19, -6, 14], [19, -6, 62], [0, 34, -74], [0, 34, 74]],
+      [[-5, 15], [5, 15], [0, 8], [0, 21]],
+    ),
+  ];
 
   function starPath(points, outer, inner) {
     const corners = [];
@@ -154,11 +200,12 @@ const hygge = (() => {
   // in the flag's proportions of 12+4+21 across and 12+4+12 down (×2), but
   // with the cross a fifth wider. Turned a quarter clockwise, so it hangs
   // from its top edge like a banner.
-  // wave: how far the cloth bends.
-  const flag = (wave) => (c) => {
+  // wave: how far the cloth bends. split: a swallow-tailed splitflag, with a
+  // notch cut into the end away from the pole.
+  const flag = (wave, split = false) => (c) => {
     const band = (top, bottom) =>
       `M-37 ${top}C-12 ${top - wave} 12 ${top + wave} 37 ${top}V${bottom}C12 ${bottom + wave}-12 ${bottom - wave}-37 ${bottom}Z`;
-    const cloth = band(-28, 28);
+    const cloth = split ? band(-28, 28).replace('V28', 'L17 0L37 28') : band(-28, 28);
     return svg(
       '<defs><clipPath id="cloth">' +
         `<path d="${cloth}"/></clipPath><linearGradient id="folds" x1="-37" x2="37" gradientUnits="userSpaceOnUse">` +
@@ -267,13 +314,16 @@ const hygge = (() => {
     {
       name: 'julehjerter',
       colors: { light: { red: '#c62828', white: '#ffffff' }, dark: { red: '#d94848', white: '#f4eee6' } },
-      sprites: [heart],
+      sprites: [heart(3), heart(2), heart(4)],
       density: 2.6, size: [24, 40], speed: [26, 46], sway: 30, spin: 0, rock: 0.45, upright: true,
     },
     {
       name: 'grankviste',
-      colors: { light: { needle: '#2f6e45', stem: '#6b4a2e' }, dark: { needle: '#5aa874', stem: '#8d6e4f' } },
-      sprites: [spruce],
+      colors: {
+        light: { needle: '#2f6e45', stem: '#6b4a2e', cone: '#8a5a32', coneShade: '#5c3a1e' },
+        dark: { needle: '#5aa874', stem: '#8d6e4f', cone: '#b07f52', coneShade: '#74502f' },
+      },
+      sprites: SPRUCE,
       density: 2, size: [40, 64], speed: [24, 42], sway: 30, spin: 0.12, rock: 0.4,
     },
     {
@@ -282,7 +332,7 @@ const hygge = (() => {
         light: { leaf: '#2a6b40', vein: '#5f9e74', berry: '#c62828' },
         dark: { leaf: '#3f9160', vein: '#7cc493', berry: '#e04848' },
       },
-      sprites: [holly],
+      sprites: HOLLY,
       density: 2.2, size: [34, 52], speed: [24, 42], sway: 28, spin: 0.15, rock: 0.4,
     },
     {
@@ -291,7 +341,7 @@ const hygge = (() => {
         light: { leaf: '#6f8f3a', stem: '#5e7a30', berry: '#ffffff', edge: '#8f8a72' },
         dark: { leaf: '#a9c46c', stem: '#8eaa58', berry: '#f6f3e7', edge: '#d6d0b8' },
       },
-      sprites: [mistletoe],
+      sprites: MISTLETOE,
       density: 2.2, size: [38, 58], speed: [24, 42], sway: 28, spin: 0.15, rock: 0.4,
     },
     {
@@ -303,7 +353,7 @@ const hygge = (() => {
     {
       name: 'dannebrog',
       colors: { light: { red: '#c8102e', white: '#ffffff' }, dark: { red: '#d42a3c', white: '#f4eee6' } },
-      sprites: [flag(6), flag(-5)],
+      sprites: [flag(6), flag(-5), flag(5, true)],
       density: 2.4, size: [26, 44], speed: [24, 42], sway: 30, spin: 0, rock: 0.3, upright: true, noFlip: true,
     },
     {

@@ -26,6 +26,11 @@ Conventions:
   - **2 have unconfirmed PD status** because the Danish translator is unknown or their dates are unknown: *På loftet sidder nissen* and *Nu tændes tusind julelys*. Hold both until this is resolved.
 - **Surprise finding.** *Juletræet med sin pynt* (1938/39), which looks modern, is **PD since 1 January 2024**. Its author Mogens Lorentzen died 7 February 1953 ([lex.dk Lorentzen][lex-lorentzen]). *Der er noget i luften* (1911) is PD too. Vilhelm Gregersen died in 1929 ([hymnary.org][hymnary-gregersen]).
 - **Best import source.** **Danish Wikisource** covers 21 of the 29. It uses modern spelling, separates stanzas with blank lines, marks the texts as PD, and has a MediaWiki API. Use **Kalliope** (reuse explicitly permitted) for original first-edition texts. Use **dendanskesalmebogonline.dk** only to *check* hymnal versions and verse counts. Its terms forbid copying.
+- **Update 2026-10-23.**
+  - Added from Højskolesangbogen's story pages, as PD texts: *Der er noget i luften* (HSB 232), *Julen har englelyd* (HSB 245; HSB credits Grundtvig alone, 1837/1851), *Juletræet med sin pynt* (HSB 259) and *Vær velkommen, Herrens år* (Advent version, HSB 227).
+  - *Vær velkommen, Herrens år* is also on [Wikisource][ws-vaer], but in a slightly different wording from the hymnal's.
+  - Its DDS number is unresolved: secondary sources give 66 or 74.
+  - Checked and left out as protected: *Santa Lucia*, whose Danish text is by Alex Garff, †1977 ([Wikisource][ws-lucia]), and *Kender I den om Rudolf?*, a translation of Johnny Marks's lyrics (†1985).
 - **Dancing around the tree is common but not universal.** In a 2024 Epinion survey for DR, 26% of those celebrating Christmas didn't expect to walk around the tree ([DR 2024][dr2024]). A 2013 YouGov survey found that 82% of Danes sing hymns at Christmas ([Bibelselskabet 2013][bibel2013]).
 
 ---
@@ -635,6 +640,8 @@ Also unverified: the credits of *Til julebal i Nisseland*. No reliable source wa
 [enwp-musevisa]: https://en.wikipedia.org/wiki/Musevisa
 [duda-nissen]: https://duda.dk/tema/jul/julesange/paa-loftet-sidder-nissen/
 [nows-nissen]: https://no.wikisource.org/w/index.php?oldid=5784
+[ws-vaer]: https://da.wikisource.org/w/index.php?oldid=431582
+[ws-lucia]: https://da.wikisource.org/w/index.php?oldid=431497
 [jc-nissen]: https://www.jenscornelius.dk/tysk-satire-blev-til-paa-loftet-sidder-nissen-med-sin-julegroed/
 [wp-desmaa]: https://da.wikipedia.org/wiki/De_sm%C3%A5_synger
 [skagen-bjaelde]: https://www.skagenonline.dk/faq/hvem-har-oversat-jingle-bells-til-dansk

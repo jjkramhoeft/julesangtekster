@@ -50,8 +50,18 @@
     "shortVersion": [1, 2, 3, 7, 8]
   },
   {
-    "id": "det-kimer-nu-til-julefest",
+    "id": "der-er-noget-i-luften",
     "idNumber": 6,
+    "title": "Der er noget i luften",
+    "firstLine": "Der er noget i luften, jeg ved ikke hvad",
+    "author": "Vilhelm Gregersen",
+    "composer": "Vilhelm Gregersen, 1911",
+    "verseCount": 4,
+    "shortVersion": [1, 2, 3, 4]
+  },
+  {
+    "id": "det-kimer-nu-til-julefest",
+    "idNumber": 7,
     "title": "Det kimer nu til julefest",
     "firstLine": "Det kimer nu til julefest",
     "author": "N.F.S. Grundtvig",
@@ -61,7 +71,7 @@
   },
   {
     "id": "en-rose-saa-jeg-skyde",
-    "idNumber": 7,
+    "idNumber": 8,
     "title": "En rose så jeg skyde",
     "firstLine": "En rose så jeg skyde",
     "author": "Tysk, 1500-tallet",
@@ -71,7 +81,7 @@
   },
   {
     "id": "et-barn-er-foedt-i-betlehem",
-    "idNumber": 8,
+    "idNumber": 9,
     "title": "Et barn er født i Betlehem",
     "firstLine": "Et barn er født i Bethlehem",
     "author": "N.F.S. Grundtvig",
@@ -81,7 +91,7 @@
   },
   {
     "id": "et-lidet-barn-saa-lysteligt",
-    "idNumber": 9,
+    "idNumber": 10,
     "title": "Et lidet barn så lysteligt",
     "firstLine": "Et lidet barn så lysteligt",
     "author": "Arvid Pedersen og N.F.S. Grundtvig",
@@ -91,7 +101,7 @@
   },
   {
     "id": "fra-himlen-hoejt-kom-budskab-her",
-    "idNumber": 10,
+    "idNumber": 11,
     "title": "Fra himlen højt kom budskab her",
     "firstLine": "Fra himlen højt kom budskab her",
     "author": "Martin Luther",
@@ -101,7 +111,7 @@
   },
   {
     "id": "glade-jul",
-    "idNumber": 11,
+    "idNumber": 12,
     "title": "Glade jul, dejlige jul",
     "firstLine": "Glade jul, dejlige jul",
     "author": "B.S. Ingemann",
@@ -111,7 +121,7 @@
   },
   {
     "id": "her-kommer-jesus-dine-smaa",
-    "idNumber": 12,
+    "idNumber": 13,
     "title": "Her kommer, Jesus, dine små",
     "firstLine": "Her kommer, Jesus, dine små",
     "author": "H.A. Brorson",
@@ -121,7 +131,7 @@
   },
   {
     "id": "hjerte-loeft-din-glaedes-vinger",
-    "idNumber": 13,
+    "idNumber": 14,
     "title": "Hjerte, løft din glædes vinger",
     "firstLine": "Hjerte, løft din glædes vinger",
     "author": "Paul Gerhardt",
@@ -131,7 +141,7 @@
   },
   {
     "id": "hoejt-fra-traeets-groenne-top",
-    "idNumber": 14,
+    "idNumber": 15,
     "title": "Højt fra træets grønne top",
     "firstLine": "Højt fra træets grønne top",
     "author": "Peter Faber",
@@ -141,7 +151,7 @@
   },
   {
     "id": "i-denne-soede-juletid",
-    "idNumber": 15,
+    "idNumber": 16,
     "title": "I denne søde juletid",
     "firstLine": "I denne søde juletid",
     "author": "H.A. Brorson",
@@ -151,7 +161,7 @@
   },
   {
     "id": "julen-har-bragt-velsignet-bud",
-    "idNumber": 16,
+    "idNumber": 17,
     "title": "Julen har bragt velsignet bud",
     "firstLine": "Julen har bragt velsignet bud",
     "author": "B.S. Ingemann",
@@ -160,8 +170,28 @@
     "shortVersion": [1, 2, 3]
   },
   {
+    "id": "julen-har-englelyd",
+    "idNumber": 18,
+    "title": "Julen har englelyd",
+    "firstLine": "Julen har englelyd",
+    "author": "N.F.S. Grundtvig",
+    "composer": "A.P. Berggreen, 1852",
+    "verseCount": 3,
+    "shortVersion": [1, 2, 3]
+  },
+  {
+    "id": "juletraeet-med-sin-pynt",
+    "idNumber": 19,
+    "title": "Juletræet med sin pynt",
+    "firstLine": "Juletræet med sin pynt",
+    "author": "Mogens Lorentzen",
+    "composer": "Egil Harder, 1940",
+    "verseCount": 5,
+    "shortVersion": [1, 2, 3, 4, 5]
+  },
+  {
     "id": "kimer-i-klokker",
-    "idNumber": 17,
+    "idNumber": 20,
     "title": "Kimer, I klokker",
     "firstLine": "Kimer, I klokker, ja, kimer før dag i det dunkle",
     "author": "N.F.S. Grundtvig",
@@ -171,7 +201,7 @@
   },
   {
     "id": "lad-det-klinge-soedt-i-sky",
-    "idNumber": 18,
+    "idNumber": 21,
     "title": "Lad det klinge sødt i sky",
     "firstLine": "Lad det klinge sødt i sky",
     "author": "Claus Mortensen, N.F.S. Grundtvig og Thomas Laub",
@@ -181,7 +211,7 @@
   },
   {
     "id": "nu-er-det-jul-igen",
-    "idNumber": 19,
+    "idNumber": 22,
     "title": "Nu er det jul igen",
     "firstLine": "Nu’ det jul igen",
     "author": "Traditionel",
@@ -191,7 +221,7 @@
   },
   {
     "id": "paa-loftet-sidder-nissen",
-    "idNumber": 20,
+    "idNumber": 23,
     "title": "På loftet sidder nissen",
     "firstLine": "På loftet sidder nissen med sin julegrød",
     "author": "Margrethe Munthe",
@@ -201,7 +231,7 @@
   },
   {
     "id": "sikken-voldsom-traengsel-og-alarm",
-    "idNumber": 21,
+    "idNumber": 24,
     "title": "Sikken voldsom trængsel og alarm",
     "firstLine": "Sikken voldsom trængsel og alarm",
     "author": "Peter Faber",
@@ -211,12 +241,22 @@
   },
   {
     "id": "velkommen-igen-guds-engle-smaa",
-    "idNumber": 22,
+    "idNumber": 25,
     "title": "Velkommen igen, Guds engle små",
     "firstLine": "Velkommen igen, Guds engle små",
     "author": "N.F.S. Grundtvig",
     "composer": "A.P. Berggreen, 1832",
     "verseCount": 8,
     "shortVersion": [1, 2, 3, 8]
+  },
+  {
+    "id": "vaer-velkommen-herrens-aar",
+    "idNumber": 26,
+    "title": "Vær velkommen, Herrens år",
+    "firstLine": "Vær velkommen, Herrens år",
+    "author": "N.F.S. Grundtvig",
+    "composer": "A.P. Berggreen, 1852",
+    "verseCount": 4,
+    "shortVersion": [1, 2, 3, 4]
   }
 ]

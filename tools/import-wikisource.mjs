@@ -319,13 +319,15 @@ const SONGS = [
     extraInfo:
       'En sang skrevet til at gå om juletræet. Teksten er af Elith Reumert, melodien af J.P.E. Hartmann.',
   },
-  // Not on Danish Wikisource. The song file is kept by hand, from Munthe's
-  // Norwegian original on no.wikisource; the importer only renumbers it.
-  {
-    id: 'paa-loftet-sidder-nissen',
-    title: 'På loftet sidder nissen',
-    manual: true,
-  },
+  // Song files kept by hand; the importer only renumbers them. The nisse song
+  // follows Munthe's Norwegian original on no.wikisource. The others are not on
+  // Danish Wikisource (or, for "Vær velkommen", only in a different wording),
+  // so their public-domain texts follow Højskolesangbogen.
+  { id: 'paa-loftet-sidder-nissen', title: 'På loftet sidder nissen', manual: true },
+  { id: 'der-er-noget-i-luften', title: 'Der er noget i luften', manual: true },
+  { id: 'julen-har-englelyd', title: 'Julen har englelyd', manual: true },
+  { id: 'juletraeet-med-sin-pynt', title: 'Juletræet med sin pynt', manual: true },
+  { id: 'vaer-velkommen-herrens-aar', title: 'Vær velkommen, Herrens år', manual: true },
 ];
 
 async function fetchPage(title) {

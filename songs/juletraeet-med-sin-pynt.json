@@ -1,0 +1,63 @@
+{
+  "id": "juletraeet-med-sin-pynt",
+  "idNumber": 19,
+  "title": "Juletræet med sin pynt",
+  "firstLine": "Juletræet med sin pynt",
+  "type": "julesang",
+  "author": "Mogens Lorentzen",
+  "translator": null,
+  "year": 1939,
+  "composer": "Egil Harder, 1940",
+  "dds": null,
+  "hsb": 259,
+  "extraInfo": "Maleren og forfatteren Mogens Lorentzen skrev sangen i 1938, og den blev trykt i hans samling »og så videre« i 1939. Egil Harder, som også skrev melodien til »Den blå anemone«, satte melodi til den i 1940. Lorentzen døde i 1953, så teksten blev fri af ophavsret 1. januar 2024.",
+  "source": {
+    "name": "Højskolesangbogen",
+    "url": "https://hojskolesangbogen.dk/om-sangbogen/historier-om-sangene/j-l/juletraeet-med-sin-pynt",
+    "revision": null,
+    "license": "Public domain (ophavsretsloven § 63): Lorentzen døde 1953"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Juletræet med sin pynt",
+      "venter på, vi får begyndt.",
+      "Aldrig har det vær’t så grønt,",
+      "aldrig har det vær’t så kønt.",
+      "Og fra selve himlen gled",
+      "vist den store stjerne ned."
+    ],
+    [
+      "Hjerter klippet med en saks",
+      "af den fingernemme slags,",
+      "kræmmerhus med krøllet hank,",
+      "som så let får en skavank,",
+      "kurve, kugler, fugle, flag,",
+      "op og ned og for og bag."
+    ],
+    [
+      "Når de mange fine ting",
+      "hænger roligt rundt omkring,",
+      "og når alle lys er tændt,",
+      "og her lugter brunt og brændt,",
+      "er det som en sommerdag",
+      "der, hvor træet kommer fra."
+    ],
+    [
+      "Alle vegne ud og ind",
+      "glimrer edderkoppespind,",
+      "mon der ikke bor en spurv",
+      "her i denne lille kurv?",
+      "Kræmmerhus med nødder i",
+      "er grangiv’lig kogleri."
+    ],
+    [
+      "Juletræet på besøg",
+      "hilser os fra eg og bøg",
+      "med besked derude fra,",
+      "at det lysner dag for dag,",
+      "og at solen fra sit skjul",
+      "ønsker os en glæd’lig jul."
+    ]
+  ]
+}

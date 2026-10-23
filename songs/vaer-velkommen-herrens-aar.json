@@ -1,0 +1,51 @@
+{
+  "id": "vaer-velkommen-herrens-aar",
+  "idNumber": 26,
+  "title": "Vær velkommen, Herrens år",
+  "firstLine": "Vær velkommen, Herrens år",
+  "type": "adventssalme",
+  "author": "N.F.S. Grundtvig",
+  "translator": null,
+  "year": 1849,
+  "composer": "A.P. Berggreen, 1852",
+  "dds": null,
+  "hsb": 227,
+  "extraInfo": "Grundtvig skrev salmen til første søndag i advent 1849 i Vartov, efter en gammel adventssang med ti vers. Han samlede den i tre vers om jul, påske og pinse og et sidste vers om hele kirkeåret. Han skrev også en udgave til det almindelige nytår på samme melodi; her er adventsudgaven.",
+  "source": {
+    "name": "Højskolesangbogen",
+    "url": "https://hojskolesangbogen.dk/om-sangbogen/historier-om-sangene/v/vaer-velkommen-herrens-aar-advent",
+    "revision": null,
+    "license": "Public domain (ophavsretsloven § 63): Grundtvig døde 1872"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Vær velkommen, Herrens år,",
+      "og velkommen herhid!",
+      "Julenat, da vor Herre blev fød,",
+      "da tændte sig lyset i mørkets skød.",
+      "Velkommen, nytår, og velkommen her!"
+    ],
+    [
+      "Vær velkommen, Herrens år,",
+      "og velkommen herhid!",
+      "Påskemorgen, da Herren opstod,",
+      "da livstræet fæsted i graven rod.",
+      "Velkommen, nytår, og velkommen her!"
+    ],
+    [
+      "Vær velkommen, Herrens år,",
+      "og velkommen herhid!",
+      "Pinsedag, da Guds Ånd kom herned,",
+      "da nedsteg Guds kraft til vor skrøbelighed.",
+      "Velkommen, nytår, og velkommen her!"
+    ],
+    [
+      "Vær velkommen, Herrens år,",
+      "og velkommen herhid!",
+      "Herrens år med vor Guds velbehag",
+      "nu bringer os glæde hver Herrens dag.",
+      "Velkommen, nytår, og velkommen her!"
+    ]
+  ]
+}

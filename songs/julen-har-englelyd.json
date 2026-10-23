@@ -1,0 +1,65 @@
+{
+  "id": "julen-har-englelyd",
+  "idNumber": 18,
+  "title": "Julen har englelyd",
+  "firstLine": "Julen har englelyd",
+  "type": "julesalme",
+  "author": "N.F.S. Grundtvig",
+  "translator": null,
+  "year": 1851,
+  "composer": "A.P. Berggreen, 1852",
+  "dds": 118,
+  "hsb": 245,
+  "extraInfo": "Grundtvig gendigtede en gammel salme fra før reformationen, hvor dansk og latin var blandet. Den første udgave fra 1837 havde syv vers; i »Fest-Psalmer« 1852 fik den sin nuværende form med tre vers. Grundtvig bad menigheden synge den ved sin anden hustrus begravelse i 1854.",
+  "source": {
+    "name": "Højskolesangbogen",
+    "url": "https://hojskolesangbogen.dk/om-sangbogen/historier-om-sangene/j-l/julen-har-englelyd",
+    "revision": null,
+    "license": "Public domain (ophavsretsloven § 63): Grundtvig døde 1872"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Julen har englelyd,",
+      "vi med fryd",
+      "os barnlig på Gud Fader",
+      "forlader;",
+      "vi var i nød så længe,",
+      "dog hørte han vor bøn,",
+      "han ved, hvortil vi trænge,",
+      "vor frelser blev Guds Søn;",
+      "thi vil vi alle sjunge",
+      "med hjerte og med tunge",
+      "et: Ære være Gud",
+      "for sit julebud!"
+    ],
+    [
+      "Ret i en salig tid",
+      "kom han hid;",
+      "til levende og døde",
+      "genløde",
+      "de ord, der fór så vide",
+      "til alle tider hen:",
+      "om ham, som tog vor kvide",
+      "og gav os fryd igen,",
+      "gik ned for os i døden",
+      "som sol i aftenrøden",
+      "og stod i morgengry",
+      "op for os på ny."
+    ],
+    [
+      "Sorg er til glæde vendt,",
+      "klagen endt!",
+      "Vor glæde skal hver tunge",
+      "udsjunge!",
+      "Syng med Guds engleskare",
+      "på Jesu fødselsdag",
+      "om fred trods nød og fare,",
+      "Gud Faders velbehag,",
+      "som vil al sorgen vende",
+      "til glæde uden ende;",
+      "bær os på børnevis",
+      "ind i Paradis!"
+    ]
+  ]
+}

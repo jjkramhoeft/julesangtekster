@@ -1,0 +1,51 @@
+{
+  "id": "der-er-noget-i-luften",
+  "idNumber": 6,
+  "title": "Der er noget i luften",
+  "firstLine": "Der er noget i luften, jeg ved ikke hvad",
+  "type": "adventssang",
+  "author": "Vilhelm Gregersen",
+  "translator": null,
+  "year": 1911,
+  "composer": "Vilhelm Gregersen, 1911",
+  "dds": null,
+  "hsb": 232,
+  "extraInfo": "Præsten Vilhelm Gregersen skrev både tekst og melodi, og sangen blev trykt første gang i digtsamlingen »Vintergæk« i 1911. Den binder forventningen til julen sammen med minderne om barndommens jul derhjemme. Kærter i vers 2 er et gammelt ord for stearinlys.",
+  "source": {
+    "name": "Højskolesangbogen",
+    "url": "https://hojskolesangbogen.dk/om-sangbogen/historier-om-sangene/d/der-er-noget-i-luften",
+    "revision": null,
+    "license": "Public domain (ophavsretsloven § 63): Gregersen døde 1929"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Der er noget i luften, jeg ved ikke hvad,",
+      "som forår, skønt skoven har mistet hvert blad.",
+      "Der er noget i luften, som rosernes duften,",
+      "som fuglenes fryd,",
+      "skønt rosen er falmet, og fuglen er draget mod syd."
+    ],
+    [
+      "Der er noget i luften, som gør mig så glad,",
+      "som frisker mit hjerte i ungdommens bad.",
+      "Der er noget herinde, et strålende minde",
+      "med kærter og sang",
+      "om julen derhjemme, derhjemme hos moder en gang."
+    ],
+    [
+      "Der er noget i luften, et barndommens bud,",
+      "som lyser imod mig som stjernen fra Gud,",
+      "som leder mig stille til frelseren lille",
+      "med barndommens fryd,",
+      "skønt barndommen flygted’ som fuglen, der rejste mod syd."
+    ],
+    [
+      "O kom til os alle, du højtidens drot,",
+      "om lokken er gylden, om håret er gråt,",
+      "udbred dine hænder, mens lysene brænder,",
+      "og skænk os din fred,",
+      "thi evig, ja evig er glæden, når du følger med."
+    ]
+  ]
+}

@@ -18,5 +18,22 @@
     "license": "Dansk tekst beskyttet: Alex Garff døde 1977"
   },
   "chorus": null,
-  "verses": []
+  "verses": [
+    ["Nu bæres lyset frem",
+    "stolt på din krone",
+    "rundt om i hus og hjem",
+    "sangen skal tone",
+    "nu på Lucia-dag",
+    "hilser vort vennelag",
+    "Santa Lucia, Santa Lucia"
+  ],
+  [
+    "Her ved vor ønskefest",
+    "sangen skal klinge",
+    "gaver til hver en gæst",
+    "glad vil du bringe",
+    "skænk os af lykkens væld",
+    "lige til livets kvæld",
+    "Santa Lucia, Santa Lucia"]
+  ]
 }

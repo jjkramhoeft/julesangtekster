@@ -18,5 +18,29 @@
     "license": "Dansk tekst beskyttet: Otto Leisner døde 2008"
   },
   "chorus": null,
-  "verses": []
+  "verses": [
+    ["Vint’ren er så kort, vi må bruge hvert minut",
+      "sneen smelter bort, og så’r det hele slut.",
+      "Nu er jorden hvid og kanen, den er klar.",
+      "Så’r der altså ingen tid til dikkedar’."
+    ],
+    [
+      "Bjældeklang, bjældeklang over vej og sti",
+      "kan man høre vintervejrets kendingsmelodi.",
+      "Bjældeklang, bjældeklang gennem mark og skov",
+      "farer vi på kanetur og ih, hvor er det sjov."
+    ],
+    [
+      "Over stok og sten går det rask af sted",
+      "Lottes lange ben kan ikke følge med.",
+      "Sneen falder tæt, aft’nen stunder til,",
+      "vi er blevet trætte, og nu skal det hjemad gå."
+    ],
+    [
+      "Bjældeklang, bjældeklang, over vej og sti",
+      "kan man høre vintervejrets kendingsmelodi.",
+      "Bjældeklang, bjældeklang, sød og let musik",
+      "fylder vores kanetur med yndig romantik."
+    ]
+  ]
 }

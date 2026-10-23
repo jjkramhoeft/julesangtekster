@@ -16,8 +16,8 @@
     "firstLine": "Bjældeklang",
     "author": "James Lord Pierpont",
     "composer": "James Lord Pierpont, 1857",
-    "verseCount": 0,
-    "shortVersion": []
+    "verseCount": 4,
+    "shortVersion": [1, 2, 3, 4]
   },
   {
     "id": "boern-og-voksne-i-kaerlig-krans",
@@ -206,8 +206,8 @@
     "firstLine": "Kender I den om Rudolf?",
     "author": "Johnny Marks",
     "composer": "Johnny Marks, 1949",
-    "verseCount": 0,
-    "shortVersion": []
+    "verseCount": 4,
+    "shortVersion": [1, 2, 3, 4]
   },
   {
     "id": "kimer-i-klokker",
@@ -256,8 +256,8 @@
     "firstLine": "Santa Lucia",
     "author": "Napolitansk folkesang",
     "composer": "Napolitansk folkemelodi, udgivet af Teodoro Cottrau 1849",
-    "verseCount": 0,
-    "shortVersion": []
+    "verseCount": 2,
+    "shortVersion": [1, 2]
   },
   {
     "id": "sikken-voldsom-traengsel-og-alarm",

@@ -18,5 +18,30 @@
     "license": "Beskyttet: oversættelse af Johnny Marks’ tekst (Marks døde 1985)"
   },
   "chorus": null,
-  "verses": []
+  "verses": [
+    [
+      "Kender I den om Rudolf?",
+      "Rudolf med den røde tud.",
+      "Han var et gammelt rensdyr",
+      "som så højst mærkværdig ud."
+    ],
+    [
+      "Alle de andre rensdyr",
+      "lo så Rudolf han blev flov",
+      "over sin røde næse",
+      "Det var ikke spor af sjov."
+    ],
+    [
+      "Men en tåget julenat,",
+      "julenissen skreg:",
+      "“Jeg kan ikke finde vej,",
+      "Rudolf, kom og lys for mig”"
+    ],
+    [
+      "Og I kan tro, at Rudolfs",
+      "næse lyste som et fyr.",
+      "Skål for de røde næser.",
+      "Dejligt juleeventyr."
+    ]
+  ]
 }

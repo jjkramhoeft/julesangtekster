@@ -1,0 +1,22 @@
+{
+  "id": "santa-lucia",
+  "idNumber": 26,
+  "title": "Santa Lucia",
+  "firstLine": "Santa Lucia",
+  "type": "luciasang",
+  "author": "Napolitansk folkesang",
+  "translator": "Alex Garff",
+  "year": null,
+  "composer": "Napolitansk folkemelodi, udgivet af Teodoro Cottrau 1849",
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "Melodien er en napolitansk folkesang, som Teodoro Cottrau udgav i 1849; den italienske tekst handler om havnekvarteret Santa Lucia i Napoli. Den danske luciatekst af Alex Garff synges ved luciaoptog den 13. december. Garff døde i 1977, så teksten er beskyttet til og med 2047 og er ikke med i appen.",
+  "source": {
+    "name": null,
+    "url": null,
+    "revision": null,
+    "license": "Dansk tekst beskyttet: Alex Garff døde 1977"
+  },
+  "chorus": null,
+  "verses": []
+}

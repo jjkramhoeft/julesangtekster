@@ -40,42 +40,45 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 
 ## Songs
 
-The app ships with 26 carols, numbered in Danish alphabetical order. Their texts are in the public domain: every author and named translator died more than 70 years ago (ophavsretsloven § 63). 21 are imported from Danish Wikisource. Five are kept by hand: *På loftet sidder nissen* (see Copyright below) and four songs that are not on Danish Wikisource. Those four follow the text in Højskolesangbogen: *Der er noget i luften*, *Julen har englelyd*, *Juletræet med sin pynt* and *Vær velkommen, Herrens år*. The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
+The app lists 29 carols, numbered in Danish alphabetical order. Three of them, *Bjældeklang*, *Kender I den om Rudolf?* and *Santa Lucia*, have no text yet because their Danish texts are protected (see Copyright below). The other 26 texts are in the public domain: every author and named translator died more than 70 years ago (ophavsretsloven § 63). 21 are imported from Danish Wikisource. Five are kept by hand: *På loftet sidder nissen* (see Copyright below) and four songs that are not on Danish Wikisource. Those four follow the text in Højskolesangbogen: *Der er noget i luften*, *Julen har englelyd*, *Juletræet med sin pynt* and *Vær velkommen, Herrens år*. The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
 
 | # | Title | Text |
 | --- | --- | --- |
 | 1 | Barn Jesus i en krybbe lå | H.C. Andersen |
-| 2 | Børn og voksne i kærlig krans | Elith Reumert |
-| 3 | Dejlig er den himmel blå | N.F.S. Grundtvig |
-| 4 | Dejlig er jorden | B.S. Ingemann |
-| 5 | Den yndigste rose er funden | H.A. Brorson |
-| 6 | Der er noget i luften | Vilhelm Gregersen |
-| 7 | Det kimer nu til julefest | N.F.S. Grundtvig |
-| 8 | En rose så jeg skyde (verses 1–2) | Thomas Laub |
-| 9 | Et barn er født i Betlehem | N.F.S. Grundtvig |
-| 10 | Et lidet barn så lysteligt | Arvid Pedersen and N.F.S. Grundtvig |
-| 11 | Fra himlen højt kom budskab her | Martin Luther, Danish text J.L.A. Kolderup-Rosenvinge |
-| 12 | Glade jul, dejlige jul | B.S. Ingemann |
-| 13 | Her kommer, Jesus, dine små | H.A. Brorson |
-| 14 | Hjerte, løft din glædes vinger | Paul Gerhardt, Danish text C.J. Brandt |
-| 15 | Højt fra træets grønne top | Peter Faber |
-| 16 | I denne søde juletid | H.A. Brorson |
-| 17 | Julen har bragt velsignet bud | B.S. Ingemann |
-| 18 | Julen har englelyd | N.F.S. Grundtvig |
-| 19 | Juletræet med sin pynt | Mogens Lorentzen |
-| 20 | Kimer, I klokker | N.F.S. Grundtvig |
-| 21 | Lad det klinge sødt i sky | Claus Mortensen, N.F.S. Grundtvig and Thomas Laub |
-| 22 | Nu er det jul igen | Traditional |
-| 23 | På loftet sidder nissen | Margrethe Munthe, Danish text unattributed |
-| 24 | Sikken voldsom trængsel og alarm | Peter Faber |
-| 25 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
-| 26 | Vær velkommen, Herrens år | N.F.S. Grundtvig |
+| 2 | Bjældeklang (no text yet) | James Lord Pierpont, Danish text Otto Leisner |
+| 3 | Børn og voksne i kærlig krans | Elith Reumert |
+| 4 | Dejlig er den himmel blå | N.F.S. Grundtvig |
+| 5 | Dejlig er jorden | B.S. Ingemann |
+| 6 | Den yndigste rose er funden | H.A. Brorson |
+| 7 | Der er noget i luften | Vilhelm Gregersen |
+| 8 | Det kimer nu til julefest | N.F.S. Grundtvig |
+| 9 | En rose så jeg skyde (verses 1–2) | Thomas Laub |
+| 10 | Et barn er født i Betlehem | N.F.S. Grundtvig |
+| 11 | Et lidet barn så lysteligt | Arvid Pedersen and N.F.S. Grundtvig |
+| 12 | Fra himlen højt kom budskab her | Martin Luther, Danish text J.L.A. Kolderup-Rosenvinge |
+| 13 | Glade jul, dejlige jul | B.S. Ingemann |
+| 14 | Her kommer, Jesus, dine små | H.A. Brorson |
+| 15 | Hjerte, løft din glædes vinger | Paul Gerhardt, Danish text C.J. Brandt |
+| 16 | Højt fra træets grønne top | Peter Faber |
+| 17 | I denne søde juletid | H.A. Brorson |
+| 18 | Julen har bragt velsignet bud | B.S. Ingemann |
+| 19 | Julen har englelyd | N.F.S. Grundtvig |
+| 20 | Juletræet med sin pynt | Mogens Lorentzen |
+| 21 | Kender I den om Rudolf? (no text yet) | Johnny Marks, Danish text unknown |
+| 22 | Kimer, I klokker | N.F.S. Grundtvig |
+| 23 | Lad det klinge sødt i sky | Claus Mortensen, N.F.S. Grundtvig and Thomas Laub |
+| 24 | Nu er det jul igen | Traditional |
+| 25 | På loftet sidder nissen | Margrethe Munthe, Danish text unattributed |
+| 26 | Santa Lucia (no text yet) | Neapolitan song, Danish text Alex Garff |
+| 27 | Sikken voldsom trængsel og alarm | Peter Faber |
+| 28 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
+| 29 | Vær velkommen, Herrens år | N.F.S. Grundtvig |
 
 ### Copyright
 
 The app is for private and non-commersial use - in the users on home: So Copyright do not apply.
 
-In practice, a site on GitHub Pages is public, so the app only ships texts that are free of copyright. *Nu tændes tusind julelys* is on hold until its Danish translator is identified, and verse 3 of *En rose så jeg skyde* is protected until 2065. These popular songs are left out because their Danish texts are still protected:
+In practice, a site on GitHub Pages is public, so the app only ships texts that are free of copyright. *Nu tændes tusind julelys* is on hold until its Danish translator is identified, and verse 3 of *En rose så jeg skyde* is protected until 2065. These popular songs are in the list with their facts, but without verses, because their Danish texts are still protected. Their pages say *Teksten er ikke skrevet ind endnu*. To fill one in, add the verses to its file in `songs/`, then set `verseCount` (and optionally `shortVersion`) in `songs/index.json`. The info text in the song file says the text is not in the app, so update that too. Anything you type in is published with the site.
 
 | Song | Danish text | Protected until |
 | --- | --- | --- |
@@ -115,7 +118,7 @@ tools/
 
 ### How the app is used
 
-- **Index:** a list of all songs in alphabetical order, numbered 1–26, under the title *Juletræssange*. Swiping on a song page follows the same order.
+- **Index:** a list of all songs in alphabetical order, numbered 1–29, under the title *Juletræssange*. Swiping on a song page follows the same order.
 - **Udvalgte vers / Alle vers:** the switch under the title picks whether song pages show only the selected verses (left) or every verse (right). The choice is remembered on the phone. Verse numbers keep their original numbering, so skipped verses are visible as gaps.
 - **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.

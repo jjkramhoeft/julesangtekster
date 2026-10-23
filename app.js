@@ -132,6 +132,8 @@ function renderVerses(song) {
     for (const line of expandRepeats([...lines, ...(song.chorus ?? [])])) section.append(renderLine(line));
     nodes.push(section);
   });
+  // Songs whose text is still protected ship without verses, to be filled in by hand.
+  if (!song.verses.length) nodes.push(el('p', 'line', 'Teksten er ikke skrevet ind endnu.'));
   $('verses').replaceChildren(...nodes);
 }
 

@@ -328,6 +328,10 @@ const SONGS = [
   { id: 'julen-har-englelyd', title: 'Julen har englelyd', manual: true },
   { id: 'juletraeet-med-sin-pynt', title: 'Juletræet med sin pynt', manual: true },
   { id: 'vaer-velkommen-herrens-aar', title: 'Vær velkommen, Herrens år', manual: true },
+  // Danish texts still protected: these ship without verses, to be typed in by hand.
+  { id: 'bjaeldeklang', title: 'Bjældeklang', manual: true },
+  { id: 'kender-i-den-om-rudolf', title: 'Kender I den om Rudolf?', manual: true },
+  { id: 'santa-lucia', title: 'Santa Lucia', manual: true },
 ];
 
 async function fetchPage(title) {

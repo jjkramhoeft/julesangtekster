@@ -1,11 +1,12 @@
 // Juletræssange – "Mere hygge": a slow background animation behind the index.
 // Nine themes (snow, paper hearts, spruce, holly, mistletoe, stars, Danish
-// flags, advent wreaths and candles), each in light and dark colours. One run
-// lasts 30 seconds.
+// flags, advent wreaths and candles), each in light and dark colours. A run
+// lasts 30 seconds, or 5 seconds for the welcome when the app opens.
 'use strict';
 
 const hygge = (() => {
   const DURATION = 30000;
+  const SHORT_DURATION = 5000;
   const FADE_IN = 1500;
   const FADE_OUT = 2500;
 
@@ -552,24 +553,24 @@ const hygge = (() => {
     const dt = Math.min(now - (r.prev ?? now), 100);
     r.prev = now;
     r.elapsed += dt;
-    if (r.elapsed >= DURATION) {
+    if (r.elapsed >= r.duration) {
       stop();
       return;
     }
     update(r, dt / 1000);
-    draw(r, Math.min(1, r.elapsed / FADE_IN, (DURATION - r.elapsed) / FADE_OUT), false);
+    draw(r, Math.min(1, r.elapsed / FADE_IN, (r.duration - r.elapsed) / FADE_OUT), false);
     r.frame = requestAnimationFrame(frame);
   }
 
   // Starts a run with a random theme other than the last. A run that is
   // already going is stopped first.
-  async function start() {
+  async function start(duration = DURATION) {
     stop();
     const choices = THEMES.filter((t) => t !== lastTheme);
     const theme = choices[Math.floor(Math.random() * choices.length)];
     lastTheme = theme;
 
-    const r = { theme, elapsed: 0, items: [], sprites: [], frame: 0, timer: 0 };
+    const r = { theme, duration, elapsed: 0, items: [], sprites: [], frame: 0, timer: 0 };
     run = r;
     fitCanvas(r);
     if (!theme.candles) {
@@ -584,10 +585,10 @@ const hygge = (() => {
     populate(r);
     canvas.hidden = false;
 
-    // With reduced motion the scene stands still for the same 30 seconds.
+    // With reduced motion the scene stands still for the same time.
     if (reducedMotion.matches) {
       draw(r, 1, true);
-      r.timer = setTimeout(stop, DURATION);
+      r.timer = setTimeout(stop, duration);
     } else {
       r.frame = requestAnimationFrame(frame);
     }
@@ -622,5 +623,5 @@ const hygge = (() => {
     if (run === r && reducedMotion.matches) draw(r, 1, true);
   });
 
-  return { start, stop };
+  return { start, stop, SHORT_DURATION };
 })();

@@ -369,7 +369,7 @@ async function start() {
   window.addEventListener('hashchange', route);
   route();
   // A little "Mere hygge" to welcome you, when the app opens on the index.
-  if (!state.current) hygge.start();
+  if (!state.current) hygge.start(hygge.SHORT_DURATION);
 }
 
 if ('serviceWorker' in navigator) {

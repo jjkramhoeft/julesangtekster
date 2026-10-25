@@ -476,23 +476,29 @@ function buildSong(song, number, parsed) {
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// Songs are numbered in Danish alphabetical order of their titles (æ, ø, å last).
-const byTitle = new Intl.Collator('da').compare;
-const ordered = [...SONGS].sort((a, b) => byTitle(a.title, b.title));
-
-// The verses for "Udvalgte vers" are chosen by hand in songs/index.json, so keep
-// the existing choice. New songs start with the odd-numbered verses.
+// The number, section and verses for "Udvalgte vers" are chosen by hand in
+// songs/index.json (see songs.md), so keep the existing choice. New songs go
+// last in the last section, and start with the odd-numbered verses.
 const previous = new Map();
 try {
   const old = JSON.parse(await readFile(new URL('index.json', OUT_DIR), 'utf8'));
-  for (const s of old) previous.set(s.id, s.shortVersion);
+  for (const s of old) previous.set(s.id, s);
 } catch {}
 const oddVerses = (count) => Array.from({ length: count }, (_, i) => i + 1).filter((n) => n % 2 === 1);
 
+let lastNumber = Math.max(0, ...[...previous.values()].map((s) => s.idNumber));
+const lastSection = [...previous.values()].find((s) => s.idNumber === lastNumber)?.section ?? null;
+for (const song of SONGS) {
+  if (previous.has(song.id)) continue;
+  previous.set(song.id, { idNumber: ++lastNumber, section: lastSection });
+  console.warn(`  ! ${song.title} is new: number ${lastNumber} in ${lastSection}; move it in songs/index.json`);
+}
+const ordered = [...SONGS].sort((a, b) => previous.get(a.id).idNumber - previous.get(b.id).idNumber);
+
 await mkdir(OUT_DIR, { recursive: true });
 const index = [];
-for (const [i, song] of ordered.entries()) {
-  const number = i + 1;
+for (const song of ordered) {
+  const { idNumber: number, section, shortVersion } = previous.get(song.id);
   console.log(`${number}. ${song.title}`);
   const data = song.manual
     ? { ...JSON.parse(await readFile(new URL(`${song.id}.json`, OUT_DIR), 'utf8')), idNumber: number }
@@ -501,12 +507,13 @@ for (const [i, song] of ordered.entries()) {
   index.push({
     id: data.id,
     idNumber: data.idNumber,
+    section,
     title: data.title,
     firstLine: data.firstLine,
     author: data.author,
     composer: data.composer,
     verseCount: data.verses.length,
-    shortVersion: previous.get(data.id) ?? oddVerses(data.verses.length),
+    shortVersion: shortVersion ?? oddVerses(data.verses.length),
   });
   if (!song.manual) await sleep(1500);
 }

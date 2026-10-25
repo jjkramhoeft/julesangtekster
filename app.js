@@ -59,15 +59,35 @@ function el(tag, className, text) {
 
 // ---------- Index view ----------
 
+function renderSongItem(song) {
+  const item = el('li', 'song-item');
+  const link = el('a', 'song-link');
+  link.href = `#/sang/${song.id}`;
+  link.append(el('span', 'num', String(song.idNumber)), el('span', 'title', song.title));
+  item.append(link);
+  return item;
+}
+
+// The songs are grouped in sections (Om Kristus, Advent og Nytår, Traditioner),
+// in the order they come in songs/index.json.
 function renderList() {
+  const sections = [];
+  for (const song of state.songs) {
+    let section = sections.at(-1);
+    if (!section || section.name !== song.section) {
+      section = { name: song.section, songs: [] };
+      sections.push(section);
+    }
+    section.songs.push(song);
+  }
   $('song-list').replaceChildren(
-    ...state.songs.map((song) => {
-      const item = el('li', 'song-item');
-      const link = el('a', 'song-link');
-      link.href = `#/sang/${song.id}`;
-      link.append(el('span', 'num', String(song.idNumber)), el('span', 'title', song.title));
-      item.append(link);
-      return item;
+    ...sections.map(({ name, songs }) => {
+      const group = el('section', 'song-section');
+      if (name) group.append(el('h2', 'section-title', name));
+      const list = el('ol', 'song-list-items');
+      list.append(...songs.map(renderSongItem));
+      group.append(list);
+      return group;
     }),
   );
 }

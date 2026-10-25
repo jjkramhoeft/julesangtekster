@@ -123,7 +123,7 @@ tools/
 ### How the app is used
 
 - **Index:** a list of all songs under the title *Juletræssange*, grouped under the headings *Om Kristus*, *Advent og Nytår* and *Traditioner*. Swiping on a song page follows the same order.
-- **Udvalgte vers / Alle vers:** the switch under the title picks whether song pages show only the selected verses (left) or every verse (right). The choice is remembered on the phone. Verse numbers keep their original numbering, so skipped verses are visible as gaps.
+- **Udvalgte vers / Alle vers:** the switch under the title picks whether song pages show only the selected verses (left) or every verse (right). It starts on *Udvalgte vers*, and the choice is remembered on the phone. Verse numbers keep their original numbering, so skipped verses are visible as gaps.
 - **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
 - **ⓘ** at the top right shows facts and a short story about the song.

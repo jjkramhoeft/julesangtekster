@@ -6,13 +6,13 @@ const $ = (id) => document.getElementById(id);
 // "all" shows every verse, "short" only the verses listed in shortVersion.
 const VERSES_KEY = 'julesange.verses';
 
-// localStorage can be unavailable (private mode, blocked storage), so fall
-// back to showing all verses.
+// "Udvalgte vers" is the default. localStorage can be unavailable (private
+// mode, blocked storage), so fall back to the default there too.
 function versesSetting() {
   try {
-    return localStorage.getItem(VERSES_KEY) === 'short' ? 'short' : 'all';
+    return localStorage.getItem(VERSES_KEY) === 'all' ? 'all' : 'short';
   } catch {
-    return 'all';
+    return 'short';
   }
 }
 

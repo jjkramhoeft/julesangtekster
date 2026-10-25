@@ -561,13 +561,12 @@ const hygge = (() => {
     r.frame = requestAnimationFrame(frame);
   }
 
-  // Starts a run with the named theme, or a random one other than the last.
-  // A run that is already going is stopped first.
-  async function start(name) {
+  // Starts a run with a random theme other than the last. A run that is
+  // already going is stopped first.
+  async function start() {
     stop();
-    const choices = THEMES.filter((t) => (name ? t.name === name : t !== lastTheme));
+    const choices = THEMES.filter((t) => t !== lastTheme);
     const theme = choices[Math.floor(Math.random() * choices.length)];
-    if (!theme) return;
     lastTheme = theme;
 
     const r = { theme, elapsed: 0, items: [], sprites: [], frame: 0, timer: 0 };

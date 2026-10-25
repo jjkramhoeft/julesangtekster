@@ -19,18 +19,11 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 
 ### Must have
 - **Readable in the dark**: black and white with a green accent, following the phone's light/dark setting; high contrast, large text.
-- **Adjustable text size**: pinch to zoom.
 - **Screen stays awake** while a song is open (Screen Wake Lock API, where the browser supports it).
-- **One-hand navigation**: swipe left/right or tap the screen edges to move between songs; scroll vertically through verses.
-- **Danish UI**: all text in the app is in Danish.
 - **No login, no ads, no tracking.**
 - **Index page of all the Carols**
-
-### Nice to have
-- **Both title and number** for carols (some titles are quite similar)
 - **Verse numbers** shown clearly, so "let's skip to verse 4" works.
 - **A Short Version switch** (*Udvalgte vers* / *Alle vers*) to show only a predefined set of verses for each carol
-- **Chorus** (*omkvæd*) written out in each verse as plain text, like the rest of the lyrics.
 - **An info pop up** for each carol with meta data and a short story about the carol
 - **Mere hygge**: a slow, quiet background animation behind the index (snow, paper hearts, spruce, holly, mistletoe, stars, Danish flags, advent wreaths or candles)
 
@@ -40,7 +33,7 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 
 ## Songs
 
-The app lists 30 carols in three sections: *Om Kristus* (1–20), *Advent og Nytår* (30–32) and *Traditioner* (40–46). Within each section the songs are in Danish alphabetical order, and the gaps in the numbering leave room for new songs. The order and sections follow [songs.md](songs.md). Three of them, *Bjældeklang*, *Kender I den om Rudolf?* and *Santa Lucia*, have no text yet because their Danish texts are protected (see Copyright below). *Lyset kommer tilbage* is a newer song by Kreste Wolff, who wrote both text and melody; its text is typed in by hand. The other 26 texts are in the public domain: every author and named translator died more than 70 years ago (ophavsretsloven § 63). 21 are imported from Danish Wikisource. Five are kept by hand: *På loftet sidder nissen* (see Copyright below) and four songs that are not on Danish Wikisource. Those four follow the text in Højskolesangbogen: *Der er noget i luften*, *Julen har englelyd*, *Juletræet med sin pynt* and *Vær velkommen, Herrens år*. The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
+The app lists 30 carols in three sections: *Om Kristus* (1–20), *Advent og Nytår* (30–32) and *Traditioner* (40–46). Within each section the songs are in Danish alphabetical order, and the gaps in the numbering leave room for new songs. Every author and named translator have died.
 
 | # | Title | Text |
 | --- | --- | --- |
@@ -80,20 +73,11 @@ The app lists 30 carols in three sections: *Om Kristus* (1–20), *Advent og Nyt
 
 ### Copyright
 
-The app is for private and non-commersial use - in the users on home: So Copyright do not apply.
-
-In practice, a site on GitHub Pages is public, so the app only ships texts that are free of copyright. *Nu tændes tusind julelys* is on hold until its Danish translator is identified, and verse 3 of *En rose så jeg skyde* is protected until 2065. These popular songs are in the list with their facts, but without verses, because their Danish texts are still protected. Their pages say *Teksten er ikke skrevet ind endnu*. To fill one in, add the verses to its file in `songs/`, then set `verseCount` (and optionally `shortVersion`) in `songs/index.json`. The info text in the song file says the text is not in the app, so update that too. Anything you type in is published with the site.
-
-| Song | Danish text | Protected until |
-| --- | --- | --- |
-| *Bjældeklang* | Otto Leisner, 1947 (†2008) | end of 2078 |
-| *Kender I den om Rudolf?* | Translation of Johnny Marks's "Rudolph the Red-Nosed Reindeer" (†1985) | end of 2055 at the earliest |
-| *Santa Lucia* | Alex Garff (†1977), per [Wikisource](https://da.wikisource.org/wiki/Santa_Lucia) | end of 2047 |
-
-*På loftet sidder nissen* is included on these grounds. Margrethe Munthe (†1931) wrote the Norwegian original in 1911, and it is public domain. The Danish text changes only a few words of hers, and no source names a Danish translator, so it counts as an anonymous adaptation. Anonymous works published before 1956 are public domain (§ 63, stk. 3). One gap remains: no Danish printing from before 1956 has been confirmed. It appears in *De små synger* (first edition 1948), but not necessarily in that first edition. The song file follows Munthe's text from [Norwegian Wikisource](https://no.wikisource.org/w/index.php?oldid=5784) as closely as the usual Danish wording allows.
+The app is for private and non-commersial use - in the users on home.
 
 ## Technical approach
 
+- All code is made by Claude Opus 5.5
 - Plain HTML, CSS and JavaScript. No build step and no dependencies at runtime, apart from a vendored QR code generator ([vendor/qrcode.js](vendor/qrcode.js), MIT).
 - Songs are stored as one data file per song in `songs/`, with title, author, translator, source and verses (with an optional info text).
 - A web app manifest and a service worker make the app installable and offline-capable. Every song is cached on the first visit, so it works without signal by the tree.
@@ -116,19 +100,8 @@ songs/
   hoejt-fra-traeets-groenne-top.json
   ...
 tools/
-  import-wikisource.mjs   Imports the song texts from Wikisource
-  serve.mjs               Small static server for local testing
+  serve.mjs           Small static server for local testing
 ```
-
-### How the app is used
-
-- **Index:** a list of all songs under the title *Juletræssange*, grouped under the headings *Om Kristus*, *Advent og Nytår* and *Traditioner*. Swiping on a song page follows the same order.
-- **Udvalgte vers / Alle vers:** the switch under the title picks whether song pages show only the selected verses (left) or every verse (right). It starts on *Udvalgte vers*, and the choice is remembered on the phone. Verse numbers keep their original numbering, so skipped verses are visible as gaps.
-- **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
-- **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.
-- **ⓘ** at the top right shows facts and a short story about the song.
-- **QR code** at the bottom of the index points to the app's address, so the rest of the family can scan it and open the app.
-- **Mere hygge:** when the app opens on the index, a randomly picked theme drifts slowly down behind the list for 30 seconds: snowflakes, *julehjerter*, spruce twigs, holly, mistletoe, stars, little Dannebrog flags or *adventskranse*, or a row of flickering candles along the bottom. The *Mere hygge* button next to the QR code starts a new run with a different theme. Opening a song stops it. With the phone's "reduce motion" setting on, the scene stands still for the 30 seconds.
 
 ### Song file format
 
@@ -159,7 +132,7 @@ tools/
 - `chorus`: lines repeated after every verse (*omkvæd*), shown as ordinary lines, or `null`.
 - The verses for *Udvalgte vers* are not in the song file; they are the `shortVersion` list in `songs/index.json` (see below).
 - Repeats are written `//: … ://` (and may span several lines); the app writes the marked lines out twice.
-- `composer`: who wrote the melody, in Danish (shown as *Melodi* in the info pop-up). Sources are in [docs/research/carol-melody-composers.md](docs/research/carol-melody-composers.md).
+- `composer`: who wrote the melody, in Danish (shown as *Melodi* in the info pop-up).
 - `dds` and `hsb` are the numbers in *Den Danske Salmebog* and *Højskolesangbogen*.
 
 ## Running locally
@@ -178,12 +151,8 @@ When you change the app shell (HTML, CSS or JS), bump `VERSION` in [sw.js](sw.js
 
 ## Adding a song
 
-- **From Wikisource:** add an entry to `SONGS` in [tools/import-wikisource.mjs](tools/import-wikisource.mjs) and run `node tools/import-wikisource.mjs`. This rewrites every song file and `songs/index.json`, and warns if a verse count does not match `expectedVerses`. It keeps each song's number and section from `songs/index.json`; a new song goes last in the last section, so move it by hand: change `idNumber` in both `songs/index.json` and the song file, set `section` in `songs/index.json`, and keep the index in number order.
-- **By hand:** add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `section`, `title`, `firstLine`, `author`, `composer`, `verseCount`, `shortVersion`) at its place in the number order. Also add `{ id, title, manual: true }` to `SONGS` in the importer, so a later import keeps the song.
-- Update [songs.md](songs.md) too, so the list there matches.
+Add a JSON file to `songs/` using the format above, and add the song to `songs/index.json` (`id`, `idNumber`, `section`, `title`, `firstLine`, `author`, `composer`, `verseCount`, `shortVersion`) at its place in the number order.
 
 ### Choosing the verses for *Udvalgte vers*
 
-Each entry in `songs/index.json` has a `shortVersion` list with the verse numbers to show when the switch is on *Udvalgte vers*, for example `"shortVersion": [1, 3, 5, 7]`. The current lists come from [docs/research/carol-short-versions.md](docs/research/carol-short-versions.md): two follow a documented songbook version, short songs keep all their verses, and the rest are editorial picks. Edit the lists by hand to change them. Re-running the importer keeps your lists, and new songs start with their odd verses.
-
-Only add songs whose text is in the public domain, or that you have permission to publish.
+Each entry in `songs/index.json` has a `shortVersion` list with the verse numbers to show when the switch is on *Udvalgte vers*, for example `"shortVersion": [1, 3, 5, 7]`. Edit the lists by hand to change them.

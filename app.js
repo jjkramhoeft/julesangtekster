@@ -112,10 +112,6 @@ function setupVerseSwitch() {
 
 // ---------- Song view ----------
 
-function renderLine(text, className = 'line') {
-  return el('p', className, text);
-}
-
 // Repeat marks in the data are written "//: … ://" and can span several
 // lines. The marked lines are written out twice instead.
 function expandRepeats(lines) {
@@ -149,7 +145,7 @@ function renderVerses(song) {
     const section = el('section', 'verse');
     section.setAttribute('aria-label', `Vers ${number}`);
     section.append(el('span', 'verse-number', String(number)));
-    for (const line of expandRepeats([...lines, ...(song.chorus ?? [])])) section.append(renderLine(line));
+    for (const line of expandRepeats([...lines, ...(song.chorus ?? [])])) section.append(el('p', 'line', line));
     nodes.push(section);
   });
   // Songs whose text is still protected ship without verses, to be filled in by hand.

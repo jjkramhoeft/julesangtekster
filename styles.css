@@ -81,9 +81,6 @@ svg {
   border: 0;
   border-radius: 12px;
   background: transparent;
-  font-weight: 600;
-  font-size: 17px;
-  white-space: nowrap;
 }
 
 .icon-button:active { background: var(--surface-2); }
@@ -262,10 +259,11 @@ svg {
 
 #song-view { min-height: 100dvh; }
 
+/* Same width as .song, whose em is the lyric size, so the icons line up with the text. */
 .song-tools {
   display: flex;
   justify-content: space-between;
-  max-width: 44em;
+  max-width: calc(44 * var(--lyric-size));
   margin: 0 auto;
   padding: calc(env(safe-area-inset-top) + 8px) 6px 0;
 }
@@ -336,7 +334,6 @@ svg {
   text-indent: -1em;
   text-wrap: pretty;
 }
-
 
 /* ---------- Dialogs ---------- */
 

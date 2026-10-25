@@ -1,0 +1,40 @@
+{
+  "id": "shchedryk",
+  "idNumber": 55,
+  "title": "Щедрик (Carol of the Bells)",
+  "firstLine": "Щедрик щедрик, щедрівочка",
+  "type": "nytårssang",
+  "author": "Ukrainsk folketekst",
+  "translator": null,
+  "year": null,
+  "composer": "Mykola Leontovych, 1916",
+  "extraInfo": "Щедрик (Sjtjedryk) er en ukrainsk »shchedrivka«, en sang til nytårsaften efter den gamle kalender. En svale flyver ind i gården og spår bonden et rigt år med lam og penge. Mykola Leontovych satte den gamle folkemelodi for kor, og den blev opført første gang i Kyiv i 1916. Det Ukrainske Nationalkor sang den på turné i Amerika i 1921–22, og i 1936 skrev Peter J. Wilhousky den engelske tekst »Carol of the Bells« til melodien.",
+  "chorus": null,
+  "verses": [
+    [
+      "Щедрик щедрик, щедрівочка,",
+      "прилетіла ластівочка,",
+      "стала собі щебетати,",
+      "господаря викликати:"
+    ],
+    [
+      "\"Вийди, вийди, господарю,",
+      "подивися на кошару,",
+      "там овечки покотились,",
+      "а ягнички народились."
+    ],
+    [
+      "В тебе товар весь хороший,",
+      "будеш мати мірку грошей,",
+      "В тебе товар весь хороший,",
+      "будеш мати мірку грошей,",
+      "хоч не грошей, то полова:",
+      "в тебе жінка чорноброва.\""
+    ],
+    [
+      "Щедрик щедрик,",
+      "Щедрівочка,",
+      "прилетіла ластівочка."
+    ]
+  ]
+}

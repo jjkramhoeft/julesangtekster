@@ -1,0 +1,56 @@
+{
+  "id": "huron-carol",
+  "idNumber": 51,
+  "title": "Huron Carol",
+  "firstLine": "'Twas in the moon of winter-time",
+  "type": "julesang",
+  "author": "Jesse Edgar Middleton",
+  "translator": null,
+  "year": 1926,
+  "composer": null,
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "Den oprindelige sang, »Jesous Ahatonhia«, skrev jesuittermissionæren Jean de Brébeuf omkring 1642 på wendat, huronernes sprog, til en fransk folkemelodi. Jesse Edgar Middleton skrev i 1926 den engelske tekst, som er en fri gendigtning: Jesusbarnet ligger i en hytte af bark, svøbt i kaninskind, og høvdingene bringer ræve- og bæverskind. Den regnes for Canadas ældste julesang.",
+  "verses": [
+    [
+      "'Twas in the moon of winter-time",
+      "When all the birds had fled,",
+      "That mighty Gitchi Manitou",
+      "Sent angel choirs instead;",
+      "Before their light the stars grew dim,",
+      "And wandering hunters heard the hymn:",
+      "Jesus your King is born, Jesus is born,",
+      "In excelsis gloria."
+    ],
+    [
+      "Within a lodge of broken bark",
+      "The tender Babe was found,",
+      "A ragged robe of rabbit skin",
+      "Enwrapp'd His beauty round;",
+      "But as the hunter braves drew nigh,",
+      "The angel song rang loud and high...",
+      "Jesus your King is born, Jesus is born,",
+      "In excelsis gloria."
+    ],
+    [
+      "The earliest moon of wintertime",
+      "Is not so round and fair",
+      "As was the ring of glory",
+      "On the helpless infant there.",
+      "The chiefs from far before him knelt",
+      "With gifts of fox and beaver pelt.",
+      "Jesus your King is born, Jesus is born,",
+      "In excelsis gloria."
+    ],
+    [
+      "O children of the forest free,",
+      "O sons of Manitou,",
+      "The Holy Child of earth and heaven",
+      "Is born today for you.",
+      "Come kneel before the radiant Boy",
+      "Who brings you beauty, peace and joy.",
+      "Jesus your King is born, Jesus is born,",
+      "In excelsis gloria."
+    ]
+  ]
+}

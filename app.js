@@ -68,7 +68,7 @@ function renderSongItem(song) {
   return item;
 }
 
-// The songs are grouped in sections (Om Kristus, Advent og Nytår, Traditioner),
+// The songs are grouped in sections (Om Kristus, Advent og Nytår, Traditioner, Udenlandske),
 // in the order they come in songs/index.json.
 function renderList() {
   const sections = [];

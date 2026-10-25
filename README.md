@@ -33,7 +33,7 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 
 ## Songs
 
-The app lists 30 carols in three sections: *Om Kristus* (1–20), *Advent og Nytår* (30–32) and *Traditioner* (40–46). Within each section the songs are in Danish alphabetical order, and the gaps in the numbering leave room for new songs. Every author and named translator have died.
+The app lists 36 carols in four sections: *Om Kristus* (1–20), *Advent og Nytår* (30–32), *Traditioner* (40–46) and *Udenlandske* (50–55). Within each section the songs are in Danish alphabetical order, and the gaps in the numbering leave room for new songs. Every author and named translator have died.
 
 | # | Title | Text |
 | --- | --- | --- |
@@ -70,6 +70,13 @@ The app lists 30 carols in three sections: *Om Kristus* (1–20), *Advent og Nyt
 | 44 | Nu er det jul igen | Traditional |
 | 45 | På loftet sidder nissen | Margrethe Munthe, Danish text unattributed |
 | 46 | Sikken voldsom trængsel og alarm | Peter Faber |
+| | **Udenlandske** | |
+| 50 | God Rest Ye Merry, Gentlemen | Traditional (English) |
+| 51 | Huron Carol | Jesse Edgar Middleton |
+| 52 | Nu tändas tusen juleljus | Emmy Köhler |
+| 53 | Stille Nacht, heilige Nacht | Joseph Mohr |
+| 54 | В лесу родилась ёлочка (A Spruce Was Born in the Forest) | Raisa Kudasheva |
+| 55 | Щедрик (Carol of the Bells) | Ukrainian folk text |
 
 ### Copyright
 

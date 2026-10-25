@@ -1,0 +1,39 @@
+{
+  "id": "nu-taendas-tusen-juleljus",
+  "idNumber": 52,
+  "title": "Nu tändas tusen juleljus",
+  "firstLine": "Nu tändas tusen juleljus",
+  "type": "julesang",
+  "author": "Emmy Köhler",
+  "translator": null,
+  "year": 1898,
+  "composer": "Emmy Köhler, 1898",
+  "extraInfo": "Svensk julesang, hvor Emmy Köhler skrev både tekst og melodi i 1898. Den er en af de mest sungne julesange i Sverige. Sangen går fra de tusind lys på jorden og stjernerne på himlen til Betlehemsstjernen, som skal lyse ind i hvert hjem og hvert hjerte.",
+  "chorus": null,
+  "verses": [
+    [
+      "Nu tändas tusen juleljus",
+      "på jordens mörka rund,",
+      "och tusen, tusen stråla ock",
+      "på himlens djupblå grund."
+    ],
+    [
+      "Ty över stad och land i kväll",
+      "går julens glada bud",
+      "att född är Herren Jesus Krist,",
+      "vår Frälsare och Gud."
+    ],
+    [
+      "Du stjärna över Betlehem,",
+      "o, låt ditt milda ljus",
+      "få lysa in med hopp och frid",
+      "i varje hem och hus."
+    ],
+    [
+      "I varje hjärta, armt och mörkt,",
+      "sänd du en stråle blid,",
+      "en stråle av Guds kärleks ljus",
+      "i signad juletid."
+    ]
+  ]
+}

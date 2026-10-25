@@ -1,0 +1,58 @@
+{
+  "id": "v-lesu-rodilas-yolochka",
+  "idNumber": 54,
+  "title": "В лесу родилась ёлочка (A Spruce Was Born in the Forest)",
+  "firstLine": "В лесу родилась ёлочка",
+  "type": "julesang",
+  "author": "Raisa Kudasheva",
+  "translator": null,
+  "year": 1903,
+  "composer": "Leonid Bekman, 1905",
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "Raisa Kudashevas digt »Ёлка« (Grantræet) blev trykt i børnebladet »Малютка« i 1903. Amatørmusikeren Leonid Bekman satte i 1905 melodi til nogle af versene for sin lille datter, og den blev Ruslands mest kendte sang om nytårstræet. Sangen fortæller om grantræet i skoven, om haren og ulven, og om bonden, der fælder træet og kører det hjem til børnenes fest.",
+  "source": {
+    "name": null,
+    "url": null,
+    "revision": null
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "В лесу родилась ёлочка,",
+      "В лесу она росла,",
+      "Зимой и летом стройная,",
+      "Зелёная была."
+    ],
+    [
+      "Метель ей пела песенку:",
+      "«Спи, ёлочка, бай-бай!»;",
+      "Мороз снежком укутывал:",
+      "«Смотри, не замерзай!»"
+    ],
+    [
+      "Трусишка зайка серенький",
+      "Под ёлочкой скакал,",
+      "Порою волк, сердитый волк,",
+      "Рысцою пробегал."
+    ],
+    [
+      "Чу! Снег по лесу частому",
+      "Под полозом скрипит,",
+      "Лошадка мохноногая",
+      "Торопится, бежит."
+    ],
+    [
+      "Везёт лошадка дровенки,",
+      "На дровнях - мужичок,",
+      "Срубил он нашу ёлочку",
+      "Под самый корешок."
+    ],
+    [
+      "И вот она, нарядная,",
+      "На праздник к нам пришла,",
+      "И много, много радости",
+      "Детишкам принесла."
+    ]
+  ]
+}

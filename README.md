@@ -40,7 +40,7 @@ This app puts the lyrics on the phone in someone's pocket. It is made for that o
 
 ## Songs
 
-The app lists 29 carols, numbered in Danish alphabetical order. Three of them, *Bjældeklang*, *Kender I den om Rudolf?* and *Santa Lucia*, have no text yet because their Danish texts are protected (see Copyright below). The other 26 texts are in the public domain: every author and named translator died more than 70 years ago (ophavsretsloven § 63). 21 are imported from Danish Wikisource. Five are kept by hand: *På loftet sidder nissen* (see Copyright below) and four songs that are not on Danish Wikisource. Those four follow the text in Højskolesangbogen: *Der er noget i luften*, *Julen har englelyd*, *Juletræet med sin pynt* and *Vær velkommen, Herrens år*. The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
+The app lists 30 carols, numbered in Danish alphabetical order. Three of them, *Bjældeklang*, *Kender I den om Rudolf?* and *Santa Lucia*, have no text yet because their Danish texts are protected (see Copyright below). *Lyset kommer tilbage* is a newer song by Kreste Wolff, who wrote both text and melody; its text is typed in by hand. The other 26 texts are in the public domain: every author and named translator died more than 70 years ago (ophavsretsloven § 63). 21 are imported from Danish Wikisource. Five are kept by hand: *På loftet sidder nissen* (see Copyright below) and four songs that are not on Danish Wikisource. Those four follow the text in Højskolesangbogen: *Der er noget i luften*, *Julen har englelyd*, *Juletræet med sin pynt* and *Vær velkommen, Herrens år*. The research behind the list, including the popular songs that had to be left out, is in [docs/research/danish-christmas-carols.md](docs/research/danish-christmas-carols.md).
 
 | # | Title | Text |
 | --- | --- | --- |
@@ -67,12 +67,13 @@ The app lists 29 carols, numbered in Danish alphabetical order. Three of them, *
 | 21 | Kender I den om Rudolf? (no text yet) | Johnny Marks, Danish text unknown |
 | 22 | Kimer, I klokker | N.F.S. Grundtvig |
 | 23 | Lad det klinge sødt i sky | Claus Mortensen, N.F.S. Grundtvig and Thomas Laub |
-| 24 | Nu er det jul igen | Traditional |
-| 25 | På loftet sidder nissen | Margrethe Munthe, Danish text unattributed |
-| 26 | Santa Lucia (no text yet) | Neapolitan song, Danish text Alex Garff |
-| 27 | Sikken voldsom trængsel og alarm | Peter Faber |
-| 28 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
-| 29 | Vær velkommen, Herrens år | N.F.S. Grundtvig |
+| 24 | Lyset kommer tilbage | Kreste Wolff |
+| 25 | Nu er det jul igen | Traditional |
+| 26 | På loftet sidder nissen | Margrethe Munthe, Danish text unattributed |
+| 27 | Santa Lucia (no text yet) | Neapolitan song, Danish text Alex Garff |
+| 28 | Sikken voldsom trængsel og alarm | Peter Faber |
+| 29 | Velkommen igen, Guds engle små | N.F.S. Grundtvig |
+| 30 | Vær velkommen, Herrens år | N.F.S. Grundtvig |
 
 ### Copyright
 
@@ -118,7 +119,7 @@ tools/
 
 ### How the app is used
 
-- **Index:** a list of all songs in alphabetical order, numbered 1–29, under the title *Juletræssange*. Swiping on a song page follows the same order.
+- **Index:** a list of all songs in alphabetical order, numbered 1–30, under the title *Juletræssange*. Swiping on a song page follows the same order.
 - **Udvalgte vers / Alle vers:** the switch under the title picks whether song pages show only the selected verses (left) or every verse (right). The choice is remembered on the phone. Verse numbers keep their original numbering, so skipped verses are visible as gaps.
 - **Song:** swipe left/right, or tap the left or right edge of the text, to change song. ☰ at the top left goes back to the index.
 - **Pinch** to make the text bigger. While the page is zoomed, swiping is turned off so you can pan.

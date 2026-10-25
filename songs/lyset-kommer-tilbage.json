@@ -1,0 +1,53 @@
+{
+  "id": "lyset-kommer-tilbage",
+  "idNumber": 24,
+  "title": "Lyset kommer tilbage",
+  "firstLine": "Når vint’ren slår til med kulde og trods",
+  "type": "adventssang",
+  "author": "Kreste Wolff",
+  "translator": null,
+  "year": 2012,
+  "composer": "Kreste Wolff",
+  "dds": null,
+  "hsb": null,
+  "extraInfo": "Kreste Wolff har skrevet både tekst og melodi. Sangen følger adventskransen: i hvert vers tændes et lys mere, og når alle fire lys skinner, kommer lyset tilbage.",
+  "source": {
+    "name": null,
+    "url": null,
+    "revision": null,
+    "license": "Tekst og melodi: Kreste Wolff"
+  },
+  "chorus": null,
+  "verses": [
+    [
+      "Når vint’ren slår til med kulde og trods,",
+      "så tændes et lys med et smil her hos os.",
+      "Vi samles og ser et håb i de mørkeste dage,",
+      "vi venter og tror at lyset vil komme tilbage."
+    ],
+    [
+      "Når vint’ren vil fryse menneskers bånd,",
+      "så tændes to lys som et par hånd i hånd.",
+      "Vi samles og ser et håb i de mørkeste dage,",
+      "vi venter og tror at lyset vil komme tilbage."
+    ],
+    [
+      "Når vinteren sir’, at mørket har magt,",
+      "så tændes tre lys som tre engle på vagt.",
+      "Vi samles og ser et håb i de mørkeste dage,",
+      "vi venter og tror at lyset vil komme tilbage."
+    ],
+    {
+      "lines": [
+        "Hvor mennesker sammen enes om fred,",
+        "vil fire lys skinne som værn mod fortræd.",
+        "Vi samles med smil, og ønsker enhver alle dage",
+        "en glædelig jul, for nu kommer lyset tilbage."
+      ],
+      "refrain": [
+        "Ja, vi samles med smil, og ønsker enhver alle dage",
+        "en glædelig jul, for nu kommer lyset tilbage."
+      ]
+    }
+  ]
+}

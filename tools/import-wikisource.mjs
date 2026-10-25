@@ -328,6 +328,8 @@ const SONGS = [
   { id: 'julen-har-englelyd', title: 'Julen har englelyd', manual: true },
   { id: 'juletraeet-med-sin-pynt', title: 'Juletræet med sin pynt', manual: true },
   { id: 'vaer-velkommen-herrens-aar', title: 'Vær velkommen, Herrens år', manual: true },
+  // A newer song, text and melody by Kreste Wolff, typed in by hand.
+  { id: 'lyset-kommer-tilbage', title: 'Lyset kommer tilbage', manual: true },
   // Danish texts still protected: these ship without verses, to be typed in by hand.
   { id: 'bjaeldeklang', title: 'Bjældeklang', manual: true },
   { id: 'kender-i-den-om-rudolf', title: 'Kender I den om Rudolf?', manual: true },

@@ -230,8 +230,18 @@
     "shortVersion": [1, 2, 3]
   },
   {
-    "id": "nu-er-det-jul-igen",
+    "id": "lyset-kommer-tilbage",
     "idNumber": 24,
+    "title": "Lyset kommer tilbage",
+    "firstLine": "Når vint’ren slår til med kulde og trods",
+    "author": "Kreste Wolff",
+    "composer": "Kreste Wolff",
+    "verseCount": 4,
+    "shortVersion": [1, 2, 3, 4]
+  },
+  {
+    "id": "nu-er-det-jul-igen",
+    "idNumber": 25,
     "title": "Nu er det jul igen",
     "firstLine": "Nu’ det jul igen",
     "author": "Traditionel",
@@ -241,7 +251,7 @@
   },
   {
     "id": "paa-loftet-sidder-nissen",
-    "idNumber": 25,
+    "idNumber": 26,
     "title": "På loftet sidder nissen",
     "firstLine": "På loftet sidder nissen med sin julegrød",
     "author": "Margrethe Munthe",
@@ -251,7 +261,7 @@
   },
   {
     "id": "santa-lucia",
-    "idNumber": 26,
+    "idNumber": 27,
     "title": "Santa Lucia",
     "firstLine": "Santa Lucia",
     "author": "Napolitansk folkesang",
@@ -261,7 +271,7 @@
   },
   {
     "id": "sikken-voldsom-traengsel-og-alarm",
-    "idNumber": 27,
+    "idNumber": 28,
     "title": "Sikken voldsom trængsel og alarm",
     "firstLine": "Sikken voldsom trængsel og alarm",
     "author": "Peter Faber",
@@ -271,7 +281,7 @@
   },
   {
     "id": "velkommen-igen-guds-engle-smaa",
-    "idNumber": 28,
+    "idNumber": 29,
     "title": "Velkommen igen, Guds engle små",
     "firstLine": "Velkommen igen, Guds engle små",
     "author": "N.F.S. Grundtvig",
@@ -281,7 +291,7 @@
   },
   {
     "id": "vaer-velkommen-herrens-aar",
-    "idNumber": 29,
+    "idNumber": 30,
     "title": "Vær velkommen, Herrens år",
     "firstLine": "Vær velkommen, Herrens år",
     "author": "N.F.S. Grundtvig",
